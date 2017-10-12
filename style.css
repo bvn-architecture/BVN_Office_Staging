@@ -15,7 +15,7 @@ body {
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
-    -webkit-transition: .2s;
+    -webkit-transition: opacity .2s;
     transition: opacity .2s;
 }
 
@@ -41,4 +41,13 @@ body {
     border-radius: 50%;
     background: #4CAF50;
     cursor: pointer;
+}
+
+.floorplan {
+    left: 10%;
+    top: 0px;
+    position: absolute;
+    width: 85%;
+    max-height: 80%;
+    z-index: -1;
 }
