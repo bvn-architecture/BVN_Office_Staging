@@ -4,7 +4,7 @@
 //     }
 // );
 
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTjCiJgL1LRHFXkeMgK4q7hE8CYO7HQQj1uMhYT0JriKNeF7ZnhuI4Ho9u-Zha-_jv9lzCIlyJ_7QO5/pubhtml?gid=0&single=true';
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTjCiJgL1LRHFXkeMgK4q7hE8CYO7HQQj1uMhYT0JriKNeF7ZnhuI4Ho9u-Zha-_jv9lzCIlyJ_7QO5/pubhtml';
 
 function slider(){
     var slider = document.getElementById("myRange");
@@ -16,7 +16,7 @@ function slider(){
         output.innerHTML = this.value;
     }
 
-    var d = document.querySelector("svg rect");
+    var d = document.getElementById("EXS40A");
     d.classList.toggle("hidden");
     alert('Successfully processed the table!')
 }
