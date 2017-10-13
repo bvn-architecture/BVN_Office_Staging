@@ -2,8 +2,17 @@ body {
     width: 100%;
 }
 
+
+svg * {
+    transition: opacity 1s;
+}
+.hidden {
+    opacity: 0;
+}
+
 #slidecontainer {
     width: 100%; /* Width of the outside container */
+    bottom: 0;
 }
 
 /* The slider itself */

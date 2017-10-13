@@ -7,159 +7,113 @@
 
 
 <body>
-    <style>
-        #slidecontainer {
-            bottom: 0;
-        }
-        svg * {
-            transition: opacity 1s;
-        }
-        .hidden {
-            opacity: 0;
-        }
-    </style>
-    
     <div id="slidecontainer">
         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
     </div>
     <p>Value: <span id="demo"></span></p>
-    <!-- <svg xmlns:svg="http://www.w3.org/2000/svg" id="my-svg" version="1.1" baseProfile="full" width="500" height="500">
-        <rect x="0" y="0" width="100" height="250" style="fill:lightblue"/>
-        <circle cx="60" cy="60" r="50" style="fill:red"/>
-    </svg> -->
 
-
-<!-- Old image placement:
-
-<svg>
-
-<image xlink:href="EmptyFloorplan.png" class="floorplan" id="emptyFloorplan">
-
-<image xlink:href="ExistingFloorplan.png" class="floorplan" id="existingFloorplan" clip-path="url(#existingClip)">
-
-<image xlink:href="ProposedFloorplan.png" class="floorplan" id="proposedFloorplan" clip-path="url(#proposedClip)">
-
-</svg>
-
--->
-
-<!-- Example clipping path code:
-
-<svg width="100" height="100" >
-    <defs>
-      <clipPath id="myClip">
-        <rect x="0" y="10" width="100" height="35" />
-        <rect x="0" y="55" width="190" height="35" />
-      </clipPath>
-    </defs>
-    <circle cx="50" cy="50" r="50" clip-path="url(#myClip)" />
-  </svg>
-
--->
-
-
-<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1593.1 1123.2">
-    <style>
-      .st0{fill:none;stroke:#FF00BF;stroke-miterlimit:10;} .st1{fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;} .st2{fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-    </style>
-    <path d="M676.4 400v-2.5h-2.2l-.4 5h-10.3l-.3-5H661v2.5h-.8V399H645.4v1h-.8v-2.6h-2.2l-.4 5h-10.3l-.3-5h-2.2v3.4-.8h-.8V399h-14.6v1h-1v-2.6h-2l-.4 5h-10.6l-.5-5.2H597v2.6h-.8v-.7H581.8v1.7-.8h-.8v-2.7h-2.2l-.3 5H568l-.4-5h-2.2v2.6h-.8v-1H550V400h-.8v-2.7h-2.2l-.5 5h-9.8l-.5-5h-2.2v2.6h-.8v-1H518.6V400h-.8v-2.7h-2.2l-.5 5h-10.6l-.4-5h-2.2v2.6h-1.4v-1H486V400h-.8v-2.7H483l-.5 5H473l-.5-5h-2.2v2.6h-.8v-1h-13.2V400h-.8v.8-3.5h-2.2l-.5 5h-13.3l-.5-5h-2.2v2.6h-.8v-1H424.6V400h-.8v-2.7h-2.2l-.5 5h-10l-.4-5h-2.2v2.6h-.8v-1H393.2V400h-.8v.7-3.4h-2.2l-.5 5H379l-.4-5h-2.2v2.7h-.8V399H360.8v1h-.8v.8-3.5h-2.2l-.5 5h-10l-.6-5h-2.2v2.5h-.8v-.7H329.3v.8h-1v.8-3.5H326l-.5 5.2h-11.7v12.3l-5.4 1.2v2h2.8-1v.8h-.8v14.3H310.3v.8h-2.6v2.2l5.7.5v91.5l-5.8.5v2.2H319v1h-.8v.8h-.6V559h.4v1h.8v1h-11.3v2l5.7.6v90l-5.6.6v2.2h2.6v.8H309.5v14.3H310.4v.8h-2.6v2.2l5.8.5.5 12.4h11.5l.5 3.3h1.4v.8h.8v.5h12.6v-.5h1v-.8h1.3l.4-3.5H357l.3 3.5h1.4v.8h1v.5H372.2v-.5h.8v-.8h1.4l.3-3.5h13.7l.3 3.5h1.4v.8h1v.5h12.5v-.5h.8v-.8h1.4l.3-3.5h13.7l.3 3.5h1.4v.8h.8v.5h12.6v-.5h.8v-.8h1.3l.2-5h14l1 5h1.3v.8h1v.5H467v-.5h1v-.8h1.3l.3-3.5H484l.3 3.5h1.4v.8h.8v.5h12.7v-.5h.8v-.8h1.4l.3-3.5h14l.2 3.5h1.3v.8h.8v.5H531v-.5h.8v-.8h1.4l.3-3.5h14.3l.3 3.5h1.3v.8h.8v.5h12.2v-.5h1v-.8h1.2l.3-5h13l1 5h1.4v.8h1v.5H593.8v-.5h.8v-.8h1.4l.3-3.5h14.3l.3 3.5h1.4v.8h1v.5H625.8v-.5h.8v-.8h1.4l.3-3.5h14l.3 3.5h1.4v.8h.8v.5h.5-.3H657h-.3.5v-.5h.8v-.8h1.3l.3-3.5H675l.3 3.5h1.4v.8h.8v.5H690v-.5h1v-.8h1.4l.3-5H706l1 5h1.4v1h.8v.2H722v-.4h.7v-.8h1.4l.4-3.5h14.2l.3 3.5h1.3v.8h.8v.3h.6-.3 12.4-.3.5v-.4h.7v-.8h1.4l.4-3.5h14l.4 3.5h1.4v.8h.8v.3h12.7v-.4h.8v-.8h1.4l.3-3.5h14.2l.3 3.5h1.4v.8h.7v.3H817.3v-.4h.8v-.8h1.3l.3-5H833l1 5h1.4v.8h.8v.3H849v-.4h.7v-.8h1.4l.4-3.5H866l.3 3.5h1.4v.8h.8v.3h12.7v-.4h1v-.8h1.2l.3-3.5h14l.2 3.5h1.3v.8h1v.3H913v-.4h.7v-.8h1.3l.5-3.4h12v4.8h1.7v.8H928.3V707.8H929.2v.8h-2.6v2.2l5 .5v10l-5 .5v2.2h2.6v.7H928.3V738.7H929.2v1h-2.6v2l5 .6v10l-5 .5v2.3h2.6v.8H928.3V770.5h1.7-.8v.8h-2.6v2.2l5 .5v10.6l-5 .5v2.3h2.6v.8H928.3V802.5H929.2v1h-2.6v2l5 .6v10l-5 .6v2.2h2.6v.8H928.3V834H929.2v1h-2.6v2l5 .6v10l-5 .6v2.2h2.6v.8H928.3V865.6H929.2v.8h-2.6v2.2l5.2.5v10l-5.2.6v2.2h2.6v.8H928.3V897H929.2v1h-2.6v2.2l5 .5v10l-5 .5v2.2h2.6v.8H928.3V928.6H929.2v.8h-2.6v2.2l5 .5v11l-5 .4v2.2h2.6v1H928.3V961H929.2v.8h-2.5v2.2l5 .5v10l-5 .4v2h3.5-1v1h-.8v14.3H929.3v.8h-2.5v2.3l5 .5v11h9.5l.7 5h2v-2.5h.8V1010.2H959.2V1009.3h.8v-.8 3.3h2.3l.3-5h9.6l.3 5h2.2v-2.5h.8V1010.2H989.7v-1.7h.8v3.3h2.3l.3-5 9.5-.2.3 5h2.3v-2.4h.8v.7H1020.5v-1.6.8h1v2.7h2.2l.4-5.2h9.6l.3 5h2v-2.6h1v.7H1049.8v-.8h1v2.7h2l.4-5.2h13l.3 5h2.2v-2.6h.8v.7H1082.3v-.8h.8v-1 3.5h2.2v-5h10.4v5h2v-2.6h1v1H1113V1009h1.3v3h2.2v-5.2h10.3v5h2.2v-2.6h.8v.7H1144.2v-.8h.7v2.6h2l.4-5h9.6l.3 5h2.2v.2h-2.2v44.6h2v.4H1410.2v-2.6h-.7H1412.7V31.6h-2.5v-1.7h-208.6v-.4h-.8v.4h-22v-.4h-.7v.4h-22v-.4h-.8v.4h-28.5V78.6h2.2-2.3l-.2 5.2h-10l-.3-5.2h-2.2v2.6h-.8V80.5H1098.8V81.4h-1v-2.6h-2l-.6 5h-9.7l-.5-5h-2.2v2.6h-.8V80.5H1067.6V81.4h-.8v-2.6h-2.2l-.5 5h-9.5l-.3-5h-2.2v2.6h-.8V80.5H1036.8v1.7-.8h-.8v-2.6h-2.2l-.5 5h-9.2l-.4-5h-2.2v2.6h-.8V80.5H1006.2V81.4h-.8v.8-3.4h-2.2l-.3 5h-10l-.4-5h-2v2.6h-.8V80.5H975.2V81.4h-.8v-2.6h-2.2l-.2 5h-10l-.2-5h-2.2v2.6h-1V80.5h-14.3V81.4h-1v-2.6h-2l-.3 5h-10v11.7l-5 .5v1.4h2.7v.8H927.8V112.6H928.7v.8H926v2.2l5 .5v10l-5 .6v2.2h3.6-.6v.8H928V144h1v.8h-2.6v2.2l5 .5v10.8l-5 .5v2.2h2.6v.8H928V176.2h1v.8h-2.6v2.2l5 .5v10l-5 .5v2.2h3.5v.2h-1v1H928V208h1v.7h-2.6v2.2l5 .4v10l-5 .4v2.2h3-.4v.8h-1V239.2H929v.8h-2.7v2.2l5 .5v10.5l-5 .5v2.2h2.6v.8h-1V271.2H929v.8h-2.7v2.2l5 .5v9.8l-5 .5v2.2h2.6v.8h-1V302.4H929v.8h-2.7v2.2l5 .5v10.7l-5 .5v2.2h2.6v1h-1V334.8H929v.8h-2.7v2.2l5 .5v9.8l-5 .5v2.2h3.4-.8v.8h-1V365.8H929v1h-2.7v2l5 .6v9.8l-5 .5v2h3.5-.8v1H928V397.5h1v.6h-1.5l-.5 4.6h-9l-.5-5h-2.2v2.5h-1.1V399H899.8V399.7h-.8V397h-2.2l-.5 5.2H886l-.3-5h-2.2v2.5h-.8v-.7H868.2V400h-.8v.7-3.5h-2.2l-.3 5h-10.7l-.4-5h-2.3v2.7h-1.1v-1H836.2V400h-.8v-2.7h-2.2l-.3 5-10.8.2-.3-5h-2.3v2.5h-1V399H804.5v1h-1v.8-3.5h-2l-.4 5h-10.6l-.4-5H788v2.7h-.8V399h-14.5v1h-.8v-2.6h-2.3l-.3 5h-10.7l-.3-5h-2.2v2.6h-1V399H741v1h-1v-2.6h-2l-.4 5h-10.3l-.3-5h-2.2v2.6h-.8V399H709v1h-.8v-2.6h-2.2l-.3 5h-10.3l-.3-5h-2.3v3.3-.8h-1v-1H677V400h-.8z" class="st0"/>
-    <defs>
-      <path id="_x30_2A_x5F_EXS_1_" d="M310.5 394h274l-3.7 189.5-237.4 4.2-25 9.6z"/>
-    </defs>
-    <clipPath id="_x30_2A_x5F_EXS_2_">
-      <use xlink:href="#_x30_2A_x5F_EXS_1_" overflow="visible"/>
-    </clipPath>
-    <g clip-path="url(#_x30_2A_x5F_EXS_2_)">
-      <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
-    </g>
-    <defs>
-      <path id="_x30_3A_x5F_EXS_1_" d="M316 690.3l4-91 24.3-9.3 290.3-6 47.6 14.5.8 91.8H576V587.7l-106.5.5-10 12.4-35 2-4.7 89.7z"/>
-    </defs>
-    <clipPath id="_x30_3A_x5F_EXS_2_">
-      <use xlink:href="#_x30_3A_x5F_EXS_1_" overflow="visible"/>
-    </clipPath>
-    <g clip-path="url(#_x30_3A_x5F_EXS_2_)">
-      <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
-    </g>
-    <defs>
-      <path id="_x31_3A_x5F_EXS_1_" d="M422.3 692.3l4.7-83.6 47.8-8 5.5-10.4h74l7.3 98z"/>
-    </defs>
-    <clipPath id="_x31_3A_x5F_EXS_2_">
-      <use xlink:href="#_x31_3A_x5F_EXS_1_" overflow="visible"/>
-    </clipPath>
-    <g clip-path="url(#_x31_3A_x5F_EXS_2_)">
-      <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
-    </g>
-    <defs>
-      <path id="_x33_3A_x5F_EXS_1_" d="M849.3 683.7l137.6-10-2-19-12-10 4.8-55 99 5.4 6.2 8.6 2 70 18.3-1-3-85.6-39-40-142 16.5-70 83z"/>
-    </defs>
-    <clipPath id="_x33_3A_x5F_EXS_2_">
-      <use xlink:href="#_x33_3A_x5F_EXS_1_" overflow="visible"/>
-    </clipPath>
-    <g clip-path="url(#_x33_3A_x5F_EXS_2_)">
-      <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
-    </g>
-    <defs>
-      <path id="_x36_1A_x5F_EXS_1_" d="M989 659.6l-2-8.7-11.3-7.2 6-47.5 97 7.3-1.3 56.3 7.7 15h22.3l12.7-406 39-15 48-10 4-54 111.4-1.8 4.6 297.5-3 431.8-22-.5 1.4-77.3-105-1.8-60-23.2-19-124-28.6-13-8-2z"/>
-    </defs>
-    <clipPath id="_x36_1A_x5F_EXS_2_">
-      <use xlink:href="#_x36_1A_x5F_EXS_1_" overflow="visible"/>
-    </clipPath>
-    <g clip-path="url(#_x36_1A_x5F_EXS_2_)">
-      <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
-    </g>
-    <defs>
-      <path id="_x34_4A_x5F_EXS_1_" d="M1083.7 677.7l-10.8-2.3-33.6-.5-80.6 22.8L933.5 978l3 32H1107l193-19.8-2.5-144.2-104.7-1.7-65.3-15.2-15.7-132.7z"/>
-    </defs>
-    <clipPath id="_x34_4A_x5F_EXS_2_">
-      <use xlink:href="#_x34_4A_x5F_EXS_1_" overflow="visible"/>
-    </clipPath>
-    <g clip-path="url(#_x34_4A_x5F_EXS_2_)">
-      <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
-    </g>
-    <g>
-      <defs>
-        <path id="_x37_6A_x5F_EXS_1_" d="M1408.4 968.6H1368l-45.3 24.4v64.8h92.8v-74.5z"/>
-      </defs>
-      <clipPath id="_x37_6A_x5F_EXS_2_">
-        <use xlink:href="#_x37_6A_x5F_EXS_1_" overflow="visible"/>
-      </clipPath>
-      <g clip-path="url(#_x37_6A_x5F_EXS_2_)">
-        <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
-      </g>
-    </g>
-    <g>
-      <defs>
-        <path id="_x37_1A_x5F_EXS_1_" d="M1417.8 967.6h-79l-9.5-461.7 7.6-365.6 83.7 2z"/>
-      </defs>
-      <clipPath id="_x37_1A_x5F_EXS_2_">
-        <use xlink:href="#_x37_1A_x5F_EXS_1_" overflow="visible"/>
-      </clipPath>
-      <g clip-path="url(#_x37_1A_x5F_EXS_2_)">
-        <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
-      </g>
-    </g>
-    <g id="EXS40A">
-      <defs>
-        <path id="EXS40Apath" d="M907.5 422.5h67l132-21.5 2-136 96-30 2.6-48 90.4-4v-63l-53.2-34H930z"/>
-      </defs>
-      <clipPath id="EXS40Apath_1_">
-        <use xlink:href="#EXS40Apath" overflow="visible"/>
-      </clipPath>
-      <g clip-path="url(#EXS40Apath_1_)">
-        <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
-      </g>
-    </g>
-    <path id="_x30_2A_x5F_PRP_1_" d="M316.7 402H587l-.3 178H334l-17.3 14z" class="st1"/>
-    <path id="_x30_3A_x5F_PRP_1_" d="M311 686.5l5.7-86.7 32.5-17.4h365.3V594L678 691l-96.5-11v-40l14.3-55-51-.2-4.5 19.5-121.4 1-10.5 81.5z" class="st2"/>
-    <path id="_x31_3A_x5F_PRP_1_" d="M436.5 681.2l144.7-2.2v-10.3l-.5-.7v-75.7l4-5.2-33.2-.6-14.5 29.3-82.4-1.6z" class="st2"/>
-    <path id="_x33_3A_x5F_PRP_1_" d="M852.3 663.5l107.7-8.2-3.5-75.3-48 .8-66.3 52.4z" class="st2"/>
-    <path id="_x34_4A_x5F_PRP_1_" d="M910 665H1147v156.2l53.7 5.2 2 51.3 97.7 7.6 12 24.4-1.3 25.2-74.3 71.3-311-1z" class="st2"/>
-    <path id="_x37_1A_x5F_PRP_1_" d="M1308 860.5l1 41 89-.2 21.3-301L1408 152l-116 12 41.7 92.2-20.4 26.3 9.4 28 6.3 26.7 1 82 21.3 43-20 26.3-9.8 178.4 6 194z" class="st2"/>
-    <path id="_x37_6A_x5F_PRP_1_" d="M1331.8 989.8l68-.6-2.5 56.5h-70.6z" class="st2"/>
-    <path id="_x36_1A_x5F_PRP_1_" d="M1323.8 859.4l-22 .5-55.6 14.5L1203 852v-27.2l-44.7-21-3-148.2-166.6-10 3.3-62 124.7-6.6V392.5l33-82.5 13-93.8 137.7-24.2 30 59.8-25 35.4 22.4 58 .5 78.8 6.4 16.8-9.7 17-5.8 151.7v112l3 12.5z" class="st2"/>
-    <path id="_x34_0A_x5F_PRP_1_" d="M931.5 81.5v338l173.3-8 35.7-101 17-98.3 101-17.2-6-111z" class="st2"/>
-  </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1593.1 1123.2">
+        <style>
+          .st0{fill:none;stroke:#FF00BF;stroke-miterlimit:10;} .st1{fill:none;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;} .st2{fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+        </style>
+        <path d="M676.4 400v-2.5h-2.2l-.4 5h-10.3l-.3-5H661v2.5h-.8V399H645.4v1h-.8v-2.6h-2.2l-.4 5h-10.3l-.3-5h-2.2v3.4-.8h-.8V399h-14.6v1h-1v-2.6h-2l-.4 5h-10.6l-.5-5.2H597v2.6h-.8v-.7H581.8v1.7-.8h-.8v-2.7h-2.2l-.3 5H568l-.4-5h-2.2v2.6h-.8v-1H550V400h-.8v-2.7h-2.2l-.5 5h-9.8l-.5-5h-2.2v2.6h-.8v-1H518.6V400h-.8v-2.7h-2.2l-.5 5h-10.6l-.4-5h-2.2v2.6h-1.4v-1H486V400h-.8v-2.7H483l-.5 5H473l-.5-5h-2.2v2.6h-.8v-1h-13.2V400h-.8v.8-3.5h-2.2l-.5 5h-13.3l-.5-5h-2.2v2.6h-.8v-1H424.6V400h-.8v-2.7h-2.2l-.5 5h-10l-.4-5h-2.2v2.6h-.8v-1H393.2V400h-.8v.7-3.4h-2.2l-.5 5H379l-.4-5h-2.2v2.7h-.8V399H360.8v1h-.8v.8-3.5h-2.2l-.5 5h-10l-.6-5h-2.2v2.5h-.8v-.7H329.3v.8h-1v.8-3.5H326l-.5 5.2h-11.7v12.3l-5.4 1.2v2h2.8-1v.8h-.8v14.3H310.3v.8h-2.6v2.2l5.7.5v91.5l-5.8.5v2.2H319v1h-.8v.8h-.6V559h.4v1h.8v1h-11.3v2l5.7.6v90l-5.6.6v2.2h2.6v.8H309.5v14.3H310.4v.8h-2.6v2.2l5.8.5.5 12.4h11.5l.5 3.3h1.4v.8h.8v.5h12.6v-.5h1v-.8h1.3l.4-3.5H357l.3 3.5h1.4v.8h1v.5H372.2v-.5h.8v-.8h1.4l.3-3.5h13.7l.3 3.5h1.4v.8h1v.5h12.5v-.5h.8v-.8h1.4l.3-3.5h13.7l.3 3.5h1.4v.8h.8v.5h12.6v-.5h.8v-.8h1.3l.2-5h14l1 5h1.3v.8h1v.5H467v-.5h1v-.8h1.3l.3-3.5H484l.3 3.5h1.4v.8h.8v.5h12.7v-.5h.8v-.8h1.4l.3-3.5h14l.2 3.5h1.3v.8h.8v.5H531v-.5h.8v-.8h1.4l.3-3.5h14.3l.3 3.5h1.3v.8h.8v.5h12.2v-.5h1v-.8h1.2l.3-5h13l1 5h1.4v.8h1v.5H593.8v-.5h.8v-.8h1.4l.3-3.5h14.3l.3 3.5h1.4v.8h1v.5H625.8v-.5h.8v-.8h1.4l.3-3.5h14l.3 3.5h1.4v.8h.8v.5h.5-.3H657h-.3.5v-.5h.8v-.8h1.3l.3-3.5H675l.3 3.5h1.4v.8h.8v.5H690v-.5h1v-.8h1.4l.3-5H706l1 5h1.4v1h.8v.2H722v-.4h.7v-.8h1.4l.4-3.5h14.2l.3 3.5h1.3v.8h.8v.3h.6-.3 12.4-.3.5v-.4h.7v-.8h1.4l.4-3.5h14l.4 3.5h1.4v.8h.8v.3h12.7v-.4h.8v-.8h1.4l.3-3.5h14.2l.3 3.5h1.4v.8h.7v.3H817.3v-.4h.8v-.8h1.3l.3-5H833l1 5h1.4v.8h.8v.3H849v-.4h.7v-.8h1.4l.4-3.5H866l.3 3.5h1.4v.8h.8v.3h12.7v-.4h1v-.8h1.2l.3-3.5h14l.2 3.5h1.3v.8h1v.3H913v-.4h.7v-.8h1.3l.5-3.4h12v4.8h1.7v.8H928.3V707.8H929.2v.8h-2.6v2.2l5 .5v10l-5 .5v2.2h2.6v.7H928.3V738.7H929.2v1h-2.6v2l5 .6v10l-5 .5v2.3h2.6v.8H928.3V770.5h1.7-.8v.8h-2.6v2.2l5 .5v10.6l-5 .5v2.3h2.6v.8H928.3V802.5H929.2v1h-2.6v2l5 .6v10l-5 .6v2.2h2.6v.8H928.3V834H929.2v1h-2.6v2l5 .6v10l-5 .6v2.2h2.6v.8H928.3V865.6H929.2v.8h-2.6v2.2l5.2.5v10l-5.2.6v2.2h2.6v.8H928.3V897H929.2v1h-2.6v2.2l5 .5v10l-5 .5v2.2h2.6v.8H928.3V928.6H929.2v.8h-2.6v2.2l5 .5v11l-5 .4v2.2h2.6v1H928.3V961H929.2v.8h-2.5v2.2l5 .5v10l-5 .4v2h3.5-1v1h-.8v14.3H929.3v.8h-2.5v2.3l5 .5v11h9.5l.7 5h2v-2.5h.8V1010.2H959.2V1009.3h.8v-.8 3.3h2.3l.3-5h9.6l.3 5h2.2v-2.5h.8V1010.2H989.7v-1.7h.8v3.3h2.3l.3-5 9.5-.2.3 5h2.3v-2.4h.8v.7H1020.5v-1.6.8h1v2.7h2.2l.4-5.2h9.6l.3 5h2v-2.6h1v.7H1049.8v-.8h1v2.7h2l.4-5.2h13l.3 5h2.2v-2.6h.8v.7H1082.3v-.8h.8v-1 3.5h2.2v-5h10.4v5h2v-2.6h1v1H1113V1009h1.3v3h2.2v-5.2h10.3v5h2.2v-2.6h.8v.7H1144.2v-.8h.7v2.6h2l.4-5h9.6l.3 5h2.2v.2h-2.2v44.6h2v.4H1410.2v-2.6h-.7H1412.7V31.6h-2.5v-1.7h-208.6v-.4h-.8v.4h-22v-.4h-.7v.4h-22v-.4h-.8v.4h-28.5V78.6h2.2-2.3l-.2 5.2h-10l-.3-5.2h-2.2v2.6h-.8V80.5H1098.8V81.4h-1v-2.6h-2l-.6 5h-9.7l-.5-5h-2.2v2.6h-.8V80.5H1067.6V81.4h-.8v-2.6h-2.2l-.5 5h-9.5l-.3-5h-2.2v2.6h-.8V80.5H1036.8v1.7-.8h-.8v-2.6h-2.2l-.5 5h-9.2l-.4-5h-2.2v2.6h-.8V80.5H1006.2V81.4h-.8v.8-3.4h-2.2l-.3 5h-10l-.4-5h-2v2.6h-.8V80.5H975.2V81.4h-.8v-2.6h-2.2l-.2 5h-10l-.2-5h-2.2v2.6h-1V80.5h-14.3V81.4h-1v-2.6h-2l-.3 5h-10v11.7l-5 .5v1.4h2.7v.8H927.8V112.6H928.7v.8H926v2.2l5 .5v10l-5 .6v2.2h3.6-.6v.8H928V144h1v.8h-2.6v2.2l5 .5v10.8l-5 .5v2.2h2.6v.8H928V176.2h1v.8h-2.6v2.2l5 .5v10l-5 .5v2.2h3.5v.2h-1v1H928V208h1v.7h-2.6v2.2l5 .4v10l-5 .4v2.2h3-.4v.8h-1V239.2H929v.8h-2.7v2.2l5 .5v10.5l-5 .5v2.2h2.6v.8h-1V271.2H929v.8h-2.7v2.2l5 .5v9.8l-5 .5v2.2h2.6v.8h-1V302.4H929v.8h-2.7v2.2l5 .5v10.7l-5 .5v2.2h2.6v1h-1V334.8H929v.8h-2.7v2.2l5 .5v9.8l-5 .5v2.2h3.4-.8v.8h-1V365.8H929v1h-2.7v2l5 .6v9.8l-5 .5v2h3.5-.8v1H928V397.5h1v.6h-1.5l-.5 4.6h-9l-.5-5h-2.2v2.5h-1.1V399H899.8V399.7h-.8V397h-2.2l-.5 5.2H886l-.3-5h-2.2v2.5h-.8v-.7H868.2V400h-.8v.7-3.5h-2.2l-.3 5h-10.7l-.4-5h-2.3v2.7h-1.1v-1H836.2V400h-.8v-2.7h-2.2l-.3 5-10.8.2-.3-5h-2.3v2.5h-1V399H804.5v1h-1v.8-3.5h-2l-.4 5h-10.6l-.4-5H788v2.7h-.8V399h-14.5v1h-.8v-2.6h-2.3l-.3 5h-10.7l-.3-5h-2.2v2.6h-1V399H741v1h-1v-2.6h-2l-.4 5h-10.3l-.3-5h-2.2v2.6h-.8V399H709v1h-.8v-2.6h-2.2l-.3 5h-10.3l-.3-5h-2.3v3.3-.8h-1v-1H677V400h-.8z" class="st0"/>
+        <defs>
+          <path id="_x30_2A_x5F_EXS_1_" d="M310.5 394h274l-3.7 189.5-237.4 4.2-25 9.6z"/>
+        </defs>
+        <clipPath id="_x30_2A_x5F_EXS_2_">
+          <use xlink:href="#_x30_2A_x5F_EXS_1_" overflow="visible"/>
+        </clipPath>
+        <g clip-path="url(#_x30_2A_x5F_EXS_2_)">
+          <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
+        </g>
+        <defs>
+          <path id="_x30_3A_x5F_EXS_1_" d="M316 690.3l4-91 24.3-9.3 290.3-6 47.6 14.5.8 91.8H576V587.7l-106.5.5-10 12.4-35 2-4.7 89.7z"/>
+        </defs>
+        <clipPath id="_x30_3A_x5F_EXS_2_">
+          <use xlink:href="#_x30_3A_x5F_EXS_1_" overflow="visible"/>
+        </clipPath>
+        <g clip-path="url(#_x30_3A_x5F_EXS_2_)">
+          <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
+        </g>
+        <defs>
+          <path id="_x31_3A_x5F_EXS_1_" d="M422.3 692.3l4.7-83.6 47.8-8 5.5-10.4h74l7.3 98z"/>
+        </defs>
+        <clipPath id="_x31_3A_x5F_EXS_2_">
+          <use xlink:href="#_x31_3A_x5F_EXS_1_" overflow="visible"/>
+        </clipPath>
+        <g clip-path="url(#_x31_3A_x5F_EXS_2_)">
+          <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
+        </g>
+        <defs>
+          <path id="_x33_3A_x5F_EXS_1_" d="M849.3 683.7l137.6-10-2-19-12-10 4.8-55 99 5.4 6.2 8.6 2 70 18.3-1-3-85.6-39-40-142 16.5-70 83z"/>
+        </defs>
+        <clipPath id="_x33_3A_x5F_EXS_2_">
+          <use xlink:href="#_x33_3A_x5F_EXS_1_" overflow="visible"/>
+        </clipPath>
+        <g clip-path="url(#_x33_3A_x5F_EXS_2_)">
+          <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
+        </g>
+        <defs>
+          <path id="_x36_1A_x5F_EXS_1_" d="M989 659.6l-2-8.7-11.3-7.2 6-47.5 97 7.3-1.3 56.3 7.7 15h22.3l12.7-406 39-15 48-10 4-54 111.4-1.8 4.6 297.5-3 431.8-22-.5 1.4-77.3-105-1.8-60-23.2-19-124-28.6-13-8-2z"/>
+        </defs>
+        <clipPath id="_x36_1A_x5F_EXS_2_">
+          <use xlink:href="#_x36_1A_x5F_EXS_1_" overflow="visible"/>
+        </clipPath>
+        <g clip-path="url(#_x36_1A_x5F_EXS_2_)">
+          <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
+        </g>
+        <defs>
+          <path id="_x34_4A_x5F_EXS_1_" d="M1083.7 677.7l-10.8-2.3-33.6-.5-80.6 22.8L933.5 978l3 32H1107l193-19.8-2.5-144.2-104.7-1.7-65.3-15.2-15.7-132.7z"/>
+        </defs>
+        <clipPath id="_x34_4A_x5F_EXS_2_">
+          <use xlink:href="#_x34_4A_x5F_EXS_1_" overflow="visible"/>
+        </clipPath>
+        <g clip-path="url(#_x34_4A_x5F_EXS_2_)">
+          <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
+        </g>
+        <g>
+          <defs>
+            <path id="_x37_6A_x5F_EXS_1_" d="M1408.4 968.6H1368l-45.3 24.4v64.8h92.8v-74.5z"/>
+          </defs>
+          <clipPath id="_x37_6A_x5F_EXS_2_">
+            <use xlink:href="#_x37_6A_x5F_EXS_1_" overflow="visible"/>
+          </clipPath>
+          <g clip-path="url(#_x37_6A_x5F_EXS_2_)">
+            <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
+          </g>
+        </g>
+        <g>
+          <defs>
+            <path id="_x37_1A_x5F_EXS_1_" d="M1417.8 967.6h-79l-9.5-461.7 7.6-365.6 83.7 2z"/>
+          </defs>
+          <clipPath id="_x37_1A_x5F_EXS_2_">
+            <use xlink:href="#_x37_1A_x5F_EXS_1_" overflow="visible"/>
+          </clipPath>
+          <g clip-path="url(#_x37_1A_x5F_EXS_2_)">
+            <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
+          </g>
+        </g>
+        <g id="EXS40A">
+          <defs>
+            <path id="EXS40Apath" d="M907.5 422.5h67l132-21.5 2-136 96-30 2.6-48 90.4-4v-63l-53.2-34H930z"/>
+          </defs>
+          <clipPath id="EXS40Apath_1_">
+            <use xlink:href="#EXS40Apath" overflow="visible"/>
+          </clipPath>
+          <g clip-path="url(#EXS40Apath_1_)">
+            <image width="4619" height="4260" xlink:href="ExistingFloorplan.png" transform="matrix(.24 0 0 .24 306.46 34.35)" overflow="visible"/>
+          </g>
+        </g>
+        <path id="_x30_2A_x5F_PRP_1_" d="M316.7 402H587l-.3 178H334l-17.3 14z" class="st1"/>
+        <path id="_x30_3A_x5F_PRP_1_" d="M311 686.5l5.7-86.7 32.5-17.4h365.3V594L678 691l-96.5-11v-40l14.3-55-51-.2-4.5 19.5-121.4 1-10.5 81.5z" class="st2"/>
+        <path id="_x31_3A_x5F_PRP_1_" d="M436.5 681.2l144.7-2.2v-10.3l-.5-.7v-75.7l4-5.2-33.2-.6-14.5 29.3-82.4-1.6z" class="st2"/>
+        <path id="_x33_3A_x5F_PRP_1_" d="M852.3 663.5l107.7-8.2-3.5-75.3-48 .8-66.3 52.4z" class="st2"/>
+        <path id="_x34_4A_x5F_PRP_1_" d="M910 665H1147v156.2l53.7 5.2 2 51.3 97.7 7.6 12 24.4-1.3 25.2-74.3 71.3-311-1z" class="st2"/>
+        <path id="_x37_1A_x5F_PRP_1_" d="M1308 860.5l1 41 89-.2 21.3-301L1408 152l-116 12 41.7 92.2-20.4 26.3 9.4 28 6.3 26.7 1 82 21.3 43-20 26.3-9.8 178.4 6 194z" class="st2"/>
+        <path id="_x37_6A_x5F_PRP_1_" d="M1331.8 989.8l68-.6-2.5 56.5h-70.6z" class="st2"/>
+        <path id="_x36_1A_x5F_PRP_1_" d="M1323.8 859.4l-22 .5-55.6 14.5L1203 852v-27.2l-44.7-21-3-148.2-166.6-10 3.3-62 124.7-6.6V392.5l33-82.5 13-93.8 137.7-24.2 30 59.8-25 35.4 22.4 58 .5 78.8 6.4 16.8-9.7 17-5.8 151.7v112l3 12.5z" class="st2"/>
+        <path id="_x34_0A_x5F_PRP_1_" d="M931.5 81.5v338l173.3-8 35.7-101 17-98.3 101-17.2-6-111z" class="st2"/>
+      </svg>
 
 
 </body>
