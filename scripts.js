@@ -1,3 +1,9 @@
+// $(document).ready( 
+//     function(){
+//         alert("I'm in UR function");
+//     }
+// );
+
 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTjCiJgL1LRHFXkeMgK4q7hE8CYO7HQQj1uMhYT0JriKNeF7ZnhuI4Ho9u-Zha-_jv9lzCIlyJ_7QO5/pubhtml?gid=0&single=true';
 
 function slider(){
@@ -30,15 +36,19 @@ function showInfo(data, tabletop) {
 
 window.addEventListener('DOMContentLoaded', init);
 window.addEventListener('DOMContentLoaded', slider);
-window.onload = loadData;
 
-function loadData() {
-    xmlhttp=new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if(xmlhttp.readyState == 4 && xmlhttp.status==200){
-        document.getElementById("display").innerHTML = xmlhttp.responseText;
-      }
-    };
-    xmlhttp.open("GET",publicSpreadsheetUrl,true);
-    xmlhttp.send(null);
-  }
+
+// window.onload = loadData;
+
+// function loadData() {
+//     xmlhttp=new XMLHttpRequest();
+//     xmlhttp.onreadystatechange = function() {
+//       if(xmlhttp.readyState == 4 && xmlhttp.status==200){
+//         document.getElementById("display").innerHTML = xmlhttp.responseText;
+//       }
+//     };
+//     xmlhttp.open("GET",publicSpreadsheetUrl,true);
+//     xmlhttp.send(null);
+//   }
+
+  

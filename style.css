@@ -51,3 +51,24 @@ body {
     max-height: 100%;
     z-index: -1;
 }
+
+#emptyFloorplan {
+    z-index: -3;
+}
+
+#existingFloorplan {
+    z-index: -2;
+}
+
+#proposedFloorplan {
+    z-index: -1;
+}
+
+
+#clippaths {
+    left: 0px;
+    top: 0px;
+    position: absoloute;
+    max-width: 100%;
+    max-height: 100%;
+}
