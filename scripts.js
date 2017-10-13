@@ -30,4 +30,15 @@ function showInfo(data, tabletop) {
 
 window.addEventListener('DOMContentLoaded', init);
 window.addEventListener('DOMContentLoaded', slider);
+window.onload = loadData;
 
+function loadData() {
+    xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if(xmlhttp.readyState == 4 && xmlhttp.status==200){
+        document.getElementById("display").innerHTML = xmlhttp.responseText;
+      }
+    };
+    xmlhttp.open("GET",publicSpreadsheetUrl,true);
+    xmlhttp.send(null);
+  }
