@@ -4,7 +4,7 @@
 //     }
 // );
 
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTjCiJgL1LRHFXkeMgK4q7hE8CYO7HQQj1uMhYT0JriKNeF7ZnhuI4Ho9u-Zha-_jv9lzCIlyJ_7QO5/pubhtml';
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s/edit?usp=sharing';
 
 function slider(){
     var slider = document.getElementById("myRange");
@@ -13,12 +13,28 @@ function slider(){
 
     // Update the current slider value (each time you drag the slider handle)
     slider.oninput = function() {
-        output.innerHTML = this.value;
-    }
+        try{
+            var row = window.officeStates[this.value];
+            output.innerHTML = row.date;
 
-    var d = document.getElementById("EXS40A");
-    d.classList.toggle("hidden");
-    alert('Successfully processed the table!')
+            for (var k in row){
+                if (row.hasOwnProperty(k)) {
+                    
+                    try {
+                        var d = document.getElementById(k);
+                        // console.log("Key is " + k + ", value is " + row[k], d);
+                        d.style.opacity = row[k];
+                    } catch(e) {
+                        //  console.log(e);
+                    }
+                }
+            }
+        } catch(e) {
+            console.log("probably just wait for the spreadsheet to load", e);
+        }
+    } 
+
+    
 }
 
 
@@ -30,8 +46,9 @@ function init() {
 }
 
 function showInfo(data, tabletop) {
-    alert('Successfully processed the table!')
+    // alert('Successfully processed the table!')
     console.log(data);
+    window.officeStates = data;
 }
 
 window.addEventListener('DOMContentLoaded', init);
