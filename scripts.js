@@ -22,10 +22,10 @@ function slider(){
                     
                     try {
                         var d = document.getElementById(k);
-                        // console.log("Key is " + k + ", value is " + row[k], d);
+                        console.log("Key is " + k + ", value is " + row[k], d);
                         d.style.opacity = row[k];
                     } catch(e) {
-                        //  console.log(e);
+                        console.log("hmmmm", e);
                     }
                 }
             }
