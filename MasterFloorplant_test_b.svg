@@ -33,11 +33,12 @@
 		.st19{fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:3.203921e-02,2.135947e-02;}
 	.st20{font-size:2.9739px;}
 	.st21{opacity:0.49;fill:#E97E00;}
-	.st22{opacity:0.49;}
-	.st23{fill:#E97E00;}
-	.st24{display:inline;fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
-	.st25{font-family:'AIGDT';}
-	.st26{font-size:36px;}
+	.st22{opacity:0.49;fill:#FFFFFF;}
+	.st23{opacity:0.49;}
+	.st24{fill:#E97E00;}
+	.st25{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st26{font-family:'AIGDT';}
+	.st27{font-size:36px;}
 </style>
 <g id="Empty_Floorplan" class="st0">
 	
@@ -65423,7 +65424,7 @@
 </g>
 <g id="Future_Fitout" class="st0">
 	
-		<image style="display:inline;overflow:visible;" width="4596" height="3957" xlink:href="E2259CE0.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+		<image style="display:inline;overflow:visible;" width="4596" height="3957" xlink:href="E2259CE1.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 	</image>
 </g>
 <g id="clippaths">
@@ -65559,7 +65560,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x30_2A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACBB.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACBA.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65573,7 +65574,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x30_3A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACB5.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACB6.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65587,7 +65588,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x31_3A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACB7.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA9.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65600,7 +65601,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x33_3A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACAA.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACAE.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65614,7 +65615,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x34_4A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACAB.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACAC.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65628,7 +65629,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x37_1A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACAD.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA4.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65641,7 +65642,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x37_6A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACAF.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA5.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65656,7 +65657,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x36_1A_x5F_PRP_3_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA8.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA6.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65670,7 +65671,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x34_0A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACCE.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACCF.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65685,32 +65686,13 @@
 		</clipPath>
 		<g style="clip-path:url(#_x36_1A_x5F_PRP_4_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACCD.png"  transform="matrix(0.24 0 0 0.24 295.2863 121.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACCC.png"  transform="matrix(0.24 0 0 0.24 295.2863 121.5169)">
 			</image>
 		</g>
 	</g>
 </g>
 <g id="Zones">
-	<path class="st21" d="M1405.2,972.1h-79.8c-2.8,0-5.1,2.3-5.1,5.1v72.4c0,2.8,2.3,5.1,5.1,5.1h79.8c2.8,0,5.1-2.3,5.1-5.1v-72.4
-		C1410.3,974.4,1408,972.1,1405.2,972.1z"/>
-	<path class="st21" d="M1409.2,961.1v-805c0-2.8-2.3-5.1-5.1-5.1h-81.4c-2.8,0-5.1,2.3-5.1,5.1v805c0,2.8,2.3,5.1,5.1,5.1h81.4
-		C1407,966.2,1409.2,963.9,1409.2,961.1z"/>
-	<path class="st21" d="M1319.2,35.6v102.7c0,2.8,2.3,5.1,5.1,5.1h80.4c2.8,0,5.1-2.3,5.1-5.1V35.6c0-2.8-2.3-5.1-5.1-5.1h-80.4
-		C1321.5,30.5,1319.2,32.8,1319.2,35.6z"/>
-	<path class="st21" d="M1271.8,1008.4v44.1c0,2.8,2.3,5.1,5.1,5.1h29.7c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1h-29.7
-		C1274.1,1003.3,1271.8,1005.6,1271.8,1008.4z"/>
-	<path class="st21" d="M1197.7,189.6l119.8,0c3,0,5.5,2.3,5.5,5.1l-0.5,651.8c0,2.8-2.5,5.1-5.5,5.1l-117.2,0c-3,0-5.5-2.3-5.5-5.1
-		V674c0-2.8-2.5-5.1-5.5-5.1h-61.2c-3,0-5.5-2.3-5.5-5.1V237.2c0-2.8,2.5-5.1,5.5-5.1h59.1c3,0,5.5-2.3,5.5-5.1v-32.4
-		C1192.2,191.9,1194.7,189.6,1197.7,189.6z"/>
-	<g id="CON60A" class="st22">
-		<path class="st23" d="M1248.2,37.1v59.5c0,2.8,2.3,5.1,5.1,5.1h42.3c2.8,0,5.1-2.3,5.1-5.1V37.1c0-2.8-2.3-5.1-5.1-5.1h-42.3
-			C1250.5,32,1248.2,34.3,1248.2,37.1z"/>
-	</g>
-	<path class="st21" d="M948.6,684.5v309.4c0,2.8,2.3,5.1,5.1,5.1h117.8c2.8,0,5.1-2.3,5.1-5.1v-30.2c0-2.8,2.3-5.1,5.1-5.1h81.7
-		c2.8,0,5.1,2.3,5.1,5.1v25.2c0,2.8,2.3,5.1,5.1,5.1h94.1c2.8,0,5.1-2.3,5.1-5.1v-3.5c0-2.8,2.3-5.1,5.1-5.1h27.4
-		c2.8,0,5.1-2.3,5.1-5.1V856.7c0-2.8-2.3-5.1-5.1-5.1h-107.5c-2.8,0-5.1-2.3-5.1-5.1v-162c0-2.8-2.3-5.1-5.1-5.1h-234
-		C950.9,679.4,948.6,681.7,948.6,684.5z"/>
-	<g>
+	<g id="CON43A">
 		<path class="st21" d="M936.3,592.5V768c0,2.8,2.3,5.1,5.1,5.1h150.7c2.8,0,5.1-2.3,5.1-5.1V592.5c0-2.8-2.3-5.1-5.1-5.1H941.4
 			C938.5,587.4,936.3,589.7,936.3,592.5z"/>
 		<path class="st21" d="M1092.1,556.6h-74.7c-2.8,0-5.1,2.3-5.1,5.1v0.3c0,2.8,2.3,5.1,5.1,5.1h74.7c2.8,0,5.1-2.3,5.1-5.1v-0.3
@@ -65738,35 +65720,93 @@
 		<path class="st21" d="M1085,597.3v73.4c0,2.9,2.3,5.3,5.1,5.3h2.8c2.8,0,5.1-2.4,5.1-5.3v-73.4c0-2.9-2.3-5.3-5.1-5.3h-2.8
 			C1087.3,592,1085,594.3,1085,597.3z"/>
 	</g>
-	<path class="st21" d="M574.9,594.8v86.3c0,2.8,2.5,5.1,5.6,5.1h90.1c3.1,0,5.6-2.3,5.6-5.1v-86.3c0-2.8-2.5-5.1-5.6-5.1h-90.1
-		C577.4,589.7,574.9,592,574.9,594.8z"/>
-	<path class="st21" d="M569.8,589.7H437c-2.8,0-5.1,2.3-5.1,5.1v86.4c0,2.8,2.3,5.1,5.1,5.1h132.8c2.8,0,5.1-2.3,5.1-5.1v-86.4
-		C574.9,592,572.6,589.7,569.8,589.7z"/>
 	<g id="CON03A">
 		<path class="st21" d="M318.3,594.8v86.3c0,2.8,2.8,5.1,6.3,5.1h101c3.5,0,6.3-2.3,6.3-5.1v-86.3c0-2.8-2.8-5.1-6.3-5.1h-101
 			C321.1,589.7,318.3,592,318.3,594.8z"/>
 		<path class="st21" d="M562.7,572.2v16.6c0,0.5,3.5,1,7.9,1h125.7c4.3,0,7.9-0.4,7.9-1v-16.6c0-0.5-3.5-1-7.9-1H570.5
 			C566.2,571.2,562.7,571.6,562.7,572.2z"/>
 	</g>
-	<path class="st21" d="M318.3,414.5v169.3c0,3.2,2.2,5.9,4.8,5.9h233.5c2.7,0,4.8-2.6,4.8-5.9V414.4c0-3.2-2.2-5.9-4.8-5.9
-		c0,0-233.5,0.1-233.5,0.1C320.4,408.7,318.3,411.3,318.3,414.5z"/>
+	<g id="CON02A">
+		<path class="st21" d="M318.3,414.5v169.3c0,3.2,2.2,5.9,4.8,5.9h233.5c2.7,0,4.8-2.6,4.8-5.9V414.4c0-3.2-2.2-5.9-4.8-5.9
+			c0,0-233.5,0.1-233.5,0.1C320.4,408.7,318.3,411.3,318.3,414.5z"/>
+		<path class="st22" d="M335.2,712.7v44.1c0,2.8,2.3,5.1,5.1,5.1H370c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1h-29.7
+			C337.5,707.6,335.2,709.9,335.2,712.7z"/>
+	</g>
+	<g id="CON13A">
+		<path class="st21" d="M569.8,589.7H437c-2.8,0-5.1,2.3-5.1,5.1v86.4c0,2.8,2.3,5.1,5.1,5.1h132.8c2.8,0,5.1-2.3,5.1-5.1v-86.4
+			C574.9,592,572.6,589.7,569.8,589.7z"/>
+		<path class="st22" d="M392,712.7v44.1c0,2.8,2.3,5.1,5.1,5.1h29.7c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1h-29.7
+			C394.3,707.6,392,709.9,392,712.7z"/>
+	</g>
+	<g id="CON23A">
+		<path class="st21" d="M574.9,594.8v86.3c0,2.8,2.5,5.1,5.6,5.1h90.1c3.1,0,5.6-2.3,5.6-5.1v-86.3c0-2.8-2.5-5.1-5.6-5.1h-90.1
+			C577.4,589.7,574.9,592,574.9,594.8z"/>
+		<path class="st22" d="M451.9,712.7v44.1c0,2.8,2.3,5.1,5.1,5.1h29.7c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1H457
+			C454.1,707.6,451.9,709.9,451.9,712.7z"/>
+	</g>
+	<g id="CON44A">
+		<path class="st21" d="M948.6,684.5v309.4c0,2.8,2.3,5.1,5.1,5.1h117.8c2.8,0,5.1-2.3,5.1-5.1v-30.2c0-2.8,2.3-5.1,5.1-5.1h81.7
+			c2.8,0,5.1,2.3,5.1,5.1v25.2c0,2.8,2.3,5.1,5.1,5.1h94.1c2.8,0,5.1-2.3,5.1-5.1v-3.5c0-2.8,2.3-5.1,5.1-5.1h27.4
+			c2.8,0,5.1-2.3,5.1-5.1V856.7c0-2.8-2.3-5.1-5.1-5.1h-107.5c-2.8,0-5.1-2.3-5.1-5.1v-162c0-2.8-2.3-5.1-5.1-5.1h-234
+			C950.9,679.4,948.6,681.7,948.6,684.5z"/>
+		<path class="st22" d="M535,712.7v44.1c0,2.8,2.3,5.1,5.1,5.1h29.7c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1h-29.7
+			C537.3,707.6,535,709.9,535,712.7z"/>
+	</g>
+	<g id="CON61A">
+		<path class="st21" d="M1197.7,189.6l119.8,0c3,0,5.5,2.3,5.5,5.1l-0.5,651.8c0,2.8-2.5,5.1-5.5,5.1l-117.2,0c-3,0-5.5-2.3-5.5-5.1
+			V674c0-2.8-2.5-5.1-5.5-5.1h-61.2c-3,0-5.5-2.3-5.5-5.1V237.2c0-2.8,2.5-5.1,5.5-5.1h59.1c3,0,5.5-2.3,5.5-5.1v-32.4
+			C1192.2,191.9,1194.7,189.6,1197.7,189.6z"/>
+		<path class="st22" d="M613.4,712.7v44.1c0,2.8,2.3,5.1,5.1,5.1h29.7c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1h-29.7
+			C615.7,707.6,613.4,709.9,613.4,712.7z"/>
+	</g>
+	<g id="CON66A">
+		<path class="st21" d="M1271.8,1008.4v44.1c0,2.8,2.3,5.1,5.1,5.1h29.7c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1h-29.7
+			C1274.1,1003.3,1271.8,1005.6,1271.8,1008.4z"/>
+		<path class="st22" d="M700.2,717.7v44.1c0,2.8,2.3,5.1,5.1,5.1H735c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1h-29.7
+			C702.5,712.6,700.2,714.9,700.2,717.7z"/>
+	</g>
+	<g id="CON76A">
+		<path class="st21" d="M1405.2,972.1h-79.8c-2.8,0-5.1,2.3-5.1,5.1v72.4c0,2.8,2.3,5.1,5.1,5.1h79.8c2.8,0,5.1-2.3,5.1-5.1v-72.4
+			C1410.3,974.4,1408,972.1,1405.2,972.1z"/>
+		<path class="st22" d="M775,717.7v44.1c0,2.8,2.3,5.1,5.1,5.1h29.7c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1h-29.7
+			C777.3,712.6,775,714.9,775,717.7z"/>
+	</g>
+	<g id="CON71A">
+		<path class="st21" d="M1409.2,961.1v-805c0-2.8-2.3-5.1-5.1-5.1h-81.4c-2.8,0-5.1,2.3-5.1,5.1v805c0,2.8,2.3,5.1,5.1,5.1h81.4
+			C1407,966.2,1409.2,963.9,1409.2,961.1z"/>
+		<path class="st22" d="M847.1,712.7v44.1c0,2.8,2.3,5.1,5.1,5.1h29.7c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1h-29.7
+			C849.4,707.6,847.1,709.9,847.1,712.7z"/>
+	</g>
+	<g id="CON60A_1_">
+		<g id="CON60A" class="st23">
+			<path class="st24" d="M1248.2,37.1v59.5c0,2.8,2.3,5.1,5.1,5.1h42.3c2.8,0,5.1-2.3,5.1-5.1V37.1c0-2.8-2.3-5.1-5.1-5.1h-42.3
+				C1250.5,32,1248.2,34.3,1248.2,37.1z"/>
+		</g>
+		<path class="st22" d="M327,786.5v44.1c0,2.8,2.3,5.1,5.1,5.1h29.7c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1h-29.7
+			C329.3,781.4,327,783.7,327,786.5z"/>
+	</g>
+	<g id="CON70A">
+		<path class="st21" d="M1319.2,35.6v102.7c0,2.8,2.3,5.1,5.1,5.1h80.4c2.8,0,5.1-2.3,5.1-5.1V35.6c0-2.8-2.3-5.1-5.1-5.1h-80.4
+			C1321.5,30.5,1319.2,32.8,1319.2,35.6z"/>
+		<path class="st22" d="M392,786.5v44.1c0,2.8,2.3,5.1,5.1,5.1h29.7c2.8,0,5.1-2.3,5.1-5.1v-44.1c0-2.8-2.3-5.1-5.1-5.1h-29.7
+			C394.3,781.4,392,783.7,392,786.5z"/>
+	</g>
 </g>
-<g id="Zone_Names" class="st0">
-	<text transform="matrix(1 0 0 1 344.5046 477.7008)" class="st24 st25 st26">02A</text>
-	<text transform="matrix(1 0 0 1 339.9745 645.6172)" class="st24 st25 st26">03A</text>
-	<text transform="matrix(1 0 0 1 470.33 644.7911)" class="st24 st25 st26">13A</text>
-	<text transform="matrix(1 0 0 1 596.1613 644.7911)" class="st24 st25 st26">23A</text>
-	<text transform="matrix(1 0 0 1 722.1375 644.7911)" class="st24 st25 st26">33A</text>
-	<text transform="matrix(1 0 0 1 1035.9702 503.2034)" class="st24 st25 st26">52A</text>
-	<text transform="matrix(1 0 0 1 961.1108 183.3912)" class="st24 st25 st26">40A</text>
-	<text transform="matrix(1 0 0 1 1204.3884 335.0197)" class="st24 st25 st26">61A</text>
-	<text transform="matrix(1 0 0 1 976.17 644.791)" class="st24 st25 st26">43A</text>
-	<text transform="matrix(1 0 0 1 964.036 815.9796)" class="st24 st25 st26">44A</text>
-	<text transform="matrix(1 0 0 1 1221 71.5677)" class="st24 st25 st26">60A</text>
-	<text transform="matrix(1 0 0 1 1327.9628 104.2339)" class="st24 st25 st26">70A</text>
-	<text transform="matrix(1 0 0 1 1325.9484 336.0103)" class="st24 st25 st26">71A</text>
-	<text transform="matrix(1 0 0 1 1224.0219 1039)" class="st24 st25 st26">66A</text>
-	<text transform="matrix(1 0 0 1 1326.0737 1025.465)" class="st24 st25 st26">76A</text>
+<g id="Zone_Names">
+	<text transform="matrix(1 0 0 1 344.5046 477.7008)" class="st25 st26 st27">02A</text>
+	<text transform="matrix(1 0 0 1 339.9745 645.6172)" class="st25 st26 st27">03A</text>
+	<text transform="matrix(1 0 0 1 470.33 644.7911)" class="st25 st26 st27">13A</text>
+	<text transform="matrix(1 0 0 1 596.1613 644.7911)" class="st25 st26 st27">23A</text>
+	<text transform="matrix(1 0 0 1 722.1375 644.7911)" class="st25 st26 st27">33A</text>
+	<text transform="matrix(1 0 0 1 961.1108 183.3912)" class="st25 st26 st27">40A</text>
+	<text transform="matrix(1 0 0 1 1204.3884 335.0197)" class="st25 st26 st27">61A</text>
+	<text transform="matrix(1 0 0 1 976.17 644.791)" class="st25 st26 st27">43A</text>
+	<text transform="matrix(1 0 0 1 964.036 815.9796)" class="st25 st26 st27">44A</text>
+	<text transform="matrix(1 0 0 1 1221 71.5677)" class="st25 st26 st27">60A</text>
+	<text transform="matrix(1 0 0 1 1327.9628 104.2339)" class="st25 st26 st27">70A</text>
+	<text transform="matrix(1 0 0 1 1325.9484 336.0103)" class="st25 st26 st27">71A</text>
+	<text transform="matrix(1 0 0 1 1224.0219 1039)" class="st25 st26 st27">66A</text>
+	<text transform="matrix(1 0 0 1 1326.0737 1025.465)" class="st25 st26 st27">76A</text>
 </g>
 <g id="Barriers" class="st0">
 	
