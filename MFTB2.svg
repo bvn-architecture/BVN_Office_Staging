@@ -36,7 +36,7 @@
 	.st22{opacity:0.49;fill:#FFFFFF;}
 	.st23{opacity:0.49;}
 	.st24{fill:#E97E00;}
-	.st25{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st25{display:inline;fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
 	.st26{font-family:'AIGDT';}
 	.st27{font-size:36px;}
 </style>
@@ -65424,7 +65424,7 @@
 </g>
 <g id="Future_Fitout" class="st0">
 	
-		<image style="display:inline;overflow:visible;" width="4596" height="3957" xlink:href="E2259CE1.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+		<image style="display:inline;overflow:visible;" width="4596" height="3957" xlink:href="E2259CE6.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 	</image>
 </g>
 <g id="clippaths">
@@ -65560,7 +65560,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x30_2A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACBA.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACB9.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65574,7 +65574,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x30_3A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACB6.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA0.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65588,7 +65588,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x31_3A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA9.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA1.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65601,7 +65601,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x33_3A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACAE.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA2.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65615,7 +65615,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x34_4A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACAC.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA3.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65629,7 +65629,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x37_1A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA4.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA7.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65642,22 +65642,22 @@
 		</clipPath>
 		<g style="clip-path:url(#_x37_6A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA5.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FAC9D.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
-	<g id="PRP76A_1_">
+	<g id="PRP61A">
 		<defs>
 			<polygon id="_x36_1A_x5F_PRP_1_" points="1323.8,859.4 1301.9,859.9 1246.2,874.5 1203,852 1203,824.8 1158.3,803.7 
 				1155.4,655.6 988.7,645.5 992,583.5 1116.7,577 1116.7,392.5 1149.8,310 1162.8,216.2 1300.4,192 1330.3,251.8 1305.4,287.2 
 				1327.8,345.2 1328.3,424 1334.7,440.8 1325,457.7 1319.2,609.5 1319.3,721.5 1322.3,734 			"/>
 		</defs>
-		<clipPath id="_x36_1A_x5F_PRP_3_">
+		<clipPath id="_x36_1A_x5F_PRP_2_">
 			<use xlink:href="#_x36_1A_x5F_PRP_1_"  style="overflow:visible;"/>
 		</clipPath>
-		<g style="clip-path:url(#_x36_1A_x5F_PRP_3_);">
+		<g style="clip-path:url(#_x36_1A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACA6.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FAC9E.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65671,22 +65671,7 @@
 		</clipPath>
 		<g style="clip-path:url(#_x34_0A_x5F_PRP_2_);">
 			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACCF.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
-			</image>
-		</g>
-	</g>
-	<g id="PRP61A">
-		<defs>
-			<polygon id="_x36_1A_x5F_PRP_2_" points="1312.8,893.4 1290.9,893.9 1235.2,908.5 1192,886 1192,858.8 1147.3,837.7 
-				1144.4,689.6 977.7,679.5 981,617.5 1105.7,611 1105.7,426.5 1138.8,344 1151.8,250.2 1289.4,226 1319.3,285.8 1294.4,321.2 
-				1316.8,379.2 1317.3,458 1323.7,474.8 1314,491.7 1308.2,643.5 1308.3,755.5 1311.3,768 			"/>
-		</defs>
-		<clipPath id="_x36_1A_x5F_PRP_4_">
-			<use xlink:href="#_x36_1A_x5F_PRP_2_"  style="overflow:visible;"/>
-		</clipPath>
-		<g style="clip-path:url(#_x36_1A_x5F_PRP_4_);">
-			
-				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACCC.png"  transform="matrix(0.24 0 0 0.24 295.2863 121.5169)">
+				<image style="overflow:visible;" width="4596" height="3957" xlink:href="AF6FACC2.png"  transform="matrix(0.24 0 0 0.24 306.2863 87.5169)">
 			</image>
 		</g>
 	</g>
@@ -65792,7 +65777,7 @@
 			C394.3,781.4,392,783.7,392,786.5z"/>
 	</g>
 </g>
-<g id="Zone_Names">
+<g id="Zone_Names" class="st0">
 	<text transform="matrix(1 0 0 1 344.5046 477.7008)" class="st25 st26 st27">02A</text>
 	<text transform="matrix(1 0 0 1 339.9745 645.6172)" class="st25 st26 st27">03A</text>
 	<text transform="matrix(1 0 0 1 470.33 644.7911)" class="st25 st26 st27">13A</text>
