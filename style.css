@@ -1,7 +1,9 @@
 body {
-    width: 100%;
+    position: absolute;
+    width: 60%;
+    right: 20%;
+    left: 20%;
 }
-
 
 svg * {
     transition: opacity 1s;
@@ -40,7 +42,7 @@ svg * {
     width: 25px;
     height: 25px;
     border-radius: 50%; 
-    background: #4CAF50;
+    background: #E97E00;
     cursor: pointer;
 }
 
