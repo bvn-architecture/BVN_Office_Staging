@@ -61,7 +61,7 @@ The naming convention of the states may not be intuitive, but there is logic to 
 
 It works like a coordinate system, with the first number representing the **x** value, and the second the **y** value. The A represents how it's first in that block - there used to be Bs and Cs but now there are only As.
 
-![Missing Image](MasterFloorplan_Example.png)
+![Missing Image](doc_images/MasterFloorplan_Example.png)
 
 The three terms - EXS, CON, & PRP - are short for existing, construction, and proposed floorplans. The construction phase is when there's an orange shape on top of it, and the existing and proposed floorplans are the different floorplans that are respectively before and after the works are completed in each area. 
 
