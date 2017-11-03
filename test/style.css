@@ -1,0 +1,76 @@
+a {
+    font-size: 13px;
+    color: #404040;
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+}
+    
+a:last-child {
+    border: none;
+}
+    
+a:hover {
+    background-color: #f8f8f8;
+    color: #404040;
+}
+    
+a.active {
+    background-color: #3887be;
+    color: #ffffff;
+}
+    
+a.active:hover {
+    background: #3074a4;
+}
+
+input {
+    position: absolute;
+    z-index: 10;
+    float: right;
+}
+
+#buttonLeisure {
+    top: 50px;
+}
+
+#buttonHubs {
+    top: 95px;
+}
+
+@font-face {
+    font-family: 'TitilliumReg';
+    src: url(TitilliumWeb-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'TitilliumBold';
+    src: url(TitilliumWeb-Bold.ttf) format("truetype");
+}
+
+#mydiv {
+	font-family: 'TitilliumReg', Arial;
+    position: absolute;
+    z-index: 9;
+    background-color: rgba(70, 70, 70, 0.7);
+    border: 2px solid #FFFFFF;
+    text-align: center;
+    color: #FFF;
+}
+
+#mydivheader {
+	font-family: 'TitilliumBold';
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #545454;
+    color: #FFFFFF;
+}
+
+bl {
+	opacity: 0;
+}
