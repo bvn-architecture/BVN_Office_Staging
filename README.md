@@ -34,9 +34,11 @@ The way that the website works is that there are three base images that are mani
 
 There are also the orange zones and the clipping planes (i.e. where the above images are split up) included in the *MasterFloorplan.ai* Illustrator file. If you'd like to edit one of the base images, just open it up in photoshop, and as long as the size of the image remains the same your edits should work like you'd expect them to.
 
-If you make any edits to the data inside the illustrator file for the website, you'll need to **File > Save As** the image as an SVG file. Make sure the settings are the same as these:
+If you make any edits to the data inside the illustrator file for the website, firstly make sure that the **Zones**, **clippaths**, & **Background** layers are visible. After that, you'll need to **File > Save As** the image as an SVG file. Make sure the settings are the same as these:
 
 ![put image here](SVGsettings.png)
+
+And then save!
 
 To actually push these changes to the website, you'll need to [collate the data](#collateData)
 
@@ -80,29 +82,27 @@ If you'd like to allow for any more layers to be visible, it will involve a quic
 
 1. In the windows start search, search for IDLE, and click on the link that presents itself.
 
-![PUT THIS IMAGE IN](windowsstartsearchforIDLE.png)
+![Missing Image](IDLEsearch.png)
 
 2. Select **File > Open**
 
 3. Find *Prepare_SVG.py* in the dialog window that appears, opening the file up.
 
-![PUT THIS IMAGE IN](selectingtheprepare_SVGpyfile.png)
+![Missing Image](Select_PrepSVG.png)
 
 4. The code should present itself.
 
-![PUT THIS IMAGE IN](imageofcode.png)
+![Missing Image](CodeOpen.png)
 
 5. Every so often you should see a line that starts on the very right that begins with an orange *"def"*. Scroll down until you see the line that says *"def runSVGPrep():"*.
 
-![PUT THIS IMAGE IN](imageofdefrunSVGPreplineofcode.png)
+![Missing Image](runSVGPrep_code.png)
 
 6. Just 6 lines below it, you should see a line that says something like *"newSVG = extractCode(inFile, ["clippaths", "Zones", "Background"])"*. This is the part that we're going to edit, specifically the part that says *"["clippaths", "Zones", "Background"]"*.
 
-![PUT THIS IMAGE IN](imageoflisteditlineofcode.png)
-
 7. To add an item to a list in Python (what we're editing is a list), just add a comma after the last item, and put the item in after it. Since the layer that we need to add is a word, we need to put speech marks ("") around it. The line should now look something like this (except with the name of your layer - remember that the case is important! keep it exactly the same as what it's named in illustrator):
 
-![PUT THIS IMAGE IN](imageofeditedlineofcode.png)
+![Missing Image](editedCode.png)
 
 8. Now that we've finished the editing, just **File > Save** it. When you next use the *Prepare_SVG.py* file, the new layer should be included!
 
