@@ -9,23 +9,27 @@ var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1Np-BOM5_Jr6B
 function slider(){
     var slider = document.getElementById("myRange");
     var output = document.getElementById("demo");
-    output.innerHTML = slider.value; // Display the default slider value
+    // output.innerHTML = slider.value; // Display the default slider value
 
     // Update the current slider value (each time you drag the slider handle)
     slider.oninput = function() {
         try{
             var row = window.officeStates[this.value];
-            output.innerHTML = row.date;
+            output.innerHTML = new Date(row.date); //TODO: format this date with moment.js or something
 
             for (var k in row){
-                if (row.hasOwnProperty(k)) {
+                if (k=="notes"){
+                  var notes = document.getElementById("notes");
+                  notes.innerText = row[k];
+                }
+                else if (row.hasOwnProperty(k)) {
                     
                     try {
                         var d = document.getElementById(k);
                         /*console.log("Key is " + k + ", value is " + row[k], d);*/
                         d.style.opacity = row[k];
                     } catch(e) {
-                        /*console.log("hmmmm", e);*/
+                        console.log("hmmmm", e);
                     }
                 }
             }
