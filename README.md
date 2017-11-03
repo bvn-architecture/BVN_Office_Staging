@@ -44,28 +44,31 @@ If you'd like to allow for any more layers to be visible, it will involve a quic
 
 1. In the windows start search, search for IDLE, and click on the link that presents itself.
 
-![PUT THIS IMAGE IN](windows start search for IDLE.png)
+![PUT THIS IMAGE IN](windowsstartsearchforIDLE.png)
 
 2. Select **File > Open**
 
 3. Find *Prepare_SVG.py* in the dialog window that appears, opening the file up.
 
-![PUT THIS IMAGE IN](selecting the prepare_SVG.py file.png)
+![PUT THIS IMAGE IN](selectingtheprepare_SVGpyfile.png)
 
 4. The code should present itself.
 
-![PUT THIS IMAGE IN](image of code.png)
+![PUT THIS IMAGE IN](imageofcode.png)
 
 5. Every so often you should see a line that starts on the very right that begins with an orange *"def"*. Scroll down until you see the line that says *"def runSVGPrep():"*.
 
-![PUT THIS IMAGE IN](image of def runSVGPrep(): line of code.png)
+![PUT THIS IMAGE IN](imageofdefrunSVGPreplineofcode.png)
 
 6. Just 6 lines below it, you should see a line that says something like *"newSVG = extractCode(inFile, ["clippaths", "Zones", "Background"])"*. This is the part that we're going to edit, specifically the part that says *"["clippaths", "Zones", "Background"]"*.
 
+![PUT THIS IMAGE IN](imageoflisteditlineofcode.png)
 
+7. To add an item to a list in Python (what we're editing is a list), just add a comma after the last item, and put the item in after it. Since the layer that we need to add is a word, we need to put speech marks ("") around it. The line should now look something like this (except with the name of your layer - remember that the case is important! keep it exactly the same as what it's named in illustrator):
 
+![PUT THIS IMAGE IN](imageofeditedlineofcode.png)
 
-
+8. Now that we've finished the editing, just **File > Save** it. When you next use the *Prepare_SVG.py* file, the new layer should be included!
 
 
 
