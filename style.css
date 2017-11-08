@@ -18,6 +18,10 @@ svg * {
     bottom: 0;
 }
 
+#notes {
+    
+}
+
 /* The slider itself */
 .slider {
     -webkit-appearance: none;
