@@ -108,13 +108,111 @@ If you'd like to allow for any more layers to be visible, it will involve a quic
 8. Now that we've finished the editing, just **File > Save** it. When you next use the *Prepare_SVG.py* file, the new layer should be included!
 
 
-### <a name="SetUp">New Website Setup</a>
+## <a name="SetUp">New Website Setup</a>
 
-Creating a new website for a different floorplan entirely is quite an involved process, especially dependant on what source information you have. This guide will assume that you have a timeline of different stages, a render of the floorplan before, and a render of the floorplan afterwards.
+Creating a new website for a different floorplan entirely is quite an involved process, especially depending on what source information you have. This guide will assume that you have a timeline of different stages, a render of the floorplan before, and a render of the floorplan afterwards.
 
 *Note: This method isn't limited to just 2 states (in fact, it usually uses 3). You can use as many different states as you want (e.g. beginning, stage 1, stage 2, stage 3, etc., end, ...)*
 
-#### Empty floorplan creation
+
+### Base image creation
+
+1. Inspect all of your stage images (typically just before and after), noting which parts of the images are common between the states. For example, in the following two floorplans (existing and proposed):
+
+![Missing Image](doc_images/ExistingWithBackground.png)
+
+![Missing Image](doc_images/ProposedWithBackground.png)
+
+   The following is common to both:
+
+![Missing Image](doc_images/Background.png)
+
+2. Using a copy of one of the original images, photoshop out the part that isn't common to get the background image:
+
+![Missing Image](doc_images/Background.png)
+
+3. Then, photoshop this common section out of the original two images (to be left with only the uncommon parts):
+
+   *Note: Ensure that these are saved as png files with transparent backgrounds for the best results.*
+
+![Missing Image](doc_images/ExistingWithoutBackground.png)
+
+![Missing Image](doc_images/ProposedWithoutBackground.png)
+
+4. You should now have all of your base images.
+
+
+### Illustrator Setup
+
+1. Open up an illustrator document with appropriate sizing (should fit your images well - this file is the one that's going to be used for creating the SVG files.
+
+2. Import the images using **File > Place**. Their names should be "<Linked File>" in the layers panel - do not embed them.
+
+   *Note: Although not necessary, it's a good idea to put them all in a layer called "Source Images" or something similar."*
+
+![Missing Image](doc_images/LinkedFiles.png)
+
+3. Ensure that they're all placed exactly in the right position relative to each other (right on top of each other):
+
+![Missing Image](doc_images/FloorplanOverlay.png)
+
+
+### Defining Sections
+
+1. 
+
+99999. ye idk how ta do dis ;((((( triki stuf munnnn
+
+
+Get to the stage of having drawn out clipping mask lines
+
+
+### Creating clipped images
+
+1. Depending on how many different sections you have, create that many copies of each image (except the background image as it won't be clipped). Use **Ctrl + Shift + V** to paste in the same place as the original.
+
+![Missing Image](doc_images/CopiedLinkedImages.png)
+
+2. 
+
+![]()
+
+### Creating overlay images
+
+1. 
+
+
+### Merging the 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
