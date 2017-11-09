@@ -161,9 +161,6 @@ Creating a new website for a different floorplan entirely is quite an involved p
 
 1. 
 
-99999. ye idk how ta do dis ;((((( triki stuf munnnn
-
-
 Get to the stage of having drawn out clipping mask lines
 
 
