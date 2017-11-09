@@ -15,7 +15,10 @@ function slider(){
     slider.oninput = function() {
         try{
             var row = window.officeStates[this.value];
-            output.innerHTML = new Date(row.date); //TODO: format this date with moment.js or something
+
+            // Display date under slider
+            var Day = new Date(row.date);
+            output.innerHTML = moment(Day).format('MMMM Do YYYY');
 
             for (var k in row){
                 if (k=="notes"){
