@@ -159,7 +159,41 @@ Creating a new website for a different floorplan entirely is quite an involved p
 
 ### Defining Sections
 
-1. 
+This section is largely dependant on what type of information you're sourcing from. In some way, you'll need to split the existing and proposed floorplans into groups of elements that all appear and disappear at the same time. The information that I had while building the original BVN floorplan website was a collection of 22 pdf renders of different stages of the building's works, each having some variation of different groups of elements:
+
+![Missing Image](doc_images/OriginalStageRenders.png)
+
+The following steps will assume you have similar information:
+
+1. Select all of the pdf files in file explorer, right clicking and selecting "Combine files in Acrobat..."
+
+   *Note: This is just to make viewing easier while scrolling through the files quickly.*
+
+![Missing Image](doc_images/CombineFilesAcrobat.png)
+
+2. At the same time, open up one of these files in photoshop/paint/etc. (I like to use snipping tool) - any image editor that can draw lines.
+
+3. Scroll through the set of images in acrobat, and draw a line between anything that changes and what didn't change every time part of the image changes. For example, in the following two images:
+
+![Missing Image](doc_images/Floorplan2D.png)
+
+![Missing Image](doc_images/Floorplan2E.png)
+
+   A line would be drawn here:
+
+![Missing Image](doc_images/ChangeLines2D2E.png)
+
+   The end result after looking through all the files should look something like this:
+
+![Missing Image](doc_images/ChangeLines.png)
+
+4. This will give you a vague idea of where the different groupings of elements are. Now, we'll have to go through the list of images again and look out specifically for each block to see where its exact barriers are.
+
+   *Note: This becomes difficult as the barriers of the existing elements don't line up with the barriers of the proposed elements. You'll need to look out for both existing and proposed states of each section.*
+
+5. After understanding where the barriers are and how the existing and proposed groupings differ, draw polylines around each group in the illustrator document from before (in a new 'paths' layer, ideally with sub-layers for existing and proposed).
+
+# Continue this.
 
 Get to the stage of having drawn out clipping mask lines
 
@@ -172,7 +206,7 @@ Get to the stage of having drawn out clipping mask lines
 
 2. 
 
-![]()
+
 
 ### Creating overlay images
 
@@ -186,7 +220,7 @@ Get to the stage of having drawn out clipping mask lines
 
 
 
-
+![Missing Image](doc_images/.png)
 
 
 
