@@ -12,6 +12,7 @@ After this, there will also be a section on more advanced uses.
 
 ## Standard Workflow
 
+This will go through the standard editing workflow for a previously set up website. [See here](#SetUp) for a quick guide on how to set up a new website.
 
 ### Editing the times
 
@@ -107,7 +108,7 @@ If you'd like to allow for any more layers to be visible, it will involve a quic
 8. Now that we've finished the editing, just **File > Save** it. When you next use the *Prepare_SVG.py* file, the new layer should be included!
 
 
-
+### <a name="SetUp">New Website Setup</a>
 
 
 
