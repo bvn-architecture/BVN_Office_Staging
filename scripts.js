@@ -2,7 +2,7 @@ var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1Np-BOM5_Jr6B
 
 function slider(){
     var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
+    var output = document.getElementById("date");
     // output.innerHTML = slider.value; // Display the default slider value
 
     // Update the current slider value (each time you drag the slider handle)
