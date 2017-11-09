@@ -110,9 +110,11 @@ If you'd like to allow for any more layers to be visible, it will involve a quic
 
 ### <a name="SetUp">New Website Setup</a>
 
+Creating a new website for a different floorplan entirely is quite an involved process, especially dependant on what source information you have. This guide will assume that you have a timeline of different stages, a render of the floorplan before, and a render of the floorplan afterwards.
 
+*Note: This method isn't limited to just 2 states (in fact, it usually uses 3). You can use as many different states as you want (e.g. beginning, stage 1, stage 2, stage 3, etc., end, ...)*
 
-
+#### Empty floorplan creation
 
 
 
