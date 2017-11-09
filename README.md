@@ -187,11 +187,21 @@ The following steps will assume you have similar information:
 
 ![Missing Image](doc_images/ChangeLines.png)
 
-4. This will give you a vague idea of where the different groupings of elements are. Now, we'll have to go through the list of images again and look out specifically for each block to see where its exact barriers are.
+4. This will give you a vague idea of where the different groupings of elements are. Now, we'll have to go through the list of images again and look out specifically for each block to see where its exact barriers are. This becomes difficult as the barriers of the existing elements don't line up with the barriers of the proposed elements. You'll need to look out for both existing and proposed states of each section. For example, in these two paths of the same section:
 
-   *Note: This becomes difficult as the barriers of the existing elements don't line up with the barriers of the proposed elements. You'll need to look out for both existing and proposed states of each section.*
+![Missing Image](doc_images/ExistingPath44A.png)
+
+![Missing Image](doc_images/ProposedPath44A.png)
+
+   The proposed and the existing paths are necessarily different while still covering a similar area.
+   
+![Missing Image](doc_images/Paths44A.png)
 
 5. After understanding where the barriers are and how the existing and proposed groupings differ, draw polylines around each group in the illustrator document from before (in a new 'paths' layer, ideally with sub-layers for existing and proposed).
+
+![Missing Image](doc_images/SplittingPaths.png)
+
+6. 
 
 # Continue this.
 
