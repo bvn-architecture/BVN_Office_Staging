@@ -201,22 +201,24 @@ The following steps will assume you have similar information:
 
 ![Missing Image](doc_images/SplittingPaths.png)
 
-6. 
-
-# Continue this.
-
-Get to the stage of having drawn out clipping mask lines
-
 
 ### Creating clipped images
 
-1. Depending on how many different sections you have, create that many copies of each image (except the background image as it won't be clipped). Use **Ctrl + Shift + V** to paste in the same place as the original.
+1. Depending on how many different clipping paths you have per state, create that many copies of each image (except the background image as it won't be clipped). Use **Ctrl + Shift + V** to paste in the same place as the original.
 
 ![Missing Image](doc_images/CopiedLinkedImages.png)
 
-2. 
+2. Ensure that the paths are above the source images:
 
+![Missing Image](doc_images/PathAbove.png)
 
+3. To create a clipping mask, first select the source image, then select the appropriate path. Then select **Object > Clipping Mask > Make**, or press **Ctrl + 7** for a shortcut. This will delete both of the original objects, a <Clip Group> object appearing in their place.
+
+4. After having repeated this process for all of the path + file combinations, all of your clip groups should be finished. Rename the clip groups appropriately. You should end up with something like this:
+
+*Note: Avoid having any symbols (even underscores and dashes), spaces or numbers in your names. When exporting to SVG illustrator will substitute these for obscure character combinations due to how their code works.*
+
+# Put image here and continue here
 
 ### Creating overlay images
 
