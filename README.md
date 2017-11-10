@@ -146,7 +146,7 @@ Creating a new website for a different floorplan entirely is quite an involved p
 
 1. Open up an illustrator document with appropriate sizing (should fit your images well - this file is the one that's going to be used for creating the SVG files.
 
-2. Import the images using **File > Place**. Their names should be "<Linked File>" in the layers panel - do not embed them.
+2. Import the images using **File > Place**. Their names should be "\<Linked File\>" in the layers panel - do not embed them.
 
    *Note: Although not necessary, it's a good idea to put them all in a layer called "Source Images" or something similar."*
 
@@ -210,24 +210,30 @@ The following steps will assume you have similar information:
 
 2. Ensure that the paths are above the source images:
 
-![Missing Image](doc_images/PathAbove.png)
+![Missing Image](doc_images/PathsAbove.png)
 
-3. To create a clipping mask, first select the source image, then select the appropriate path. Then select **Object > Clipping Mask > Make**, or press **Ctrl + 7** for a shortcut. This will delete both of the original objects, a <Clip Group> object appearing in their place.
+3. To create a clipping mask, first select the source image, then select the appropriate path. Then select **Object > Clipping Mask > Make**, or press **Ctrl + 7** for a shortcut. This will delete both of the original objects, a \<Clip Group\> object appearing in their place.
 
 4. After having repeated this process for all of the path + file combinations, all of your clip groups should be finished. Rename the clip groups appropriately. You should end up with something like this:
 
 *Note: Avoid having any symbols (even underscores and dashes), spaces or numbers in your names. When exporting to SVG illustrator will substitute these for obscure character combinations due to how their code works.*
 
-# Put image here and continue here
+5. Move all of the "\<Clip Group\>" files into their own file base layer, called something like *clippaths*. The clipping paths are now done! 
+
+![Missing Image](doc_images/clippathsLayer.png)
+
 
 ### Creating overlay images
 
 1. 
 
 
-### Merging the 
+### Merging the illustrator files into the 
 
 
+
+
+### Setting up the times
 
 
 
