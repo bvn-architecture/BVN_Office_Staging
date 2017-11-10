@@ -1,3 +1,45 @@
+# TODO:
+
+*In order of priority*
+
+### Create a section on the different options (with pros & cons) for downloading and interacting with this:
+
+   - Create github account, download github for desktop, fork repo
+   
+   - Create github account, install github stuff for command line (why on earth would they do this option), fork repo
+   
+   - Download zip folder of repo
+
+### Finish off create new website section guide:
+
+   - Prep up illustrator for python code
+   
+   - Running python code (this will have to change as it merges into js)
+   
+   - Setting up google spreadsheet
+   
+   - Entering details into google spreadsheet
+   
+### Read through this thing and tidy it up
+
+   - Make sure that there's a logical flow, especially to someone who has no idea what they're doing and hasn't read this before.
+   
+   - This will likely include a better 'contents' page.
+
+### Website improvements?? Look into:
+
+   - Turning python code into js (prob just gonna have to ask Ben for a lotta help on this one)
+   
+   - Better gui for entering of data into spreadsheet
+   
+   - Automatic entering of data into spreadsheet?? The PDF from buildcorp looks a lot like an excel spreadsheet that's been 'printed'
+
+*****
+
+*****
+
+*****
+
 # How to edit and use the website:
 
 There are three main parts to editing the data on the website.
@@ -263,7 +305,9 @@ The following steps will assume you have similar information:
 
 8. Group each of the blocks not in groups with one of the blank blocks. You should finally end up with something like this:
 
-9. 
+GROUP IMAGE HERE
+
+9. CONTINUE FOR RENAMING APPROPRIATELY
 
 
 ### Merging the illustrator files into the 
