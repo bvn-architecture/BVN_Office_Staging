@@ -1,5 +1,3 @@
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s/edit?usp=sharing';
-
 function slider(){
     var slider = document.getElementById("myRange");
     var output = document.getElementById("date");
