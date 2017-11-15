@@ -1,3 +1,45 @@
+# TODO:
+
+*In order of priority*
+
+### Create a section on the different options (with pros & cons) for downloading and interacting with this:
+
+   - Create github account, download github for desktop, fork repo
+   
+   - Create github account, install github stuff for command line (why on earth would they do this option), fork repo
+   
+   - Download zip folder of repo
+
+### Finish off create new website section guide:
+
+   - Prep up illustrator for python code
+   
+   - Running python code (this will have to change as it merges into js)
+   
+   - Setting up google spreadsheet
+   
+   - Entering details into google spreadsheet
+   
+### Read through this thing and tidy it up
+
+   - Make sure that there's a logical flow, especially to someone who has no idea what they're doing and hasn't read this before.
+   
+   - This will likely include a better 'contents' page.
+
+### Website improvements?? Look into:
+
+   - Turning python code into js (prob just gonna have to ask Ben for a lotta help on this one)
+   
+   - Better gui for entering of data into spreadsheet
+   
+   - Automatic entering of data into spreadsheet?? The PDF from buildcorp looks a lot like an excel spreadsheet that's been 'printed'
+
+*****
+
+*****
+
+*****
+
 # How to edit and use the website:
 
 There are three main parts to editing the data on the website.
@@ -214,28 +256,68 @@ The following steps will assume you have similar information:
 
 3. To create a clipping mask, first select the source image, then select the appropriate path. Then select **Object > Clipping Mask > Make**, or press **Ctrl + 7** for a shortcut. This will delete both of the original objects, a \<Clip Group\> object appearing in their place.
 
-4. After having repeated this process for all of the path + file combinations, all of your clip groups should be finished. Rename the clip groups appropriately. You should end up with something like this:
+4. After having repeated this process for all of the path + file combinations, all of your clip groups should be finished. Rename the clip groups appropriately. A good way to name them includes:
 
-*Note: Avoid having any symbols (even underscores and dashes), spaces or numbers in your names. When exporting to SVG illustrator will substitute these for obscure character combinations due to how their code works.*
+     - <a name="layerName">The location (e.g. NorthWing, SouthProjectRoom, etc.)</a>
+     
+     - The state (e.g. existing or proposed)
+     
+     - No spaces or symbols, even dashes and underscores (All of these are substituted for obscure character combinations when exporting to SVG)
+     
+     - No numbers at the beginning of the name (same issue as above) although later in the name is fine.
 
-5. Move all of the "\<Clip Group\>" files into their own file base layer, called something like *clippaths*. The clipping paths are now done! 
+   e.g. "NorthWingExisting", "NorthWingProposed", "SouthProjectRoomExisting", etc.
+
+5. Move all of the "\<Clip Group\>" files into their own file base layer, called something like *clippaths*. The clipping paths are now done! You should end up with something like this (except with your own names of course!):
 
 ![Missing Image](doc_images/clippathsLayer.png)
 
 
-### Creating overlay images
+### Creating overlay blocks
 
-1. 
+1. With the pen tool in illustrator, create all your blocks in their appropriate positions (inside an appropriately named layer, [see here for guidelines](#layerName)).
+
+![Missing Image](doc_images/OpaqueBlocks.png)
+
+2. In order to make them translucent, select them all and change the opacity down to an appropriate value (I set it to around 50%).
+
+![Missing Image](doc_images/TransparentBlocks.png)
+
+3. Note down which blocks all appear together and disappear together, and then group them in illustrator (Right click and select *group* or press **Ctrl + G**). For example, I grouped these together:
+
+![Missing Image](doc_images/ZoneGroup.png)
+
+   Now there should be a mix of grouped and non-grouped blocks (if there are only groups, you can skip steps 4-8). Unfortunately, this doesn't work well with the current method of interpreting the svg in the javascript, so we'll need to group each of the individual blocks with a workaround invisible block.
+
+5. With the pen tool, create another small block that's out of the way.
+
+![Missing Image](doc_images/VisibleInvisibleBlock.png)
+
+6. Select the block, and make sure that both the border's and the fill's colours are set to 'None'.
+
+![Missing Image](doc_images/InvisibleColours.png)
+
+7. Duplicate the block as many times as necessary (one for each actual block not in a group). Use **Ctrl + Shift + V** to paste in the same location.
+
+   *Note: I renamed the blank blocks to BlankBlock from \<path\> for clarity.*
+   
+![Missing Image](doc_images/BlankBlocks.png)
+
+8. Group each of the blocks not in groups with one of the blank blocks. You should finally end up with something like this:
+
+GROUP IMAGE HERE
+
+9. CONTINUE FOR RENAMING APPROPRIATELY
 
 
 ### Merging the illustrator files into the 
 
-
+1. 
 
 
 ### Setting up the times
 
-
+1. 
 
 
 ![Missing Image](doc_images/.png)
