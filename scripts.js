@@ -39,7 +39,7 @@ function slider(){
 
 
 function init() {
-    Tabletop.init( { key: publicSpreadsheetUrl,
+    Tabletop.init( { key: window.BVNofficeProgressPublicSpreadsheetUrl,
                         callback: showInfo,
                         simpleSheet: true } )
 }
