@@ -2,7 +2,7 @@
 
 *In order of priority*
 
-#### *@Benita: Ignore all of the todo stuff (everything before the three horizontal lines)*
+#### *@Benita: Ignore all of this todo stuff (everything before the three horizontal lines)*
 
 
 ### Finish off create new website section guide:
@@ -14,23 +14,29 @@
    - [ ] Setting up google spreadsheet
    
    - [ ] Entering details into google spreadsheet
+
+### Organise the timeline data for Benita
+
+   - [ ] Look at the format for the time stuff and try and figure out what's actually being communicated
    
+   - [ ] Organise it up for Benita (similar level of stuff to what I got from Matthew)
+
 ### Read through this thing and tidy it up
 
    - [ ] Make sure that there's a logical flow, especially to someone who has no idea what they're doing and hasn't read this before.
-   
+
    - [ ] Write up [github guide](#githubGuide)
-   
+
    - [ ] This will likely include a better 'contents' page.
 
 ### Website improvements?? Look into:
 
    - [ ] Turning python code into js (prob just gonna have to ask Ben for a lotta help on this one)
-   
+
    - [ ] Better gui for entering of data into spreadsheet
-   
+
    - [ ] Reading in names from illustrator's svg files directly into spreadsheet
-   
+
    - [ ] Automatic entering of data into spreadsheet?? The PDF from buildcorp looks a lot like an excel spreadsheet that's been 'printed'
 
 *****
