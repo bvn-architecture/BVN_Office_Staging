@@ -50,7 +50,7 @@ GithubRepoLink
 
 ## Getting all the files ready
 
-If you have no experience with github and downloading repos, this section will guide you through setting everything up so that you can begin to edit the website. There are 2 main different ways that you can do this:
+If you have no experience with github and downloading repos, this section will guide you through setting everything up so that you can begin to edit the website. There are 2 main ways that you can do this:
 
 ### Download Zip
 
@@ -66,7 +66,7 @@ This method provides no backups or web hosting capabilities, but is a bit less i
 
 ![Missing Image](doc_images/DownloadZip.png)
 
-3. Place and extract the folder wherever you need it. You now have all the files! [Here is a guide on the different important files](#FileGuide).
+3. Place and extract the folder wherever you need it. You now have all the files! [Here is a guide on the different important files](#fileGuide).
 
 ### Github Repo Pulling
 
@@ -76,8 +76,31 @@ This method is recommended for most people - even though it takes a bit longer t
 
 2. [Download and install the github for desktop application](https://desktop.github.com/).
 
-3. Go to [this repo's webpage](../)
+3. Go to [this repo's webpage](./), and click on *Fork*.
 
+![Missing Image](doc_images/forkRepo.png)
+
+4. It may ask you to verify your email address - do it if it asks you of course! If it did, redo step 3 after verifying.
+
+![Missing Image](doc_images/verifyEmail.png)
+
+5. Open up github for desktop and log in.
+
+6. Select **File > Clone Repository...**
+
+![Missing Image](doc_images/cloneRepoLocal.png)
+
+7. Select the repo called [your name]/BVN_Office_Staging, then choose where you'd like the repo to be downloaded to in the *Local path* textbox. Once you've decided, click clone to download the repo!
+
+*Note: It's difficult (but possible) to change where a repo lives, so choose carefully! Copy pasting the repo once it's been downloaded won't update the where github for desktop thinks it lives.*
+
+##### *Benita, could you please take a screenshot when completing the above step for me? It's ctrl + printscreen if you weren't sure. I'd need to log in to a new account at BVN to get a picture that would make sense. It should look like this:*
+
+![Missing Image](doc_images/forkCloneDesktop.png)
+
+##### *Except with the appropriate repo there. Thanks! :)*
+
+8. All of the files have now been downloaded. [Here is a guide on the different important files](#fileGuide). If you'd like to use some of github's backing up features, [here's a very quick guide to what the basic uses are](#githubGuide) such as backing up your data.
 
 
 ## Standard Workflow
@@ -185,7 +208,7 @@ If you'd like to allow for any more layers to be visible, it will involve a quic
 
 8. Now that we've finished the editing, just **File > Save** it. When you next use the *Prepare_SVG.py* file, the new layer should be included!
 
-### <a name="FileGuide">Important Files</a>
+### <a name="fileGuide">Important Files</a>
 
 There are various files in the repo, some more critical than others to the website's creation. Here's a list of the ones you may need to know about:
 
@@ -202,7 +225,9 @@ There are various files in the repo, some more critical than others to the websi
 |Prepare_SVG.py|This is a ***py**thon* file that takes all the relevant information out of *MasterFloorplan.svg* file and puts it into the *index.html* file. You'll need to install [python 2.7]() in order to use it.|
 |README.md|That's this document! Provides a comprehensive guide on how to edit and otherwise use the website for visualisations, and looks a lot better when viewed on github.com or in github for desktop. All the images used in this document are stored in the [doc_images](doc_images) folder.|
 
+### <a name="githubGuide">Important Files</a>
 
+Gotta do this
 
 ## <a name="SetUp">New Website Setup</a>
 
