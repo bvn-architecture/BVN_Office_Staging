@@ -32,6 +32,8 @@
    
    - Better gui for entering of data into spreadsheet
    
+   - Reading in names from illustrator's svg files directly into spreadsheet
+   
    - Automatic entering of data into spreadsheet?? The PDF from buildcorp looks a lot like an excel spreadsheet that's been 'printed'
 
 *****
@@ -52,7 +54,7 @@ If you have no experience with github and downloading repos, this section will g
 
 ### Download Zip
 
-This method provides no backups or web hosting capabilities (unlike the other two).
+This method provides no backups or web hosting capabilities, but is a bit less involved and takes a lot less time.
 
 1. On the top of this page, click on **BVN_Office_Staging** to get to the main page of the repository. 
 
@@ -65,6 +67,16 @@ This method provides no backups or web hosting capabilities (unlike the other tw
 ![Missing Image](doc_images/DownloadZip.png)
 
 3. Place and extract the folder wherever you need it. You now have all the files! [Here is a guide on the different important files](#FileGuide).
+
+### Github Repo Pulling
+
+This method is recommended for most people - even though it takes a bit longer to get started, the payoffs of easy version control and web hosting are worth it.
+
+1. [Create a github account](https://github.com/join?source=other) if you don't have one already.
+
+2. [Download and install the github for desktop application](https://desktop.github.com/).
+
+3. Go to [this repo's webpage](../)
 
 
 
