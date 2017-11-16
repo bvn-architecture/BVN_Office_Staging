@@ -2,6 +2,9 @@
 
 *In order of priority*
 
+#### *@Benita: Ignore all of the todo stuff (everything before the three horizontal lines)*
+
+
 ### Finish off create new website section guide:
 
    - [ ] Prep up illustrator for python code
