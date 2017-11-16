@@ -2,14 +2,6 @@
 
 *In order of priority*
 
-### Create a section on the different options (with pros & cons) for downloading and interacting with this:
-
-   - [ ] Create github account, download github for desktop, fork repo
-   
-   - [ ] Create github account, install github stuff for command line (why on earth would they do this option), fork repo
-   
-   - [ ] Download zip folder of repo
-
 ### Finish off create new website section guide:
 
    - [ ] Prep up illustrator for python code
