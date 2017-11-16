@@ -4,37 +4,39 @@
 
 ### Create a section on the different options (with pros & cons) for downloading and interacting with this:
 
-   - Create github account, download github for desktop, fork repo
+   - [ ] Create github account, download github for desktop, fork repo
    
-   - Create github account, install github stuff for command line (why on earth would they do this option), fork repo
+   - [ ] Create github account, install github stuff for command line (why on earth would they do this option), fork repo
    
-   - Download zip folder of repo
+   - [ ] Download zip folder of repo
 
 ### Finish off create new website section guide:
 
-   - Prep up illustrator for python code
+   - [ ] Prep up illustrator for python code
    
-   - Running python code (this will have to change as it merges into js)
+   - [ ] Running python code (this will have to change as it merges into js)
    
-   - Setting up google spreadsheet
+   - [ ] Setting up google spreadsheet
    
-   - Entering details into google spreadsheet
+   - [ ] Entering details into google spreadsheet
    
 ### Read through this thing and tidy it up
 
-   - Make sure that there's a logical flow, especially to someone who has no idea what they're doing and hasn't read this before.
+   - [ ] Make sure that there's a logical flow, especially to someone who has no idea what they're doing and hasn't read this before.
    
-   - This will likely include a better 'contents' page.
+   - [ ] Write up [github guide](#githubGuide)
+   
+   - [ ] This will likely include a better 'contents' page.
 
 ### Website improvements?? Look into:
 
-   - Turning python code into js (prob just gonna have to ask Ben for a lotta help on this one)
+   - [ ] Turning python code into js (prob just gonna have to ask Ben for a lotta help on this one)
    
-   - Better gui for entering of data into spreadsheet
+   - [ ] Better gui for entering of data into spreadsheet
    
-   - Reading in names from illustrator's svg files directly into spreadsheet
+   - [ ] Reading in names from illustrator's svg files directly into spreadsheet
    
-   - Automatic entering of data into spreadsheet?? The PDF from buildcorp looks a lot like an excel spreadsheet that's been 'printed'
+   - [ ] Automatic entering of data into spreadsheet?? The PDF from buildcorp looks a lot like an excel spreadsheet that's been 'printed'
 
 *****
 
@@ -86,6 +88,8 @@ This method is recommended for most people - even though it takes a bit longer t
 
 5. Open up github for desktop and log in.
 
+#### *@Benita: Could let me know if step 5 needs more clarification? I couldn't get an image of it or try it out, just assuming it happens like that.*
+
 6. Select **File > Clone Repository...**
 
 ![Missing Image](doc_images/cloneRepoLocal.png)
@@ -94,13 +98,13 @@ This method is recommended for most people - even though it takes a bit longer t
 
 *Note: It's difficult (but possible) to change where a repo lives, so choose carefully! Copy pasting the repo once it's been downloaded won't update the where github for desktop thinks it lives.*
 
-#### *Benita, could you please take a screenshot when completing the above step for me? It should look like this:*
+#### *@Benita: Could you please take a screenshot when completing the above step for me? It should look like this:*
 
 ![Missing Image](doc_images/forkCloneDesktop.png)
 
 #### *Except with the appropriate repo there. Thanks! :)*
 
-8. All of the files have now been downloaded. [Here is a guide on the different important files](#fileGuide). If you'd like to use some of github's backing up features, [here's a very quick guide to what the basic uses are](#githubGuide) such as backing up your data.
+8. All of the files have now been downloaded. [Here is a guide on the different important files](#fileGuide). If you'd like to use some of github's backing up or web hosting features, [here's a very quick guide to what the basic uses are](#githubGuide).
 
 
 ## Standard Workflow
@@ -227,7 +231,12 @@ There are various files in the repo, some more critical than others to the websi
 
 ### <a name="githubGuide">Important Files</a>
 
-Gotta do this
+Gotta do this!
+
+ - Backing stuff up
+ 
+ - Web hosting pages stuff
+
 
 ## <a name="SetUp">New Website Setup</a>
 
