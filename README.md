@@ -40,9 +40,37 @@
 
 *****
 
-# How to edit and use the website:
+# Office Staging Visualisations
 
-There are three main parts to editing the data on the website.
+## Intro
+
+GithubRepoLink
+
+## Getting all the files ready
+
+If you have no experience with github and downloading repos, this section will guide you through setting everything up so that you can begin to edit the website. There are 2 main different ways that you can do this:
+
+### Download Zip
+
+This method provides no backups or web hosting capabilities (unlike the other two).
+
+1. On the top of this page, click on **BVN_Office_Staging** to get to the main page of the repository. 
+
+![Missing Image](doc_images/GithubRepoLink.png)
+
+2. Then, click on **Clone or download**, selecting **Download ZIP**.
+
+![Missing Image](doc_images/CloneOrDownload.png)
+
+![Missing Image](doc_images/DownloadZip.png)
+
+3. Place and extract the folder wherever you need it. You now have all the files! [Here is a guide on the different important files](#FileGuide).
+
+
+
+## Standard Workflow
+
+This will go through the standard editing workflow for a previously set up website. There are three main parts to editing the data on the website:
 
  - Editing the times
 
@@ -50,11 +78,7 @@ There are three main parts to editing the data on the website.
 
  - Collating the data
 
-After this, there will also be a section on more advanced uses.
-
-## Standard Workflow
-
-This will go through the standard editing workflow for a previously set up website. [See here](#SetUp) for a quick guide on how to set up a new website.
+[See here](#SetUp) for a guide on how to set up a new website.
 
 ### Editing the times
 
@@ -148,6 +172,24 @@ If you'd like to allow for any more layers to be visible, it will involve a quic
 ![Missing Image](doc_images/editedCode.png)
 
 8. Now that we've finished the editing, just **File > Save** it. When you next use the *Prepare_SVG.py* file, the new layer should be included!
+
+### <a name="FileGuide">Important Files</a>
+
+There are various files in the repo, some more critical than others to the website's creation. Here's a list of the ones you may need to know about:
+
+| Name | Description |
+|---|---|
+|index.html|This is a ***h**yper<b>t</b>ext **m**arkup **l**anguage* file, and is what people are viewing when looking at the visualisation. If you need to edit it and you're a bit unsure of how to do what you want to do, [this website](https://www.w3schools.com/html/default.asp) is a great guide on how html works.|
+|style.css|This is a ***c**ascading **s**tyle **s**heets* file, and it controls a lot of how the website looks, rather than the content - think fonts, colour, spacing, arrangement and other rules for the html. This is needed for the html to load correctly.|
+|scripts.js|This is a ***j**ava<b>s</b>cript* file. It controls how the visualisation actually works behind the scenes, connecting the spreadsheet data, the slider, and the different images in a way that makes sense. This is needed for the interactivity of the visualisation.|
+|MasterFloorplan.ai|This is the illustrator file, and is the first file not needed for the actual website to load. This file is used for all the clipping mask and other layer editing tasks.|
+|EmptyFloorplan.png|This image is used as the background of the visualised floorplan.|
+|ExistingFloorplan.png|This is the image used for how the office was layed out beforehand.|
+|ProposedFloorplan.png|Same as *ExistingFloorplan.png* except for the future layout.|
+|MasterFloorplan.svg|This is a ***s**calable **v**ector **g**raphics* file, and is the file you should overwrite when saving for the website. It provides the clipping masks and the block layers.|
+|Prepare_SVG.py|This is a ***py**thon* file that takes all the relevant information out of *MasterFloorplan.svg* file and puts it into the *index.html* file. You'll need to install [python 2.7]() in order to use it.|
+|README.md|That's this document! Provides a comprehensive guide on how to edit and otherwise use the website for visualisations, and looks a lot better when viewed on github.com or in github for desktop. All the images used in this document are stored in the [doc_images](doc_images) folder.|
+
 
 
 ## <a name="SetUp">New Website Setup</a>
