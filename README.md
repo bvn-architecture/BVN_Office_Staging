@@ -74,7 +74,11 @@ This method is recommended for most people - even though it takes a bit longer t
 
 1. [Create a github account](https://github.com/join?source=other) if you don't have one already.
 
-2. 
+2. [Download and install the github for desktop application](https://desktop.github.com/).
+
+3. Go to [this repo's webpage](../)
+
+
 
 ## Standard Workflow
 
