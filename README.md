@@ -94,11 +94,11 @@ This method is recommended for most people - even though it takes a bit longer t
 
 *Note: It's difficult (but possible) to change where a repo lives, so choose carefully! Copy pasting the repo once it's been downloaded won't update the where github for desktop thinks it lives.*
 
-##### *Benita, could you please take a screenshot when completing the above step for me? It's ctrl + printscreen if you weren't sure. I'd need to log in to a new account at BVN to get a picture that would make sense. It should look like this:*
+#### *Benita, could you please take a screenshot when completing the above step for me? It should look like this:*
 
 ![Missing Image](doc_images/forkCloneDesktop.png)
 
-##### *Except with the appropriate repo there. Thanks! :)*
+#### *Except with the appropriate repo there. Thanks! :)*
 
 8. All of the files have now been downloaded. [Here is a guide on the different important files](#fileGuide). If you'd like to use some of github's backing up features, [here's a very quick guide to what the basic uses are](#githubGuide) such as backing up your data.
 
