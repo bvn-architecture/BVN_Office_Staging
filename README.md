@@ -516,7 +516,7 @@ The following steps will assume you have similar information:
 
 ![Missing Image](doc_images/.png)
 
-3. The way that the spreadsheet works is each cell takes a value between source data you could have for this step, you'll mostly usually the case, using that number as the opacity of values over a large number of cells. Just enter each of these values into the bathrooms will be in the previous state from the 11th of these values into the spreadsheet appropriately only used it with the proposed state.
+3. To make these values a lot easier to visualise while working with the spreadsheet we'll change the colour of the cell depending on its value. Select all the cells that have these values (0>=value>=1) in them, then selecting **Format > Conditional Formatting...**
 
 ![Missing Image](doc_images/.png)
 
