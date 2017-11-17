@@ -11,7 +11,7 @@
    
    - [x] Running python code (this will have to change as it merges into js)
    
-   - [ ] Setting up google spreadsheet
+   - [x] Setting up google spreadsheet
    
    - [ ] Entering details into google spreadsheet
 
