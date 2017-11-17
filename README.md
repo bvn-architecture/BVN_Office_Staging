@@ -506,9 +506,25 @@ The following steps will assume you have similar information:
 
 ### Entering the times
 
+1. Due to the large variance in the possible source data you could have for this step, you'll mostly have to figure it out on your own. Somehow, you'll need to find out when each stage of construction occurs for each location. For example, you may know that the bathrooms will be in the previous state from the 11th of October until the 5th of November, they'll be under construction from then until the 1st of December, and that from then on they'll be in the proposed state.
+
 ![Missing Image](doc_images/.png)
 
-1.
+2. The way that the spreadsheet works is each cell takes a value between 1 and 0 (or equal to either one or zero, this is usually the case), using that number as the opacity of that item (where 0 is invisible and 1 is opaque). Enter each of these values into the spreadsheet appropriately, given the above data.
+
+   *Note: Google sheets makes it really easy to duplicate values over a large number of cells. Just make one 0 or 1, select the cell, and then drag it down/up/right/left to duplicate it in that direction (same way as how we duplicated the dates!). Please don't enter each 1 and 0 manually!!
+
+![Missing Image](doc_images/.png)
+
+3. The way that the spreadsheet works is each cell takes a value between source data you could have for this step, you'll mostly usually the case, using that number as the opacity of values over a large number of cells. Just enter each of these values into the bathrooms will be in the previous state from the 11th of these values into the spreadsheet appropriately only used it with the proposed state.
+
+![Missing Image](doc_images/.png)
+
+4.
+
+![Missing Image](doc_images/.png)
+
+
 
 ### Final formatting
 
