@@ -245,7 +245,6 @@ Creating a new website for a different floorplan entirely is quite an involved p
 
 *Note: This method isn't limited to just 2 states (in fact, it usually uses 3). You can use as many different states as you want (e.g. beginning, stage 1, stage 2, stage 3, etc., end, ...)*
 
-
 ### Base image creation
 
 1. Inspect all of your stage images (typically just before and after), noting which parts of the images are common between the states. For example, in the following two floorplans (existing and proposed):
@@ -392,16 +391,96 @@ The following steps will assume you have similar information:
    
 ![Missing Image](doc_images/BlankBlocks.png)
 
-8. Group each of the blocks not in groups with one of the blank blocks. You should finally end up with something like this:
+8. Group each of the blocks not in groups with one of the blank blocks.
 
-GROUP IMAGE HERE
+![Missing Image](doc_images/allGroups.png)
 
-9. CONTINUE FOR RENAMING APPROPRIATELY
+9. Finally, these need to be renamed appropriately. [See here](#layerName) for effective naming guidelines. You should end up with something like this:
+
+![Missing Image](doc_images/renamedZones.png)
+
+   *Note: My naming in this example is quite terrible really, try and do better than me! The numbers don't make for particularly recognisable locations.*
 
 
-### Merging the illustrator files into the 
+### Prepping the illustrator file for merging
 
-1. 
+1. The illustrator file is now effectively finished! We just now need to make sure that it's exported correctly, so open up the file and ensure that you've saved it.
+
+2. Take note of the layers, ensuring that:
+
+      - Any extra layers that you've made that aren't supposed to be in the website are hidden
+      
+      - Any layers that are supposed to be in the website are visible
+      
+      - All the names of layers and their items follow [these rules](#layerName)
+      
+      - Every item is inside only the one base layer (e.g. **clippaths > PRP40a** is correct whereas **clippaths > proposed > PRP40A** won't work)
+      
+      - All of the overlay blocks are in groups
+
+![Missing Image](doc_images/finishedLayers.png)
+
+3. Once you're sure everything is correct, go **File > Save As...** and save the file as an **svg** in the same folder.
+
+![Missing Image](doc_images/SaveAsSVG.png)
+
+4. When the options appear, ensure that the imge location is linked and that the SVG Profile is set to SVG 1.1.
+
+![Missing Image](doc_images/SVGsettings.png)
+
+
+### Prepping the python file
+
+1. Ensure that you have python installed. [Here is a link](https://www.python.org/downloads/release/python-2713/) to version 2.7, the version needed for this to run.
+
+2. In the windows start search, search for IDLE, and click on the link that presents itself.
+
+![Missing Image](doc_images/IDLEsearch.png)
+
+3. Select **File > Open**
+
+4. Find *Prepare_SVG.py* in the dialog window that appears, opening the file up.
+
+![Missing Image](doc_images/Select_PrepSVG.png)
+
+5. The code should present itself.
+
+![Missing Image](doc_images/CodeOpen.png)
+
+6. Every so often you should see a line that starts on the very right that begins with an orange *"def"*. Scroll down until you see the line that says *"def runSVGPrep():"*.
+
+![Missing Image](doc_images/runSVGPrep_code.png)
+
+7. Just 6 lines below it, you should see a line that says something like *"newSVG = extractCode(inFile, ["clippaths", "Zones", "Background"])"*. This is the part that we're going to edit, specifically the part that says *"["clippaths", "Zones", "Background"]"*.
+
+8. Open up your illustrator document, and note down the exact names of the important layers you want visualised.
+
+![Missing Image](doc_images/importantMetaLayers.png)
+
+8. What we're editing in this python file is a list. The format of a list is something like this:
+
+   [item1, item2, item3, item4, item5]
+
+   Since the layer that we need to add is a word, we need to put speech marks ("") around it, so it'll look more like this:
+   
+   ["layer1", "layer2", "layer3", "layer4", "layer5"]
+   
+   Edit in your layer's names into the python file in this format (remember that the case is important, keep it exactly the same as what it's named in illustrator).
+
+![Missing Image](doc_images/editedCode.png)
+
+9. Now that we've finished the editing, just **File > Save** it. When you next use the *Prepare_SVG.py* file, the appropriate layers will be added to index.html!
+
+
+### Collating the data
+
+1. We'll now have to use the *Prepare_SVG.py* python file we just edited to collate the data. To start, open up the *Prepare_SVG.py* file.
+   
+2. The script will ask you for the name of the svg file generated. Enter it, ensuring that all the cases of the letters are correct and that you've put *.svg* on the end of it. This will most likely be called *MasterFloorplan.svg*.
+
+3. After this, it should ask for the html file's name. This file will most likely be called *index.html* unless you've renamed it. As before, ensure that the cases are correct and *.html* is on the end of it!
+
+4. The program is done! The html file has all the appropriate clipping mask and overlay objects connected. This process will have to be re-done every time you want to update these.
 
 
 ### Setting up the times
