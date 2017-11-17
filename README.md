@@ -7,9 +7,9 @@
 
 ### Finish off create new website section guide:
 
-   - [ ] Prep up illustrator for python code
+   - [x] Prep up illustrator for python code
    
-   - [ ] Running python code (this will have to change as it merges into js)
+   - [x] Running python code (this will have to change as it merges into js)
    
    - [ ] Setting up google spreadsheet
    
@@ -241,7 +241,7 @@ Gotta do this!
 
 ## <a name="SetUp">New Website Setup</a>
 
-Creating a new website for a different floorplan entirely is quite an involved process, especially depending on what source information you have. This guide will assume that you have a timeline of different stages, a render of the floorplan before, and a render of the floorplan afterwards.
+Creating a new website for a different floorplan entirely is quite an involved process, especially depending on what source information you have. This guide will assume that you have a timeline of different stages, a render of the floorplan before, a render of the floorplan afterwards, and a copy of the files in this repo.
 
 *Note: This method isn't limited to just 2 states (in fact, it usually uses 3). You can use as many different states as you want (e.g. beginning, stage 1, stage 2, stage 3, etc., end, ...)*
 
@@ -483,18 +483,36 @@ The following steps will assume you have similar information:
 4. The program is done! The html file has all the appropriate clipping mask and overlay objects connected. This process will have to be re-done every time you want to update these.
 
 
-### Setting up the times
+### Setting up the spreadsheet
 
-1. 
+1. A google sheet is used for the time data; [here's the original website's google sheet](https://docs.google.com/spreadsheets/d/1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s/edit?usp=sharing), your new one will look very similar. First off, [create a new sheet here](https://docs.google.com/spreadsheets/u/0/).
 
+![Missing Image](doc_images/newSpreadsheet.png)
+
+2. In **A1**, enter *date*. In **B1**, enter *notes*. These are the keywords that the script will look for.
+
+![Missing Image](doc_images/a1b1cells.png)
+
+3. The rest of the first row will contain all of the location/state combo names. These names will have to be written in exactly the same way that they appear in illustrator - case matters! Although it doesn't matter which way you order these columns, grouping the columns by location (keeping for example bridge_existing, bridge_construction, & bridge_proposed together, then having reception_existing, reception_construction, reception_proposed together, etc.) makes the editing of the data a lot easier to manage.
+
+![Missing Image](doc_images/firstRowCells.png)
+
+4. The first column will contain every date that is relevant to the construction in chronological order. To create dates, simply type in the first date, select the cell, and then drag it down. It will autocomplete every date until you stop dragging.
+
+   *Note: Your google account (like mine), may be set to American date formatting. You'll need to write your dates in their format (mm/dd/yyyy) for the autofilling to work correctly. The javascript later on may not even work with other date formatting methods as I've only used it with American date formatting.*
+   
+![Missing Image](doc_images/dateColumnCells.png)
+
+
+### Entering the times
 
 ![Missing Image](doc_images/.png)
 
+1.
 
+### Final formatting
 
-
-
-
+![Missing Image](doc_images/.png)
 
 
 
