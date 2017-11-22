@@ -52,3 +52,67 @@ function showInfo(data, tabletop) {
 
 window.addEventListener('DOMContentLoaded', init);
 window.addEventListener('DOMContentLoaded', slider);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+google.charts.load('current', {'packages':['gantt']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Task ID');
+    data.addColumn('string', 'Task Name');
+    data.addColumn('date', 'Start Date');
+    data.addColumn('date', 'End Date');
+    data.addColumn('number', 'Duration');
+    data.addColumn('number', 'Percent Complete');
+    data.addColumn('string', 'Dependencies');
+
+    data.addRows([
+        ['2014Spring', 'Spring 2014',
+         new Date(2014, 2, 22), new Date(2014, 5, 20), null, 100, null],
+        ['2014Summer', 'Summer 2014',
+         new Date(2014, 5, 29), new Date(2014, 8, 20), null, 100, null],
+        ['2014Autumn', 'Autumn 2014',
+         new Date(2014, 7, 21), new Date(2014, 11, 20), null, 100, null],
+        ['2014Winter', 'Winter 2014',
+         new Date(2014, 11, 21), new Date(2015, 2, 11), null, 100, null],
+        ['2015Spring', 'Spring 2015',
+         new Date(2014, 10, 22), new Date(2015, 2, 20), null, 100, null],
+    ]);
+
+    var options = {
+        height: 400,
+        gantt: {
+            trackHeight: 30
+        }
+    };
+
+    var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+    //https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
+
+    chart.draw(data, options);
+}
