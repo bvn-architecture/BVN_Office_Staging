@@ -81,6 +81,17 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
 
+    //Finds where the dates are - assumes the first relevant column is the third one.
+    for (var tempRow = window.officeStates.length - 1; tempRow >= 0; tempRow--) {
+        if (window.officeStates[tempRow] == 'dates') {
+            var datesStartRow = tempRow;
+            break;
+        }
+    }
+
+    //Loops through each column and adds relevant rows to gantt chart
+    for (var )
+
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Task ID');
     data.addColumn('string', 'Task Name');
@@ -107,7 +118,8 @@ function drawChart() {
         height: 400,
         gantt: {
             trackHeight: 30
-        }
+        },
+        fill: '#FF0000'
     };
 
     var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
