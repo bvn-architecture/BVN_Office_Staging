@@ -6,7 +6,11 @@ function slider(){
     // Update the current slider value (each time you drag the slider handle)
     slider.oninput = function() {
         try{
-            var row = window.officeStates[this.value];
+            if (this == undefined || this == null) {
+                var row = window.officeStates[0];
+            } else {
+                var row = window.officeStates[this.value];  
+            }
 
             // Display date under slider
             var Day = new Date(row.date);
@@ -14,8 +18,8 @@ function slider(){
 
             for (var k in row){
                 if (k=="notes"){
-                  var notes = document.getElementById("notes");
-                  notes.innerText = row[k];
+                    var notes = document.getElementById("notes");
+                    notes.innerText = row[k];
                 }
                 else if (row.hasOwnProperty(k)) {
                     
@@ -87,13 +91,18 @@ function drawChart() {
                 var datesStartRow = tempRow;
                 break;
             }
-            console.log(window.officeStates[tempRow])
+            //console.log(window.officeStates[tempRow])
         }
+
+        slider();
 
         //Creating the data structure for the gantt chart
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Task ID');
         data.addColumn('string', 'Task Name');
+        if (window.BVNvisualiserColouredBySector) {
+            data.addColumn('string', 'Resource');
+        }
         data.addColumn('date', 'Start Date');
         data.addColumn('date', 'End Date');
         data.addColumn('number', 'Duration');
@@ -112,16 +121,13 @@ function drawChart() {
         var nameUnfound = true;
         var extraCount = 2;
         var rowCount = 0;
+        var constructionIdentifier = window.BVNvisualiserConstructionIdentifier;
 
-        //Make this variable entered in the index.html file!
-        var constructionIdentifier = "CON"
-
-
-        console.log("HERE! Part -1");
-        console.log(window.officeStates);
-        console.log(Object.keys(window.officeStates).length);
-        console.log(datesStartRow)
-        console.log("HERE! Part 0");
+        //console.log("HERE! Part -1");
+        //console.log(window.officeStates);
+        //console.log(Object.keys(window.officeStates).length);
+        //console.log(datesStartRow)
+        //console.log("HERE! Part 0");
 
         //Loops through each column and adds relevant rows to gantt chart
         //for (var tempColumn = startColumn; tempColumn < Object.keys(window.officeStates[0]).length; tempColumn++) {
@@ -140,9 +146,9 @@ function drawChart() {
                     //Checking for name already being taken
                     if (previousNameList.indexOf(columnKey) == -1) { //Workaround for the lack of an 'in' function in javascript
                         name = columnKey;
-                        console.log("HERE! Part 3a");
+                        //console.log("HERE! Part 3a");
                     } else {
-                        console.log("HERE! Part 3b");
+                        //console.log("HERE! Part 3b");
                         //Adding extra "pt." until untaken
                         extraCount = 2;
                         nameUnfound = true;
@@ -155,7 +161,6 @@ function drawChart() {
                         }
                     }
                     previousNameList.push(name);
-                    console.log(name);
 
                     //Formatting start and end dates
                     cellValueEnd = window.officeStates[tempRow + 1][columnKey]
@@ -163,7 +168,11 @@ function drawChart() {
                     endDay = new Date(cellValueEnd.split('/')[2], cellValueEnd.split('/')[0], cellValueEnd.split('/')[1]);
                     
                     //Adding row information
-                    data.addRow([name, name, startDay, endDay, null, 100, null]);
+                    if (window.BVNvisualiserColouredBySector) {
+                        data.addRow([name, name, columnKey, startDay, endDay, null, 100, null]);
+                    } else {
+                        data.addRow([name, name, startDay, endDay, null, 100, null]);
+                    }
                     rowCount++;
                     //console.log(name + " " + startDay + " " + endDay);
                 }
@@ -202,7 +211,30 @@ function drawChart() {
             }
         };
 
+        var container = document.getElementById('chart_div');
         var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+        // monitor activity, change bar color
+        var observer = new MutationObserver(function (mutations) {
+            Array.prototype.forEach.call(container.getElementsByTagName('path'), function(bar, index) {
+                if (data.getValue(index, 6) > 100) {
+                    bar.setAttribute('fill', '#a52714');
+                }
+            });
+        });
+        observer.observe(container, {
+            childList: true,
+            subtree: true
+        });
+
+
+
+
+
+
+
+
+
 
         //https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
 

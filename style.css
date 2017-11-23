@@ -114,4 +114,5 @@ h1 {
 #chart_div {
     font-family: 'Muli', sans-serif !important;
     color: #E97E00 !important;
+    max-width: 100%;
 }
