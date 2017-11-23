@@ -111,6 +111,7 @@ function drawChart() {
         var cellValue = null;
         var nameUnfound = true;
         var extraCount = 2;
+        var rowCount = 0;
 
         //Make this variable entered in the index.html file!
         var constructionIdentifier = "CON"
@@ -163,6 +164,7 @@ function drawChart() {
                     
                     //Adding row information
                     data.addRow([name, name, startDay, endDay, null, 100, null]);
+                    rowCount++;
                     //console.log(name + " " + startDay + " " + endDay);
                 }
             }
@@ -187,12 +189,17 @@ function drawChart() {
 
         */
 
+
         var options = {
-            height: 400,
+            height: 30*rowCount + 50,
             gantt: {
                 trackHeight: 30
             },
-            fill: '#FF0000'
+            labelStyle: {
+                fontName: "Arial",
+                fontSize: 40,
+                color: '#FF0000'
+            }
         };
 
         var chart = new google.visualization.Gantt(document.getElementById('chart_div'));

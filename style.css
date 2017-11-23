@@ -105,3 +105,13 @@ h1 {
 #date {
     font-size: 2vmin;
 }
+
+#chart_div * {
+    font-family: 'Muli', sans-serif !important;
+    color: #E97E00 !important;
+}
+
+#chart_div {
+    font-family: 'Muli', sans-serif !important;
+    color: #E97E00 !important;
+}
