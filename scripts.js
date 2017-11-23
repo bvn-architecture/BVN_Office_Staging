@@ -29,7 +29,7 @@ function slider(){
                 }
             }
         } catch(e) {
-            console.log("probably just wait for the spreadsheet to load", e);
+            console.log("probably just wait for the spreadsheet to load (floorplan) ", e);
         }
     } 
 
@@ -80,51 +80,99 @@ google.charts.load('current', {'packages':['gantt']});
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
-
-    //Finds where the dates are - assumes the first relevant column is the third one.
-    for (var tempRow = window.officeStates.length - 1; tempRow >= 0; tempRow--) {
-        if (window.officeStates[tempRow] == 'dates') {
-            var datesStartRow = tempRow;
-            break;
+    try {
+        //Finds where the dates are - assumes the first relevant column is the third one.
+        for (var tempRow = window.officeStates.length-1; tempRow >= 0; tempRow--) {
+            if (window.officeStates[tempRow]["date"] == 'datesStart') {
+                var datesStartRow = tempRow;
+                break;
+            }
+            console.log(window.officeStates[tempRow])
         }
+
+        //Creating the data structure for the gantt chart
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task ID');
+        data.addColumn('string', 'Task Name');
+        data.addColumn('date', 'Start Date');
+        data.addColumn('date', 'End Date');
+        data.addColumn('number', 'Duration');
+        data.addColumn('number', 'Percent Complete');
+        data.addColumn('string', 'Dependencies');
+
+        //Start column of the date data
+        //var startColumn = 2;
+
+        //Various variable initialisations for the following loop
+        var name = "initial name";
+        var startDay = new Date(2001, 1, 1);
+        var endDay = new Date(2002, 2, 2);
+        var cellValue = null;
+
+        console.log("HERE! Part -1");
+        console.log(window.officeStates);
+        console.log(Object.keys(window.officeStates).length);
+        console.log(datesStartRow)
+        console.log("HERE! Part 0");
+
+        //Loops through each column and adds relevant rows to gantt chart
+        //for (var tempColumn = startColumn; tempColumn < Object.keys(window.officeStates[0]).length; tempColumn++) {
+        for (var columnKey in window.officeStates[datesStartRow]) {
+            console.log("HERE! Part 1");
+            //Looping through the rows
+            for (var tempRow = datesStartRow; tempRow < window.officeStates.length; tempRow += 2) {
+                console.log("HERE! Part 2")
+                cellValueStart = window.officeStates[tempRow][columnKey]
+                //Ensuring invalid cells aren't treated as dates
+                if (cellValueStart == null || cellValueStart == "" || columnKey == "date" || columnKey == "notes" || columnKey == null) {
+                    break;
+                } else {
+                    //Adding row information
+                    name = columnKey;
+                    cellValueEnd = window.officeStates[tempRow + 1][columnKey]
+                    console.log(cellValueStart.split('/'))
+                    startDay = new Date(cellValueStart.split('/')[2], cellValueStart.split('/')[0], cellValueStart.split('/')[1]);
+                    endDay = new Date(cellValueEnd.split('/')[2], cellValueEnd.split('/')[0], cellValueEnd.split('/')[1]);
+                    data.addRow([name, name, startDay, endDay, null, 100, null]);
+                    console.log(name + " " + startDay + " " + endDay);
+                }
+            }
+        }
+
+        /*
+
+        //Test row data:
+
+        data.addRows([
+            ['2014Spring', 'Spring 2014',
+             new Date(2014, 2, 22), new Date(2014, 5, 20), null, 100, null],
+            ['2014Summer', 'Summer 2014',
+             new Date(2014, 5, 29), new Date(2014, 8, 20), null, 100, null],
+            ['2014Autumn', 'Autumn 2014',
+             new Date(2014, 7, 21), new Date(2014, 11, 20), null, 100, null],
+            ['2014Winter', 'Winter 2014',
+             new Date(2014, 11, 21), new Date(2015, 2, 11), null, 100, null],
+            ['2015Spring', 'Spring 2015',
+             new Date(2014, 10, 22), new Date(2015, 2, 20), null, 100, null],
+        ]);
+
+        */
+
+        var options = {
+            height: 400,
+            gantt: {
+                trackHeight: 30
+            },
+            fill: '#FF0000'
+        };
+
+        var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+        //https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
+
+        chart.draw(data, options);
+    } catch(e) {
+        console.log("probably just wait for the spreadsheet to load (gantt chart) ", e);
+        setTimeout(drawChart, 500)
     }
-
-    //Loops through each column and adds relevant rows to gantt chart
-    for (var )
-
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Task ID');
-    data.addColumn('string', 'Task Name');
-    data.addColumn('date', 'Start Date');
-    data.addColumn('date', 'End Date');
-    data.addColumn('number', 'Duration');
-    data.addColumn('number', 'Percent Complete');
-    data.addColumn('string', 'Dependencies');
-
-    data.addRows([
-        ['2014Spring', 'Spring 2014',
-         new Date(2014, 2, 22), new Date(2014, 5, 20), null, 100, null],
-        ['2014Summer', 'Summer 2014',
-         new Date(2014, 5, 29), new Date(2014, 8, 20), null, 100, null],
-        ['2014Autumn', 'Autumn 2014',
-         new Date(2014, 7, 21), new Date(2014, 11, 20), null, 100, null],
-        ['2014Winter', 'Winter 2014',
-         new Date(2014, 11, 21), new Date(2015, 2, 11), null, 100, null],
-        ['2015Spring', 'Spring 2015',
-         new Date(2014, 10, 22), new Date(2015, 2, 20), null, 100, null],
-    ]);
-
-    var options = {
-        height: 400,
-        gantt: {
-            trackHeight: 30
-        },
-        fill: '#FF0000'
-    };
-
-    var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
-
-    //https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
-
-    chart.draw(data, options);
 }
