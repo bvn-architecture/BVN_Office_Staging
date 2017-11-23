@@ -105,10 +105,12 @@ function drawChart() {
 
         //Various variable initialisations for the following loop
         var name = "initial name";
+        var previousNameList = [];
         var startDay = new Date(2001, 1, 1);
         var endDay = new Date(2002, 2, 2);
         var cellValue = null;
-
+        var nameUnfound = true;
+        var extraCount = 2;
 
         //Make this variable entered in the index.html file!
         var constructionIdentifier = "CON"
@@ -123,27 +125,45 @@ function drawChart() {
         //Loops through each column and adds relevant rows to gantt chart
         //for (var tempColumn = startColumn; tempColumn < Object.keys(window.officeStates[0]).length; tempColumn++) {
         for (var columnKey in window.officeStates[datesStartRow]) {
-            console.log("HERE! Part 1");
             //Looping through the rows
             for (var tempRow = datesStartRow; tempRow < window.officeStates.length; tempRow += 2) {
-                console.log("HERE! Part 2")
                 cellValueStart = window.officeStates[tempRow][columnKey]
 
-                console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
-                console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
+                //console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
+                //console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
                 
                 //Ensuring invalid cells aren't treated as dates
                 if (cellValueStart == null || cellValueStart == "" || columnKey.substr(0,constructionIdentifier.length) != constructionIdentifier) {
                     break;
                 } else {
-                    //Adding row information
-                    name = columnKey;
+                    //Checking for name already being taken
+                    if (previousNameList.indexOf(columnKey) == -1) { //Workaround for the lack of an 'in' function in javascript
+                        name = columnKey;
+                        console.log("HERE! Part 3a");
+                    } else {
+                        console.log("HERE! Part 3b");
+                        //Adding extra "pt." until untaken
+                        extraCount = 2;
+                        nameUnfound = true;
+                        while (nameUnfound == true) {
+                            if (previousNameList.indexOf(columnKey + " pt." + extraCount) == -1) {
+                                name = columnKey + " pt." + extraCount;
+                                nameUnfound = false;
+                            }
+                            extraCount++;
+                        }
+                    }
+                    previousNameList.push(name);
+                    console.log(name);
+
+                    //Formatting start and end dates
                     cellValueEnd = window.officeStates[tempRow + 1][columnKey]
-                    console.log(cellValueStart.split('/'))
                     startDay = new Date(cellValueStart.split('/')[2], cellValueStart.split('/')[0], cellValueStart.split('/')[1]);
                     endDay = new Date(cellValueEnd.split('/')[2], cellValueEnd.split('/')[0], cellValueEnd.split('/')[1]);
+                    
+                    //Adding row information
                     data.addRow([name, name, startDay, endDay, null, 100, null]);
-                    console.log(name + " " + startDay + " " + endDay);
+                    //console.log(name + " " + startDay + " " + endDay);
                 }
             }
         }
