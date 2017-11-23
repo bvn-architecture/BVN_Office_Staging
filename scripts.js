@@ -109,6 +109,11 @@ function drawChart() {
         var endDay = new Date(2002, 2, 2);
         var cellValue = null;
 
+
+        //Make this variable entered in the index.html file!
+        var constructionIdentifier = "CON"
+
+
         console.log("HERE! Part -1");
         console.log(window.officeStates);
         console.log(Object.keys(window.officeStates).length);
@@ -123,8 +128,12 @@ function drawChart() {
             for (var tempRow = datesStartRow; tempRow < window.officeStates.length; tempRow += 2) {
                 console.log("HERE! Part 2")
                 cellValueStart = window.officeStates[tempRow][columnKey]
+
+                console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
+                console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
+                
                 //Ensuring invalid cells aren't treated as dates
-                if (cellValueStart == null || cellValueStart == "" || columnKey == "date" || columnKey == "notes" || columnKey == null) {
+                if (cellValueStart == null || cellValueStart == "" || columnKey.substr(0,constructionIdentifier.length) != constructionIdentifier) {
                     break;
                 } else {
                     //Adding row information
