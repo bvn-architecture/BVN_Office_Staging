@@ -93,7 +93,7 @@ function drawChart() {
         slider();
 
         //Creating the data structure for the gantt chart
-        data = new google.visualization.DataTable();
+        var data = new google.visualization.DataTable();
         data.addColumn('string', 'Task ID');
         data.addColumn('string', 'Task Name');
         if (window.BVNvisualiserColouredBySector) {
@@ -111,8 +111,8 @@ function drawChart() {
         //Various variable initialisations for the following loop
         var name = "initial name";
         var previousNameList = [];
-        startDay = new Date(2001, 1, 1);
-        endDay = new Date(2002, 2, 2);
+        var startDay = new Date(2001, 1, 1);
+        var endDay = new Date(2002, 2, 2);
         var cellValue = null;
         var nameUnfound = true;
         var extraCount = 2;
@@ -194,7 +194,7 @@ function drawChart() {
                         data.addRow([name, name, startDay, endDay, null, percentageCompleted, null]);
 
                         //Adding row information to global variable for easy continual generation
-                        nearlyFilledDataRows.push([name, name, columnKey, startDay, endDay, null]);
+                        nearlyFilledDataRows.push([name, name, startDay, endDay, null]);
                     }
                     rowCount++;
                     //console.log(name + " " + startDay + " " + endDay);
@@ -288,15 +288,41 @@ function updateChart(currentTime) {
     try {
         console.log(nearlyFilledDataRows)
 
-        throw '- actually just temp error to stop this function from working.'
+        //throw '- actually just temp error to stop this function from working.'
+
+        var startDay = new Date(2001, 1, 1);
+        var endDay = new Date(2002, 2, 2);
+
+        //Initialising data
+        var newData = new google.visualization.DataTable();
+        newData.addColumn('string', 'Task ID');
+        newData.addColumn('string', 'Task Name');
+        if (window.BVNvisualiserColouredBySector) {
+            newData.addColumn('string', 'Resource');
+        }
+        newData.addColumn('date', 'Start Date');
+        newData.addColumn('date', 'End Date');
+        newData.addColumn('number', 'Duration');
+        newData.addColumn('number', 'Percent Complete');
+        newData.addColumn('string', 'Dependencies');
 
         //Removing all the rows
-        data.removeRows(0, rowCount-1)
+        //data.removeRows(0, rowCount-1)
 
         console.log("GOT HERE!! -1")
         var updatedChartData = [];
-        for (var incompleteRow in nearlyFilledDataRows) {
-            console.log("GOT HERE!! 0")
+
+        for (var index in nearlyFilledDataRows) {
+            incompleteRow = nearlyFilledDataRows[index];
+
+            //console.log(incompleteRow)
+
+            startDay = incompleteRow[2];
+            endDay = incompleteRow[3];
+
+            //console.log(startDay, endDay)
+
+            //console.log("GOT HERE!! 0")
             if (endDay.getTime() < currentTime) {
                 percentageCompleted = 100;
             } else if (startDay.getTime() > currentTime) {
@@ -304,11 +330,18 @@ function updateChart(currentTime) {
             } else {
                 percentageCompleted = Math.round(((currentTime-startDay.getTime())/((endDay.getTime()-startDay.getTime())))*100);
             }
-            console.log("GOT HERE!! 1")
-            data.addRow(incompleteRow.concat([percentageCompleted, null]));
+            //console.log("GOT HERE!! 1", c)
+
+            //console.log(percentageCompleted);
+
+            newDataList = incompleteRow.concat([percentageCompleted, null]);
+
+            //sconsole.log(newDataList);
+
+            newData.addRow(newDataList);
         }
         console.log("GOT HERE!! 2")
-        chart.draw(updatedChartData, chartOptions);
+        chart.draw(newData, chartOptions);
     } catch(e) {
         console.log("probably just wait for the spreadsheet to load (gantt chart update) ", e);
     }
