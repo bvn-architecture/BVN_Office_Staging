@@ -36,8 +36,6 @@ function slider(){
             console.log("probably just wait for the spreadsheet to load (floorplan) ", e);
         }
     } 
-
-    
 }
 
 
@@ -122,8 +120,10 @@ function drawChart() {
         var extraCount = 2;
         var rowCount = 0;
         var constructionIdentifier = window.BVNvisualiserConstructionIdentifier;
+        var cellValueStart = "3/3/2003";
+        var cellValueEnd = "4/4/2004";
 
-        //console.log("HERE! Part -1");
+        console.log("HERE! Part -1");
         //console.log(window.officeStates);
         //console.log(Object.keys(window.officeStates).length);
         //console.log(datesStartRow)
@@ -131,24 +131,33 @@ function drawChart() {
 
         //Loops through each column and adds relevant rows to gantt chart
         //for (var tempColumn = startColumn; tempColumn < Object.keys(window.officeStates[0]).length; tempColumn++) {
+        
+        
         for (var columnKey in window.officeStates[datesStartRow]) {
             //Looping through the rows
-            for (var tempRow = datesStartRow; tempRow < window.officeStates.length; tempRow += 2) {
-                cellValueStart = window.officeStates[tempRow][columnKey]
+            //console.log("HERE! Part 1")
 
-                //console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
-                //console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
-                
+            for (var tempRow = datesStartRow; tempRow < window.officeStates.length; tempRow += 2) {
+                cellValueStart = window.officeStates[tempRow][columnKey];
+
+                console.log(tempRow, columnKey)
+                console.log(window.officeStates)
+                console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
+                console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
+                console.log("HERE! Part 2")
+
                 //Ensuring invalid cells aren't treated as dates
+                console.log(cellValueStart)
+
                 if (cellValueStart == null || cellValueStart == "" || columnKey.substr(0,constructionIdentifier.length) != constructionIdentifier) {
                     break;
                 } else {
                     //Checking for name already being taken
                     if (previousNameList.indexOf(columnKey) == -1) { //Workaround for the lack of an 'in' function in javascript
                         name = columnKey;
-                        //console.log("HERE! Part 3a");
+                        console.log("HERE! Part 3a");
                     } else {
-                        //console.log("HERE! Part 3b");
+                        console.log("HERE! Part 3b");
                         //Adding extra "pt." until untaken
                         extraCount = 2;
                         nameUnfound = true;
@@ -178,11 +187,11 @@ function drawChart() {
                 }
             }
         }
-
-        /*
+        
+        console.log("HERE! Part 4")
 
         //Test row data:
-
+        /*
         data.addRows([
             ['2014Spring', 'Spring 2014',
              new Date(2014, 2, 22), new Date(2014, 5, 20), null, 100, null],
@@ -195,9 +204,9 @@ function drawChart() {
             ['2015Spring', 'Spring 2015',
              new Date(2014, 10, 22), new Date(2015, 2, 20), null, 100, null],
         ]);
-
         */
-
+        
+        rowCount = 20;
 
         var options = {
             height: 30*rowCount + 50,
@@ -211,10 +220,14 @@ function drawChart() {
             }
         };
 
+        console.log("HERE! Part 5")
+
         var container = document.getElementById('chart_div');
         var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
 
         // monitor activity, change bar color
+
+        /*
         var observer = new MutationObserver(function (mutations) {
             Array.prototype.forEach.call(container.getElementsByTagName('path'), function(bar, index) {
                 if (data.getValue(index, 6) > 100) {
@@ -226,17 +239,19 @@ function drawChart() {
             childList: true,
             subtree: true
         });
+        */
+
+        
+        console.log("HERE! Part 6")
 
 
-
-
-
-
-
-
+        console.log(data, name, previousNameList, startDay, endDay, cellValue, nameUnfound, extraCount, rowCount,
+                    constructionIdentifier, cellValueStart, cellValueEnd, columnKey, tempRow, options, chart)
 
 
         //https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
+
+        //https://stackoverflow.com/questions/40655308/change-the-bar-color-in-gantt-chat-based-on-value/40655754#40655754
 
         chart.draw(data, options);
     } catch(e) {
