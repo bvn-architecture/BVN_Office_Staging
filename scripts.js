@@ -2,6 +2,7 @@ function slider(){
     var slider = document.getElementById("myRange");
     var output = document.getElementById("date");
     // output.innerHTML = slider.value; // Display the default slider value
+    //setTimeout(drawChart, 1)
 
     // Update the current slider value (each time you drag the slider handle)
     slider.oninput = function() {
@@ -70,16 +71,12 @@ window.addEventListener('DOMContentLoaded', slider);
 
 
 
-
-
-
-
-
-
-
+var BVNnearlyFilledDataRows = [];
 
 google.charts.load('current', {'packages':['gantt']});
 google.charts.setOnLoadCallback(drawChart);
+
+var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
 
 function drawChart() {
     try {
@@ -122,8 +119,10 @@ function drawChart() {
         var constructionIdentifier = window.BVNvisualiserConstructionIdentifier;
         var cellValueStart = "3/3/2003";
         var cellValueEnd = "4/4/2004";
+        var currentTime = Date.now();
+        var percentageCompleted = 100;
 
-        console.log("HERE! Part -1");
+        //console.log("HERE! Part -1");
         //console.log(window.officeStates);
         //console.log(Object.keys(window.officeStates).length);
         //console.log(datesStartRow)
@@ -140,14 +139,14 @@ function drawChart() {
             for (var tempRow = datesStartRow; tempRow < window.officeStates.length; tempRow += 2) {
                 cellValueStart = window.officeStates[tempRow][columnKey];
 
-                console.log(tempRow, columnKey)
-                console.log(window.officeStates)
-                console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
-                console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
-                console.log("HERE! Part 2")
+                //console.log(tempRow, columnKey)
+                //console.log(window.officeStates)
+                //console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
+                //console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
+                //console.log("HERE! Part 2")
 
                 //Ensuring invalid cells aren't treated as dates
-                console.log(cellValueStart)
+                //console.log(cellValueStart)
 
                 if (cellValueStart == null || cellValueStart == "" || columnKey.substr(0,constructionIdentifier.length) != constructionIdentifier) {
                     break;
@@ -155,9 +154,9 @@ function drawChart() {
                     //Checking for name already being taken
                     if (previousNameList.indexOf(columnKey) == -1) { //Workaround for the lack of an 'in' function in javascript
                         name = columnKey;
-                        console.log("HERE! Part 3a");
+                        //console.log("HERE! Part 3a");
                     } else {
-                        console.log("HERE! Part 3b");
+                        //console.log("HERE! Part 3b");
                         //Adding extra "pt." until untaken
                         extraCount = 2;
                         nameUnfound = true;
@@ -176,11 +175,27 @@ function drawChart() {
                     startDay = new Date(cellValueStart.split('/')[2], cellValueStart.split('/')[0], cellValueStart.split('/')[1]);
                     endDay = new Date(cellValueEnd.split('/')[2], cellValueEnd.split('/')[0], cellValueEnd.split('/')[1]);
                     
+                    //Calculating percentage completed from start, current, and end times
+                    if (endDay.getTime() < currentTime) {
+                        percentageCompleted = 100;
+                    } else if (startDay.getTime() > currentTime) {
+                        percentageCompleted = 0;
+                    } else {
+                        percentageCompleted = Math.round(((currentTime-startDay.getTime())/((endDay.getTime()-startDay.getTime())))*100);
+                    }
+                    console.log(percentageCompleted);
+                    console.log("TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG");
                     //Adding row information
                     if (window.BVNvisualiserColouredBySector) {
                         data.addRow([name, name, columnKey, startDay, endDay, null, 100, null]);
+
+                        //Adding row information to global variable for easy continual generation
+                        BVNnearlyFilledDataRows.push([name, name, columnKey, startDay, endDay, null]);
                     } else {
-                        data.addRow([name, name, startDay, endDay, null, 100, null]);
+                        data.addRow([name, name, startDay, endDay, null, percentageCompleted, null]);
+
+                        //Adding row information to global variable for easy continual generation
+                        BVNnearlyFilledDataRows.push([name, name, columnKey, startDay, endDay, null]);
                     }
                     rowCount++;
                     //console.log(name + " " + startDay + " " + endDay);
@@ -188,8 +203,8 @@ function drawChart() {
             }
         }
         
-        console.log("HERE! Part 4")
-
+        //console.log("HERE! Part 4")
+        //console.log(Date.now())
         //Test row data:
         /*
         data.addRows([
@@ -220,10 +235,9 @@ function drawChart() {
             }
         };
 
-        console.log("HERE! Part 5")
+        //console.log("HERE! Part 5")
 
         var container = document.getElementById('chart_div');
-        var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
 
         // monitor activity, change bar color
 
@@ -241,12 +255,12 @@ function drawChart() {
         });
         */
 
-        
-        console.log("HERE! Part 6")
+
+        //console.log("HERE! Part 6")
 
 
-        console.log(data, name, previousNameList, startDay, endDay, cellValue, nameUnfound, extraCount, rowCount,
-                    constructionIdentifier, cellValueStart, cellValueEnd, columnKey, tempRow, options, chart)
+        //console.log(data, name, previousNameList, startDay, endDay, cellValue, nameUnfound, extraCount, rowCount,
+        //            constructionIdentifier, cellValueStart, cellValueEnd, columnKey, tempRow, options, chart)
 
 
         //https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
@@ -255,7 +269,23 @@ function drawChart() {
 
         chart.draw(data, options);
     } catch(e) {
-        console.log("probably just wait for the spreadsheet to load (gantt chart) ", e);
-        setTimeout(drawChart, 500)
+        console.log("probably just wait for the spreadsheet to load (gantt chart initialisation) ", e);
+        setTimeout(drawChart, 500);
+    }
+}
+
+
+
+
+
+
+
+
+function updateChart() {
+    try {
+
+        chart.draw(data, options);
+    } catch(e) {
+        console.log("probably just wait for the spreadsheet to load (gantt chart update) ", e);
     }
 }
