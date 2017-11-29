@@ -1,0 +1,43 @@
+<style>
+    .hg__header { grid-area: header; }
+    .hg__footer { grid-area: footer; }
+    .hg__main { grid-area: main; }
+    .hg__left { grid-area: navigation; }
+    .hg__right { grid-area: ads; }
+
+    .hg {
+        display: grid;
+        grid-template-areas: "header header header"
+                            "navigation main ads"
+                            "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 
+                            1fr
+                            1fr;
+        min-height: 100vh;
+    }
+
+    @media screen and (max-width: 600px) {
+        .hg {
+            grid-template-areas: "header"
+                                "navigation"
+                                "main"
+                                "ads"
+                                "footer";
+            grid-template-columns: 100%;
+            grid-template-rows: 100px 
+                                50px 
+                                1fr
+                                50px 
+                                30px;
+        }
+    }
+</style>
+
+<body class="hg">  
+    <div class="hg__header">Title</div>
+    <div class="hg__main">Content</div>
+    <div class="hg__left">Menu</div>
+    <div class="hg__right">Ads</div>
+    <div class="hg__footer">Footer</div>
+</body>  

@@ -2,12 +2,12 @@
     --theme-colour: rgba(233, 124, 0, 0.49);
     --theme-colour-opaque:  rgb(233, 124, 0);
 }
-
+/*
 html {
     display: table;
     margin: auto;
 }
-
+*/
 body {
     max-width: 100%;
     max-height: 100%;
@@ -73,9 +73,9 @@ svg * {
 .floorplan {
     left: 10%;
     top: 0px;
-    position: absolute;
-    max-width: 100%;
-    max-height: 100%;
+    /*position: absolute;
+    /*max-width: 100%;
+    max-height: 100%;*/
     z-index: -1;
 }
 
@@ -91,14 +91,14 @@ svg * {
     z-index: -1;
 }
 
-
+/*
 #clippaths {
     left: 0px;
     top: 0px;
     position: absoloute;
     max-width: 100%;
     max-height: 100%;
-}
+}*/
 
 h1 {
     color: #fff;
@@ -122,4 +122,80 @@ h1 {
     font-family: 'Muli', sans-serif !important;
     color: var(--theme-colour) !important;
     max-width: 100%;
+}
+
+
+
+
+/* Grid stuff */
+
+
+.grid__title {
+    /* grid-area: 1 / 1 / 2 / 3; */
+    grid-area: title;
+    top: 0px;
+    color: #fff;
+    background-color: var(--theme-colour);
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+    font-size: 7.5vmin;
+    padding: 1.5vmin;
+}
+
+.grid__floorplan {
+    /* grid-area: 2 / 1 / 3 / 2; */
+    grid-area: floorplan;
+}
+
+.grid__gantt {
+    /* grid-area: 2 / 2 / 3 / 3; */
+    grid-area: gantt;
+}
+
+
+.grid__title2 {
+    /* grid-area: 2 / 2 / 3 / 3; */
+    grid-area: title2;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 13vh
+                        1fr;
+    grid-template-areas: "title title title title"
+                         "floorplan floorplan gantt gantt";
+    min-height: 100vh;
+    /* grid-auto-flow: row; */
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+
+    .grid__title {
+        /* grid-area: 1 / 1 / 2 / 2; */
+        grid-area: title;
+        align-self: start;
+    }
+
+    .grid__floorplan {
+        /* grid-area: 2 / 1 / 3 / 2; */
+        grid-area: floorplan;
+    }
+
+    .grid__gantt {
+        /* grid-area: 3 / 1 / 4/ 2; */
+        grid-area: gantt;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 13vh
+                            1fr
+                            1fr;
+        grid-template-areas: "title"
+                             "floorplan"
+                             "gantt";
+    }
 }
