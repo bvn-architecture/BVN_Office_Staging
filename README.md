@@ -79,7 +79,7 @@ This method is recommended for most people - even though it takes a bit longer t
 
 2. [Download and install the github for desktop application](https://desktop.github.com/).
 
-3. Go to [this repo's webpage](./), and click on *Fork*.
+3. Go to [this repo's webpage](https://github.com/BaptisteHiggs/BVN_Office_Staging), and click on *Fork*.
 
 ![Missing Image](doc_images/forkRepo.png)
 
