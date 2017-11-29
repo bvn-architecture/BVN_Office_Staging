@@ -125,7 +125,7 @@ def insertCode(filePath, newSVG):
     Does not return anything (the file is updated).
     """
     # This is the line that starts the svg off in the html file.
-    svgStartMarker = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">'
+    svgStartMarker = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1380 1080">'
     
     # Initialising list of lines
     htmlCode = []
