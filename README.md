@@ -85,6 +85,8 @@ This method is recommended for most people - even though it takes a bit longer t
 
 4. It may ask you to verify your email address - do it if it asks you of course! If it did, redo step 3 after verifying.
 
+*Note: BVN's spam filter may think that this email is spam if you used your work email address. Try waiting a bit and checking your junk folder just in case! If you can't seem to find it, you can always use a different address.*
+
 ![Missing Image](doc_images/verifyEmail.png)
 
 5. Open up github for desktop and log in.
