@@ -91,8 +91,6 @@ This method is recommended for most people - even though it takes a bit longer t
 
 5. Open up github for desktop and log in.
 
-#### *@Benita: Could let me know if step 5 needs more clarification? I couldn't get an image of it or try it out, just assuming it happens like that.*
-
 6. Select **File > Clone Repository...**
 
 ![Missing Image](doc_images/cloneRepoLocal.png)
@@ -101,11 +99,7 @@ This method is recommended for most people - even though it takes a bit longer t
 
 *Note: It's difficult (but possible) to change where a repo lives, so choose carefully! Copy pasting the repo once it's been downloaded won't update the where github for desktop thinks it lives.*
 
-#### *@Benita: Could you please take a screenshot when completing the above step for me? It should look like this:*
-
 ![Missing Image](doc_images/forkCloneDesktop.png)
-
-#### *Except with the appropriate repo there. Thanks! :)*
 
 8. All of the files have now been downloaded. [Here is a guide on the different important files](#fileGuide). If you'd like to use some of github's backing up or web hosting features, [here's a very quick guide to what the basic uses are](#githubGuide).
 
