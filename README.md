@@ -127,7 +127,7 @@ The rows represent each of the days, spanning between August 2017 and January 20
 
 ### Editing the visuals
 
-The way that the website works is that there are three base images that are manipulated:
+The way that the website works is that there are three base images that can be manipulated:
 
  - *ExistingFloorplan.png*,
  
@@ -135,9 +135,13 @@ The way that the website works is that there are three base images that are mani
  
  - & *ProposedFloorplan.png*
 
-There are also the orange zones and the clipping planes (i.e. where the above images are split up) included in the *MasterFloorplan.ai* Illustrator file. If you'd like to edit one of the base images, just open it up in photoshop, and as long as the size of the image remains the same your edits should work like you'd expect them to.
+And one illustrator file that can be used to edit the different zonings (orange areas and where the floorplans are split up):
 
-If you make any edits to the data inside the illustrator file for the website, firstly make sure that the **Zones**, **clippaths**, & **Background** layers are visible. After that, you'll need to **File > Save As** the image as an SVG file. Make sure the settings are the same as these:
+ - *MasterFloorplan.ai*
+
+If you'd like to edit one of the base images, just open it up in photoshop, and as long as the size of the image remains the same your edits should work like you'd expect them to.
+
+If you'd like to edit the zonings inside the illustrator file for the website, open up the illustrator file and edit the zones or clipping planes as you'd like. When you want to save your changes, make sure that the **Zones**, **clippaths**, & **Background** layers are visible. After that, you'll need to **File > Save As** the image as an SVG file. Make sure the settings are the same as these:
 
 ![Missing Image](doc_images/SVGsettings.png)
 
@@ -181,7 +185,7 @@ Currently, the *Prepare_SVG.py* python script that collates all the data ignores
  
  - Background
  
-If you'd like to allow for any more layers to be visible, it will involve a quick trip into the python script. Don't worry if you're unfamiliar with coding or python, it's fairly straightforward:
+If you'd like to allow for any more layers to be visible, it will involve a quick trip into the python script. Don't worry if you're unfamiliar with coding or python, it's fairly straightforward. All we'll be doing is changing the part that tells the computer which layers to reveal:
 
 1. In the windows start search, search for IDLE, and click on the link that presents itself.
 
@@ -201,9 +205,9 @@ If you'd like to allow for any more layers to be visible, it will involve a quic
 
 ![Missing Image](doc_images/runSVGPrep_code.png)
 
-6. Just 6 lines below it, you should see a line that says something like *"newSVG = extractCode(inFile, ["clippaths", "Zones", "Background"])"*. This is the part that we're going to edit, specifically the part that says *"["clippaths", "Zones", "Background"]"*.
+6. Find the line that says *"newSVG = extractCode(inFile, ["clippaths", "Zones", "Background"])"*, we will be editing the part inside the brackets that says *"["clippaths", "Zones", "Background"]"*.
 
-7. To add an item to a list in Python (what we're editing is a list), just add a comma after the last item, and put the item in after it. Since the layer that we need to add is a word, we need to put speech marks ("") around it. The line should now look something like this (except with the name of your layer - remember that the case is important! keep it exactly the same as what it's named in illustrator):
+7. To tell the computer to allow another layer to be visible, put a comma after the last layer (*["Background"],* ) and add your new layer's name inside quotation marks. The line should now look something like this:
 
 ![Missing Image](doc_images/editedCode.png)
 
