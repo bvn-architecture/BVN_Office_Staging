@@ -1,6 +1,6 @@
 :root {
-    --theme-colour: rgba(233, 124, 0, 0.49);
-    --theme-colour-opaque:  rgb(233, 124, 0);
+    --theme-colour: rgba(36, 127, 255, 0.49);
+    --theme-colour-opaque:  #276fe2;
 }
 /*
 html {
