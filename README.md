@@ -13,7 +13,9 @@
    
    - [x] Setting up google spreadsheet
    
-   - [ ] Entering details into google spreadsheet
+   - [x] Entering details into google spreadsheet
+   
+   - [ ] Final formatting
 
 ### Organise the timeline data for Benita
 
