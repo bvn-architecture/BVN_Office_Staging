@@ -122,6 +122,8 @@ function drawChart() {
         var cellValueEnd = "4/4/2004";
         var currentTime = Date.now();
         var percentageCompleted = 100;
+        var displayName = "";
+
 
         //console.log("HERE! Part -1");
         //console.log(window.officeStates);
@@ -153,6 +155,7 @@ function drawChart() {
                     break;
                 } else {
                     //Checking for name already being taken
+
                     if (previousNameList.indexOf(columnKey) == -1) { //Workaround for the lack of an 'in' function in javascript
                         name = columnKey;
                         //console.log("HERE! Part 3a");
@@ -171,6 +174,8 @@ function drawChart() {
                     }
                     previousNameList.push(name);
 
+                    displayName = createDisplayName(constructionIdentifier, name);
+
                     //Formatting start and end dates
                     cellValueEnd = window.officeStates[tempRow + 1][columnKey]
                     startDay = convertCellDate(cellValueStart)
@@ -186,15 +191,15 @@ function drawChart() {
                     }
                     //Adding row information
                     if (window.BVNvisualiserColouredBySector) {
-                        data.addRow([name, name, columnKey, startDay, endDay, null, 100, null]);
+                        data.addRow([name, displayName, columnKey, startDay, endDay, null, 100, null]);
 
                         //Adding row information to global variable for easy continual generation
-                        nearlyFilledDataRows.push([name, name, columnKey, startDay, endDay, null]);
+                        nearlyFilledDataRows.push([name, displayName, columnKey, startDay, endDay, null]);
                     } else {
-                        data.addRow([name, name, startDay, endDay, null, percentageCompleted, null]);
+                        data.addRow([name, displayName, startDay, endDay, null, percentageCompleted, null]);
 
                         //Adding row information to global variable for easy continual generation
-                        nearlyFilledDataRows.push([name, name, startDay, endDay, null]);
+                        nearlyFilledDataRows.push([name, displayName, startDay, endDay, null]);
                     }
                     rowCount++;
                     //console.log(name + " " + startDay + " " + endDay);
@@ -345,4 +350,44 @@ function updateChart(currentTime) {
     } catch(e) {
         console.log("probably just wait for the spreadsheet to load (gantt chart update) ", e);
     }
+}
+
+
+function createDisplayName(identifier, name) {
+    /*Create a better (more legible) display name for each of the room names.
+      Practically, it:
+        - Removes the beginning identifier
+        - Places a space between any progressions from lowercase to uppercase
+      E.g. "CONSTRUCTIONProjectRoomSouth" => "Project Room South" */
+
+    //Removing beginning identifier
+    var betterName = name.substr(identifier.length, name.length);
+
+    //Initialising as previous character being upper case to avoid unnecesary initial spaces
+    var previouslyLowerCase = false;
+
+    //Initialising the display name with the first character
+    var displayName = betterName[0];
+
+    //Looping through each character
+    for (var charIndex = 1; charIndex < betterName.length; charIndex++) {
+        char = betterName[charIndex]
+        
+        //Testing if uppercase
+        if (char.toUpperCase() === char && char.toLowerCase() !== char) {
+            
+            if (previouslyLowerCase) {
+                //Adding the necessary space
+                displayName += " ";
+            }
+
+            previouslyLowerCase = false;
+        } else {
+            previouslyLowerCase = true;
+        }
+
+        //Adding the current character to the name to be returned
+        displayName += char;
+    }
+    return displayName;
 }
