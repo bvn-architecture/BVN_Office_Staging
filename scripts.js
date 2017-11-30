@@ -6,6 +6,8 @@ function slider(){
 
     // Update the current slider value (each time you drag the slider handle)
     slider.oninput = function() {
+
+        // Try statement catches instances where the spreadsheet hasn't loaded yet
         try{
             if (this == undefined || this == null) {
                 var row = window.officeStates[0];
@@ -80,6 +82,8 @@ google.charts.load('current', {'packages':['gantt']});
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
+
+    // Try statement catches instances where the spreadsheet hasn't loaded yet
     try {
         //Finds where the dates are - assumes the first relevant column is the third one.
         for (var tempRow = window.officeStates.length-1; tempRow >= 0; tempRow--) {
@@ -290,8 +294,10 @@ function convertCellDate(dateString) {
 
 function updateChart(currentTime) {
     /* Updates chart data with date from slider*/
+
+    // Try statement catches instances where the spreadsheet hasn't loaded yet
     try {
-        console.log(nearlyFilledDataRows)
+        console.log(window.officeStates)
 
         //throw '- actually just temp error to stop this function from working.'
 
@@ -314,20 +320,17 @@ function updateChart(currentTime) {
         //Removing all the rows
         //data.removeRows(0, rowCount-1)
 
-        console.log("GOT HERE!! -1")
         var updatedChartData = [];
 
+        //Looping through each row
         for (var index in nearlyFilledDataRows) {
             incompleteRow = nearlyFilledDataRows[index];
 
-            //console.log(incompleteRow)
-
+            //Fetching relevant dates
             startDay = incompleteRow[2];
             endDay = incompleteRow[3];
 
-            //console.log(startDay, endDay)
-
-            //console.log("GOT HERE!! 0")
+            //Calculating percentage completed
             if (endDay.getTime() < currentTime) {
                 percentageCompleted = 100;
             } else if (startDay.getTime() > currentTime) {
@@ -335,17 +338,13 @@ function updateChart(currentTime) {
             } else {
                 percentageCompleted = Math.round(((currentTime-startDay.getTime())/((endDay.getTime()-startDay.getTime())))*100);
             }
-            //console.log("GOT HERE!! 1", c)
 
-            //console.log(percentageCompleted);
-
+            // Adding the updated items to the row
             newDataList = incompleteRow.concat([percentageCompleted, null]);
-
-            //sconsole.log(newDataList);
-
             newData.addRow(newDataList);
         }
-        console.log("GOT HERE!! 2")
+
+        //Redrawing the chart with the updated progress bars
         chart.draw(newData, chartOptions);
     } catch(e) {
         console.log("probably just wait for the spreadsheet to load (gantt chart update) ", e);
