@@ -45,9 +45,8 @@ function slider(){
 }
 
 
-
 function init() {
-    Tabletop.init( { key: window.BVNofficeProgressPublicSpreadsheetUrl,
+    Tabletop.init( { key: "https://docs.google.com/spreadsheets/d/" + window.BVNofficeProgressPublicSpreadsheetUrlKey + "/pubhtml",
                         callback: showInfo,
                         simpleSheet: true } )
 }
@@ -60,14 +59,6 @@ function showInfo(data, tabletop) {
 
 window.addEventListener('DOMContentLoaded', init);
 window.addEventListener('DOMContentLoaded', slider);
-
-
-
-
-
-
-
-
 
 
 
@@ -211,23 +202,6 @@ function drawChart() {
             }
         }
         
-        //console.log("HERE! Part 4")
-        //console.log(Date.now())
-        //Test row data:
-        /*
-        data.addRows([
-            ['2014Spring', 'Spring 2014',
-             new Date(2014, 2, 22), new Date(2014, 5, 20), null, 100, null],
-            ['2014Summer', 'Summer 2014',
-             new Date(2014, 5, 29), new Date(2014, 8, 20), null, 100, null],
-            ['2014Autumn', 'Autumn 2014',
-             new Date(2014, 7, 21), new Date(2014, 11, 20), null, 100, null],
-            ['2014Winter', 'Winter 2014',
-             new Date(2014, 11, 21), new Date(2015, 2, 11), null, 100, null],
-            ['2015Spring', 'Spring 2015',
-             new Date(2014, 10, 22), new Date(2015, 2, 20), null, 100, null],
-        ]);
-        */
         
         rowCount = 20;
 
@@ -263,9 +237,6 @@ function drawChart() {
             subtree: true
         });
         */
-
-
-        //console.log("HERE! Part 6")
 
 
         //console.log(data, name, previousNameList, startDay, endDay, cellValue, nameUnfound, extraCount, rowCount,
@@ -390,3 +361,7 @@ function createDisplayName(identifier, name) {
     }
     return displayName;
 }
+
+
+
+// https://spreadsheets.google.com/feeds/list/1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s/od6/public/values?alt=json
