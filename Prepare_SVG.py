@@ -297,7 +297,59 @@ def downloadSheetData(googleSheetsURL):
 def formatData(jsonData):
     """
     Extrapolate the appropriate sub-dataset from the google sheets data, saving it to sheetsData.js
+
+    (Now with the json library - hopefully a lot easier)
     """
+    import json
+    data = json.loads(jsonData)
+    
+    usefulData = data["feed"]["entry"]
+
+    cellPrefix = "gsx$"
+
+    # Cleaning data (removing unnecessary entries + renaming keys)
+    cleanData = []
+    for dateEntry in usefulData:
+        zoneDict = {}
+        # zoneEntry is the key, innerDict is the value
+        for zoneEntry, innerDict in dateEntry.iteritems():
+            # Only adding values with the "gsx$" prefix
+            if zoneEntry[:len(cellPrefix)] == cellPrefix:
+                # Chopping off "gsx$", removing unnecessary extra dictionary layer
+                zoneDict[zoneEntry[len(cellPrefix):]] = innerDict["$t"]
+            
+        cleanData.append(zoneDict)
+    
+    # Writing the data to googleSheetsData.js
+    googleSheetsFile = open("googleSheetsData.js", 'w')
+    googleSheetsFile.write("window.officeStates = " + removeUnicodeUs(str(cleanData)))
+    googleSheetsFile.close()
+
+
+def removeUnicodeUs(givenString):
+    """
+    A probably not so great way of removing the annoying "u"s created by the unicode encoding
+    """
+    previousCharacters = '????'
+    cleanString = ""
+
+    for char in givenString:
+        previousCharacters = previousCharacters[1:] + char
+        if previousCharacters in [": u'", ", u'"] or previousCharacters[1:] == "{u'":
+            cleanString = cleanString[:-1]
+        
+        cleanString += char
+    return cleanString
+
+
+def formatData_OLD(jsonData):
+    """
+    Extrapolate the appropriate sub-dataset from the google sheets data, saving it to sheetsData.js
+
+    testStructure = [[{1:2,2:3,3:4}],[{'d':2,'c':3,'b':4}],[["szzdf","szzdf","szzdf","szzdf","szzdf","dafhdgh"],["abfsdf","asdsdfe","abfsdf","asdsdfe","abfsdf","asdsdfe"],[{1:2,3:4},{1:{1:2,3:4},3:"dgdfg"}],[1,2,3,4,5]],[1,2,3,4,5,6,7]]
+    """
+    import json
+
     # Initialising output file's variable
     newFileString = ""
 
@@ -348,7 +400,29 @@ def formatData(jsonData):
         elif char == "," and layersDeep <= deletionLevel:
             # Testing for item being
             deletionLevel = 999
-            
+    
+
+    # Initialising variables for loop
+    currentDepth = 0
+    currentItem = ""
+    currentSearchString = len(disposableString)*"!"
+    disposable = True
+
+    for char in usefulData:
+        if char == "," and currentDepth <= 1:
+            if not disposable:
+                cleanData += currentItem
+            elif disposable and currentDepth == 0:
+                cleanData += "}"
+        
+        elif char == "{":
+            currentDepth += 1
+            if not disposable:
+                cleanData += currentItem + "{"
+        
+        elif char == "}":
+            sdgsg
+
 
 
 
@@ -372,8 +446,51 @@ def formatData(jsonData):
 
 
 
+def printStructure(fileStructure, startString=""):
+    """
+    Print the given variable's structure (intended for dictionaries/lists/etc.)
+    """
 
+    structureList = []
 
+    if isinstance(fileStructure, dict):
+        structureList.append(startString + "DICT")
+        for key, value in fileStructure.iteritems():
+            structureList.append(printStructure(value, startString + "    "))
+    elif isinstance(fileStructure, (list, tuple)):
+        if isinstance(fileStructure, list):
+            structureList.append(startString + "LIST")
+        else:
+            structureList.append(startString + "TUPLE")
+        for item in fileStructure:
+            structureList.append(printStructure(item, startString + "    "))
+    else:
+        return "ITEM"
+
+    if structureList != []:
+        # Necessary initialisations
+        previousItem = ""
+        itemCount = 1
+        newStructureList = []
+        #print structureList
+
+        for item in structureList:
+            if item == previousItem:
+                itemCount += 1
+            else:
+                if itemCount == 1:
+                    newStructureList.append(str(previousItem))
+                else:
+                    if isinstance(previousItem, str):
+                        newStructureList.append(previousItem)
+                    elif isinstance(previousItem, list):
+                        previousItem.append("x" + str(itemCount))
+                        newStructureList.extend(previousItem)
+
+                itemCount = 1
+                previousItem = item
+
+        return newStructureList
 
 
 def run():
@@ -482,6 +599,7 @@ def run():
 
     print("Formatting and saving data...")
     formatData(googleSheetsData)
+
 
 # Running the program
 run()

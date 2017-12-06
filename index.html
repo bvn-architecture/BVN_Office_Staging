@@ -1,31 +1,33 @@
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="styleTest.css">
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-		<script src="moment.js"></script>
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-		<script type="application/javascript">
-			//URL key to the spreadsheet with the data
-			window.BVNofficeProgressPublicSpreadsheetUrlKey = '1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s';
 
-			//window.BVNofficeProgressPublicSpreadsheetUrl = './officeStates.html'
+<head>
+	<link rel="stylesheet" type="text/css" href="styleTest.css">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+	<script src="moment.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="application/javascript">
+		//URL key to the spreadsheet with the data
+		window.BVNofficeProgressPublicSpreadsheetUrlKey = '1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s';
 
-			//Phrase that goes before every item you want to visualise from the gantt chart
-			window.BVNvisualiserConstructionIdentifier = "Construction";
+		//window.BVNofficeProgressPublicSpreadsheetUrl = './officeStates.html'
 
-			//Set to 'false' for no colours, and 'true' for individual colouring per location
-			window.BVNvisualiserColouredBySector = false;
-		</script>
-		<script src='scripts.js'></script>
-		<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-	</head>
+		//Phrase that goes before every item you want to visualise from the gantt chart
+		window.BVNvisualiserConstructionIdentifier = "Construction";
 
-	<body class="container">
-		<div class="grid__title">BVN Sydney Office Works</div>
-		<!-- <div class='title2'></div> -->
-		<div class="grid__floorplan">
-			<span id="date">August 1st 2017</span> <!--DON'T CHANGE THE NEXT LINE-->
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1380 1080">
+		//Set to 'false' for no colours, and 'true' for individual colouring per location
+		window.BVNvisualiserColouredBySector = false;
+	</script>
+	<script src='scripts.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+
+<body class="container">
+	<div class="grid__title">BVN Sydney Office Works</div>
+	<!-- <div class='title2'></div> -->
+	<div class="grid__floorplan">
+		<span id="date">August 1st 2017</span>
+		<!--DON'T CHANGE THE NEXT LINE-->
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1380 1080">
 <style type="text/css">
 	.st1{display:inline;}
 	.st2{fill:none;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
@@ -419,16 +421,17 @@
 			C113.8,767.9,111.5,770.2,111.5,773z"/>
 	</g>
 </g>
-			</svg>
-			<div id="notes"></div>
+		</svg>
+		<div id="notes"></div>
+	</div>
+	<div class="grid__gantt">
+		<br>
+		<div id="slidecontainer">
+			<input type="range" min="0" max="160" value="0" class="slider" id="myRange">
 		</div>
-		<div class="grid__gantt">
-			<br>
-			<div id="slidecontainer">
-				<input type="range" min="0" max="160" value="0" class="slider" id="myRange">
-			</div>
-			<br>
-			<div id="chart_div"></div>
-		</div>
-	</body>
+		<br>
+		<div id="chart_div"></div>
+	</div>
+</body>
+
 </html>

@@ -45,19 +45,19 @@ function slider(){
 }
 
 
-function init() {
-    Tabletop.init( { key: "https://docs.google.com/spreadsheets/d/" + window.BVNofficeProgressPublicSpreadsheetUrlKey + "/pubhtml",
-                        callback: showInfo,
-                        simpleSheet: true } )
-}
+// function init() {
+//     Tabletop.init( { key: "https://docs.google.com/spreadsheets/d/" + window.BVNofficeProgressPublicSpreadsheetUrlKey + "/pubhtml",
+//                         callback: showInfo,
+//                         simpleSheet: true } )
+// }
 
-function showInfo(data, tabletop) {
-    // alert('Successfully processed the table!')
-    console.log(data);
-    window.officeStates = data;
-}
+// function showInfo(data, tabletop) {
+//     // alert('Successfully processed the table!')
+//     console.log(data);
+//     window.officeStates = data;
+// }
 
-window.addEventListener('DOMContentLoaded', init);
+//window.addEventListener('DOMContentLoaded', init);
 window.addEventListener('DOMContentLoaded', slider);
 
 
