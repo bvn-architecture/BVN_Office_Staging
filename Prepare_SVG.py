@@ -49,6 +49,7 @@ def extractCode(filePath, groupNames):
                 # Check for inner group opening
                 elif line.strip()[:2] == "<g":
                     innerGroupCount += 1
+                    # line = line.lower()
                 
                 # Check for closing of group tag
                 elif line.strip()[:3] == "</g":

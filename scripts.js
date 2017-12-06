@@ -65,8 +65,6 @@ window.addEventListener('DOMContentLoaded', slider);
 
 
 
-
-
 var nearlyFilledDataRows = [];
 
 google.charts.load('current', {'packages':['gantt']});
@@ -124,7 +122,7 @@ function drawChart() {
         //console.log(window.officeStates);
         //console.log(Object.keys(window.officeStates).length);
         //console.log(datesStartRow)
-        //console.log("HERE! Part 0");
+        console.log("HERE! Part 0");
 
         //Loops through each column and adds relevant rows to gantt chart
         //for (var tempColumn = startColumn; tempColumn < Object.keys(window.officeStates[0]).length; tempColumn++) {
@@ -132,7 +130,7 @@ function drawChart() {
         
         for (var columnKey in window.officeStates[datesStartRow]) {
             //Looping through the rows
-            //console.log("HERE! Part 1")
+            console.log("HERE! Part 1")
 
             for (var tempRow = datesStartRow; tempRow < window.officeStates.length; tempRow += 2) {
                 cellValueStart = window.officeStates[tempRow][columnKey];
@@ -141,7 +139,7 @@ function drawChart() {
                 //console.log(window.officeStates)
                 //console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
                 //console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
-                //console.log("HERE! Part 2")
+                console.log("HERE! Part 2")
 
                 //Ensuring invalid cells aren't treated as dates
                 //console.log(cellValueStart)
@@ -153,9 +151,9 @@ function drawChart() {
 
                     if (previousNameList.indexOf(columnKey) == -1) { //Workaround for the lack of an 'in' function in javascript
                         name = columnKey;
-                        //console.log("HERE! Part 3a");
+                        console.log("HERE! Part 3a");
                     } else {
-                        //console.log("HERE! Part 3b");
+                        console.log("HERE! Part 3b");
                         //Adding extra "pt." until untaken
                         extraCount = 2;
                         nameUnfound = true;
@@ -197,7 +195,7 @@ function drawChart() {
                         nearlyFilledDataRows.push([name, displayName, startDay, endDay, null]);
                     }
                     rowCount++;
-                    //console.log(name + " " + startDay + " " + endDay);
+                    console.log(name + " " + startDay + " " + endDay);
                 }
             }
         }
@@ -217,7 +215,7 @@ function drawChart() {
             }
         };
 
-        //console.log("HERE! Part 5")
+        console.log("HERE! Part 5")
 
         var container = document.getElementById('chart_div');
         chart = new google.visualization.Gantt(document.getElementById('chart_div'));
@@ -239,8 +237,8 @@ function drawChart() {
         */
 
 
-        //console.log(data, name, previousNameList, startDay, endDay, cellValue, nameUnfound, extraCount, rowCount,
-        //            constructionIdentifier, cellValueStart, cellValueEnd, columnKey, tempRow, options, chart)
+        console.log(data, name, previousNameList, startDay, endDay, cellValue, nameUnfound, extraCount, rowCount,
+                    constructionIdentifier, cellValueStart, cellValueEnd, columnKey, tempRow, chartOptions, chart)
 
 
         //https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
