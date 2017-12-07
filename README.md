@@ -41,6 +41,20 @@
 
    - [ ] Automatic entering of data into spreadsheet?? The PDF from buildcorp looks a lot like an excel spreadsheet that's been 'printed'
 
+### Other:
+
+   - [ ] Do a writeup on this thing (look at trello comment for breif details)
+
+
+## Unrelated stuff
+
+   - [ ] Finish workflow writeups
+   
+   - [ ] Talk to Craig about workflows
+   
+   - [ ] Ghost plugin Fab thing
+
+
 *****
 
 *****
