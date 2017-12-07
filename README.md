@@ -243,7 +243,7 @@ Gotta do this!
 
 ## <a name="SetUp">New Website Setup</a>
 
-Creating a new website for a different floorplan entirely is quite an involved process, especially depending on what source information you have. This guide will assume that you have a timeline of different stages, a render of the floorplan before, a render of the floorplan afterwards, and a copy of the files in this repo.
+Creating a new website for a different floorplan entirely is quite an involved process, especially depending on what source information you have. This guide will assume that you have a timeline of different stages, an image of the floorplan before, an image of the floorplan afterwards, and a copy of the files in this repo.
 
 *Note: This method isn't limited to just 2 states (in fact, it usually uses 3). You can use as many different states as you want (e.g. beginning, stage 1, stage 2, stage 3, etc., end, ...)*
 
@@ -278,7 +278,7 @@ Creating a new website for a different floorplan entirely is quite an involved p
 
 1. Open up an illustrator document with appropriate sizing (should fit your images well - this file is the one that's going to be used for creating the SVG files.
 
-2. Import the images using **File > Place**. Their names should be "\<Linked File\>" in the layers panel - do not embed them.
+2. Import the images using **File > Place**. Their names should be "\<Linked File\>" in the layers panel - do not embed them. As the files should be mostly transparent with only black lines detailing the floorplan on them, the order they're placed doesn't matter. However, it's good practice to have the base empty floorplan on the bottom with the others on top.
 
    *Note: Although not necessary, it's a good idea to put them all in a layer called "Source Images" or something similar."*
 
@@ -303,7 +303,7 @@ The following steps will assume you have similar information:
 
 ![Missing Image](doc_images/CombineFilesAcrobat.png)
 
-2. At the same time, open up one of these files in photoshop/paint/etc. (I like to use snipping tool) - any image editor that can draw lines.
+2. At the same time, open up one of these files in photoshop/paint/etc. (I like to use snipping tool) - any image editor that can draw lines. You could also print out a copy and draw by hand if you'd find that easier!
 
 3. Scroll through the set of images in acrobat, and draw a line between anything that changes and what didn't change every time part of the image changes. For example, in the following two images:
 
@@ -333,6 +333,7 @@ The following steps will assume you have similar information:
 
 ![Missing Image](doc_images/SplittingPaths.png)
 
+![Missing Image](doc_images/finishedPathsLayers.png)
 
 ### Creating clipped images
 
@@ -348,15 +349,17 @@ The following steps will assume you have similar information:
 
 4. After having repeated this process for all of the path + file combinations, all of your clip groups should be finished. Rename the clip groups appropriately. A good way to name them includes:
 
-     - <a name="layerName">The location (e.g. NorthWing, SouthProjectRoom, etc.)</a>
+     - <a name="layerName">The location (e.g. northwing, southprojectroom, etc.)</a>
      
      - The state (e.g. existing or proposed)
      
      - No spaces or symbols, even dashes and underscores (All of these are substituted for obscure character combinations when exporting to SVG)
      
+     - No upper case letters.
+     
      - No numbers at the beginning of the name (same issue as above) although later in the name is fine.
 
-   e.g. "NorthWingExisting", "NorthWingProposed", "SouthProjectRoomExisting", etc.
+   e.g. "northwingexisting", "northwingproposed", "southprojectroomexisting", etc.
 
 5. Move all of the "\<Clip Group\>" files into their own file base layer, called something like *clippaths*. The clipping paths are now done! You should end up with something like this (except with your own names of course!):
 
