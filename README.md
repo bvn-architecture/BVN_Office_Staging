@@ -249,6 +249,8 @@ Creating a new website for a different floorplan entirely is quite an involved p
 
 ### Base image creation
 
+To start off, we'll need to create the base background image and the different states to go with it. These are all basically just floorplans, one with everything that doesn't change, and the others all the bits that do change.
+
 1. Inspect all of your stage images (typically just before and after), noting which parts of the images are common between the states. For example, in the following two floorplans (existing and proposed):
 
 ![Missing Image](doc_images/ExistingWithBackground.png)
@@ -276,7 +278,9 @@ Creating a new website for a different floorplan entirely is quite an involved p
 
 ### Illustrator Setup
 
-1. Open up an illustrator document with appropriate sizing (should fit your images well - this file is the one that's going to be used for creating the SVG files.
+A lot of the workflow is creating an illustrator document set up correctly. This is the basic beginning to that file.
+
+1. Open up an illustrator document with appropriate sizing (should fit your images well - this file is the one that's going to be used for creating the SVG files).
 
 2. Import the images using **File > Place**. Their names should be "\<Linked File\>" in the layers panel - do not embed them. As the files should be mostly transparent with only black lines detailing the floorplan on them, the order they're placed doesn't matter. However, it's good practice to have the base empty floorplan on the bottom with the others on top.
 
@@ -337,6 +341,8 @@ The following steps will assume you have similar information:
 
 ### Creating clipped images
 
+The paths now need to be applied to the images as clipping masks to seperate the different sections of the image.
+
 1. Depending on how many different clipping paths you have per state, create that many copies of each image (except the background image as it won't be clipped). Use **Ctrl + Shift + V** to paste in the same place as the original.
 
 ![Missing Image](doc_images/CopiedLinkedImages.png)
@@ -368,6 +374,8 @@ The following steps will assume you have similar information:
 
 ### Creating overlay blocks
 
+If you need any overlayed blocks over the source images, like construction zones, this method details how to create them.
+
 1. With the pen tool in illustrator, create all your blocks in their appropriate positions (inside an appropriately named layer, [see here for guidelines](#layerName)).
 
 ![Missing Image](doc_images/OpaqueBlocks.png)
@@ -380,27 +388,29 @@ The following steps will assume you have similar information:
 
 ![Missing Image](doc_images/ZoneGroup.png)
 
-   Now there should be a mix of grouped and non-grouped blocks (if there are only groups, you can skip steps 4-8). Unfortunately, this doesn't work well with the current method of interpreting the svg in the javascript, so we'll need to group each of the individual blocks with a workaround invisible block.
+---------
 
-5. With the pen tool, create another small block that's out of the way.
+   Now there should be a mix of grouped and non-grouped blocks (if there are only groups, you can skip steps 4-7). Unfortunately, this doesn't work well with the current method of interpreting the svg in the javascript, so we'll need to group each of the individual blocks with a workaround invisible block.
+
+4. With the pen tool, create another small block that's out of the way.
 
 ![Missing Image](doc_images/VisibleInvisibleBlock.png)
 
-6. Select the block, and make sure that both the border's and the fill's colours are set to 'None'.
+5. Select the block, and make sure that both the border's and the fill's colours are set to 'None'.
 
 ![Missing Image](doc_images/InvisibleColours.png)
 
-7. Duplicate the block as many times as necessary (one for each actual block not in a group). Use **Ctrl + Shift + V** to paste in the same location.
+6. Duplicate the block as many times as necessary (one for each actual block not in a group). Use **Ctrl + Shift + V** to paste in the same location.
 
    *Note: I renamed the blank blocks to BlankBlock from \<path\> for clarity.*
    
 ![Missing Image](doc_images/BlankBlocks.png)
 
-8. Group each of the blocks not in groups with one of the blank blocks.
+7. Group each of the blocks not in groups with one of the blank blocks.
 
 ![Missing Image](doc_images/allGroups.png)
 
-9. Finally, these need to be renamed appropriately. [See here](#layerName) for effective naming guidelines. You should end up with something like this:
+8. Finally, these need to be renamed appropriately. [See here](#layerName) for effective naming guidelines. You should end up with something like this:
 
 ![Missing Image](doc_images/renamedZones.png)
 
@@ -409,7 +419,9 @@ The following steps will assume you have similar information:
 
 ### Prepping the illustrator file for merging
 
-1. The illustrator file is now effectively finished! We just now need to make sure that it's exported correctly, so open up the file and ensure that you've saved it.
+The illustrator file is now effectively finished! We just now need to make sure that it's exported correctly to the svg format so that the website can use it.
+
+1. Open up the file and ensure that you've saved it.
 
 2. Take note of the layers, ensuring that:
 
@@ -435,6 +447,8 @@ The following steps will assume you have similar information:
 
 
 ### Prepping the python file
+
+# OUTDATED, FIX THIS
 
 1. Ensure that you have python installed. [Here is a link](https://www.python.org/downloads/release/python-2713/) to version 2.7, the version needed for this to run.
 
@@ -479,6 +493,8 @@ The following steps will assume you have similar information:
 
 ### Collating the data
 
+# OUTDATED, FIX THIS
+
 1. We'll now have to use the *Prepare_SVG.py* python file we just edited to collate the data. To start, open up the *Prepare_SVG.py* file.
    
 2. The script will ask you for the name of the svg file generated. Enter it, ensuring that all the cases of the letters are correct and that you've put *.svg* on the end of it. This will most likely be called *MasterFloorplan.svg*.
@@ -489,6 +505,8 @@ The following steps will assume you have similar information:
 
 
 ### Setting up the spreadsheet
+
+To have the website know what times the different areas are in their different states, a google spreadsheet is used.
 
 1. A google sheet is used for the time data; [here's the original website's google sheet](https://docs.google.com/spreadsheets/d/1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s/edit?usp=sharing), your new one will look very similar. First off, [create a new sheet here](https://docs.google.com/spreadsheets/u/0/).
 
@@ -508,8 +526,11 @@ The following steps will assume you have similar information:
    
 ![Missing Image](doc_images/dateColumnCells.png)
 
+# ADD THE KEY TO THE JAVASCRIPT FILE
 
 ### Entering the times
+
+Now that the spreadsheet has been set up, the actual times need to be entered into the spreadsheet's grid.
 
 1. Due to the large variance in the possible source data you could have for this step, you'll mostly have to figure it out on your own. Somehow, you'll need to find out when each stage of construction occurs for each location. For example, you may know that the bathrooms will be in the previous state from the 11th of October until the 5th of November, they'll be under construction from then until the 1st of December, and that from then on they'll be in the proposed state.
 
@@ -532,6 +553,8 @@ The following steps will assume you have similar information:
 
 
 ### Final formatting
+
+# DO THIS!
 
 1. The website is effectively finished, at least in terms of functionality!
 
