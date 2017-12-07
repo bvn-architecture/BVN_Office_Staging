@@ -45,6 +45,7 @@
 
    - [ ] Do a writeup on this thing (look at trello comment for breif details)
 
+   - [ ] Make "temporary" layer that includes temp states of westwingnorth, balcony, & southwing
 
 ## Unrelated stuff
 
