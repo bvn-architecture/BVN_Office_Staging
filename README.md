@@ -170,13 +170,13 @@ To actually push these changes to the website, you'll need to [collate the data]
 
 1. To start collating the data, open up the *Prepare_SVG.py* file.
 
-   *Note: You'll need python 2.7 installed in order to do this!
+   *Note: You'll need python 2.7 installed in order to do this!*
    
-2. The script will ask you for the name of the svg file generated. Enter it, ensuring that all the cases of the letters are correct and that you've put *.svg* on the end of it.
+2. You have two options here. Either allow it to use the default options that are presented, or enter other values. Either way, follow the prompts as they lead you through the process.
 
-3. After this, it should ask for the html file's name. It's likely *index.html* unless you've renamed it. As before, ensure that the cases are correct and *.html* is on the end of it!
+   *Note: If you choose to enter new values, you'll have the option to save them as the new default values after entering them.*
 
-4. The program is done! Index.html should work with your newly updated files.
+3. The program is done! Index.html should work with your newly updated files.
 
 
 ## Other Issues
@@ -191,44 +191,6 @@ It works like a coordinate system, with the first number representing the **x** 
 
 The three terms - EXS, CON, & PRP - are short for existing, construction, and proposed floorplans. The construction phase is when there's an orange shape on top of it, and the existing and proposed floorplans are the different floorplans that are respectively before and after the works are completed in each area. 
 
-
-### Allowing for more layers to be shown
-
-Currently, the *Prepare_SVG.py* python script that collates all the data ignores anything that's not visible and that's not in any of the following layers:
-
- - clippaths
- 
- - Zones
- 
- - Background
- 
-If you'd like to allow for any more layers to be visible, it will involve a quick trip into the python script. Don't worry if you're unfamiliar with coding or python, it's fairly straightforward. All we'll be doing is changing the part that tells the computer which layers to reveal:
-
-1. In the windows start search, search for IDLE, and click on the link that presents itself.
-
-![Missing Image](doc_images/IDLEsearch.png)
-
-2. Select **File > Open**
-
-3. Find *Prepare_SVG.py* in the dialog window that appears, opening the file up.
-
-![Missing Image](doc_images/Select_PrepSVG.png)
-
-4. The code should present itself.
-
-![Missing Image](doc_images/CodeOpen.png)
-
-5. Every so often you should see a line that starts on the very right that begins with an orange *"def"*. Scroll down until you see the line that says *"def runSVGPrep():"*.
-
-![Missing Image](doc_images/runSVGPrep_code.png)
-
-6. Find the line that says *"newSVG = extractCode(inFile, ["clippaths", "Zones", "Background"])"*, we will be editing the part inside the brackets that says *"["clippaths", "Zones", "Background"]"*.
-
-7. To tell the computer to allow another layer to be visible, put a comma after the last layer (*["Background"],* ) and add your new layer's name inside quotation marks. The line should now look something like this:
-
-![Missing Image](doc_images/editedCode.png)
-
-8. Now that we've finished the editing, just **File > Save** it. When you next use the *Prepare_SVG.py* file, the new layer should be included!
 
 ### <a name="fileGuide">Important Files</a>
 
@@ -461,64 +423,6 @@ The illustrator file is now effectively finished! We just now need to make sure 
 ![Missing Image](doc_images/SVGsettings.png)
 
 
-### Prepping the python file
-
-# OUTDATED, FIX THIS
-
-1. Ensure that you have python installed. [Here is a link](https://www.python.org/downloads/release/python-2713/) to version 2.7, the version needed for this to run.
-
-2. In the windows start search, search for IDLE, and click on the link that presents itself.
-
-![Missing Image](doc_images/IDLEsearch.png)
-
-3. Select **File > Open**
-
-4. Find *Prepare_SVG.py* in the dialog window that appears, opening the file up.
-
-![Missing Image](doc_images/Select_PrepSVG.png)
-
-5. The code should present itself.
-
-![Missing Image](doc_images/CodeOpen.png)
-
-6. Every so often you should see a line that starts on the very right that begins with an orange *"def"*. Scroll down until you see the line that says *"def runSVGPrep():"*.
-
-![Missing Image](doc_images/runSVGPrep_code.png)
-
-7. Just 6 lines below it, you should see a line that says something like *"newSVG = extractCode(inFile, ["clippaths", "Zones", "Background"])"*. This is the part that we're going to edit, specifically the part that says *"["clippaths", "Zones", "Background"]"*.
-
-8. Open up your illustrator document, and note down the exact names of the important layers you want visualised.
-
-![Missing Image](doc_images/importantMetaLayers.png)
-
-8. What we're editing in this python file is a list. The format of a list is something like this:
-
-   [item1, item2, item3, item4, item5]
-
-   Since the layer that we need to add is a word, we need to put speech marks ("") around it, so it'll look more like this:
-   
-   ["layer1", "layer2", "layer3", "layer4", "layer5"]
-   
-   Edit in your layer's names into the python file in this format (remember that the case is important, keep it exactly the same as what it's named in illustrator).
-
-![Missing Image](doc_images/editedCode.png)
-
-9. Now that we've finished the editing, just **File > Save** it. When you next use the *Prepare_SVG.py* file, the appropriate layers will be added to index.html!
-
-
-### Collating the data
-
-# OUTDATED, FIX THIS
-
-1. We'll now have to use the *Prepare_SVG.py* python file we just edited to collate the data. To start, open up the *Prepare_SVG.py* file.
-   
-2. The script will ask you for the name of the svg file generated. Enter it, ensuring that all the cases of the letters are correct and that you've put *.svg* on the end of it. This will most likely be called *MasterFloorplan.svg*.
-
-3. After this, it should ask for the html file's name. This file will most likely be called *index.html* unless you've renamed it. As before, ensure that the cases are correct and *.html* is on the end of it!
-
-4. The program is done! The html file has all the appropriate clipping mask and overlay objects connected. This process will have to be re-done every time you want to update these.
-
-
 ### Setting up the spreadsheet
 
 To have the website know what times the different areas are in their different states, a google spreadsheet is used.
@@ -541,7 +445,6 @@ To have the website know what times the different areas are in their different s
    
 ![Missing Image](doc_images/dateColumnCells.png)
 
-# ADD THE KEY TO THE JAVASCRIPT FILE
 
 ### Entering the times
 
@@ -566,18 +469,45 @@ Now that the spreadsheet has been set up, the actual times need to be entered in
 ![Missing Image](doc_images/colouredOpacityGrid.png)
 
 
+### Linking the spreadsheet to the html file
+
+In order for the the data to work right, the google sheet needs to be linked.
+
+1. Open up your google sheet, and grab the URL. It should look something like this:
+
+   ht&#8203;tps://docs.google.c&#8203;om/spreadsheets/d/1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s/edit#gid=0
+   
+2. What's needed is the key - that's the long string of characters after **d/** and before **/edit**:
+
+   ht&#8203;tps://docs.google.c&#8203;om/spreadsheets/d/**1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s**/edit#gid=0
+
+3. Open up your html file (most likely index.html) and find the line that starts with **window.BVNofficeProgressPublicSpreadsheetUrlKey**
+
+![Missing Image](doc_images/spreadsheetKey.png)
+
+4. Copy the key from your spreadsheet and paste it in the spot where the other key was in the html file.
+
+   *Note: the apostrophes aren't part of the old key and should be left on either side of the new key.*
+
+
+### Collating the data
+
+1. To start collating the data, open up the *Prepare_SVG.py* file.
+
+   *Note: You'll need python 2.7 installed in order to do this!*
+   
+2. You have two options here. Either allow it to use the default options that are presented, or enter other values - you'll likely need to enter new values the first time running this script unless you've used the exact same naming scheme! Either way, follow the prompts as they lead you through the process.
+
+   *Note: If you choose to enter new values, you'll have the option to save them as the new default values after entering them.*
+
+3. The program is done! Index.html should work with your newly updated files.
+
 
 ### Final formatting
 
 # DO THIS!
 
-1. The website is effectively finished, at least in terms of functionality!
-
-
-
-
-
-
+Now that the website is nearly finished, the html and css files need some touch-ups to get the appearance right.
 
 
 
