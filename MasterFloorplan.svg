@@ -65238,6 +65238,45 @@
 			</image>
 		</g>
 	</g>
+	<g id="temporarywestwingnorth">
+		<defs>
+			<polygon id="SVGID_1_" points="29.2,367.1 308.1,367.1 308.1,578.6 14.2,562.1 			"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_2_);">
+			
+				<image style="overflow:visible;" width="4613" height="4284" xlink:href="TemporaryFloorplan.png"  transform="matrix(0.2462 0 0 0.2462 5 -4.0278)">
+			</image>
+		</g>
+	</g>
+	<g id="temporarysouthwing">
+		<defs>
+			<polygon id="SVGID_3_" points="621.5,643.2 916.2,643.2 948.2,847.8 1028.2,861.2 1028.2,973.2 760.8,1004.5 621.5,995.8 			"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_4_);">
+			
+				<image style="overflow:visible;" width="4613" height="4284" xlink:href="TemporaryFloorplan.png"  transform="matrix(0.2462 0 0 0.2462 5 -4.0278)">
+			</image>
+		</g>
+	</g>
+	<g id="temporarybalcony">
+		<defs>
+			<polygon id="SVGID_5_" points="1044.8,942.5 1034.2,801.8 1028.2,125.2 1062.8,114.5 1145.5,114.5 1125.5,942.5 			"/>
+		</defs>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_6_);">
+			
+				<image style="overflow:visible;" width="4613" height="4284" xlink:href="TemporaryFloorplan.png"  transform="matrix(0.2462 0 0 0.2462 5 -4.0278)">
+			</image>
+		</g>
+	</g>
 	<g id="proposedwestwingnorth">
 		<defs>
 			<polygon id="_x30_2A_x5F_PRP_1_" points="36.2,388.5 306.6,388.5 306.2,566.5 53.7,566.5 36.2,580.5 			"/>
@@ -65498,7 +65537,7 @@
 	<text transform="matrix(1 0 0 1 849.0236 53.3291)" class="st26 st29 st28">QuietRoomNorth</text>
 	<text transform="matrix(1 0 0 1 978.0091 114.9206)" class="st26 st29 st28">ProjectRoomNorth</text>
 	<text transform="matrix(1 0 0 1 1029.9237 494.6984)" class="st26 st29 st28">Balcony</text>
-	<text transform="matrix(1 0 0 1 892.9025 1032.1678)" class="st26 st29 st28">QuietRoomSouth</text>
+	<text transform="matrix(1 0 0 1 892.9025 1032.1677)" class="st26 st29 st28">QuietRoomSouth</text>
 	<text transform="matrix(1 0 0 1 967.7006 992.834)" class="st26 st29 st28">ProjectRoomSouth</text>
 	<text transform="matrix(1 0 0 1 962.7774 557.6766)" class="st26 st29 st28">Kitchen</text>
 </g>
