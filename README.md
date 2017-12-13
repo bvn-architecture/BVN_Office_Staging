@@ -15,19 +15,17 @@
    
    - [x] Entering details into google spreadsheet
    
-   - [ ] Final formatting
+   - [x] Final formatting
 
 ### Organise the timeline data for Benita
 
-   - [ ] Look at the format for the time stuff and try and figure out what's actually being communicated
+   - [x] Look at the format for the time stuff and try and figure out what's actually being communicated
    
-   - [ ] Organise it up for Benita (similar level of stuff to what I got from Matthew)
+   - [x] Organise it up for Benita (similar level of stuff to what I got from Matthew)
 
 ### Read through this thing and tidy it up
 
    - [ ] Make sure that there's a logical flow, especially to someone who has no idea what they're doing and hasn't read this before.
-
-   - [ ] Write up [github guide](#githubGuide)
 
    - [ ] This will likely include a better 'contents' page.
 
@@ -45,7 +43,7 @@
 
    - [ ] Do a writeup on this thing (look at trello comment for breif details)
 
-   - [ ] Make "temporary" layer that includes temp states of westwingnorth, balcony, & southwing
+   - [x] Make "temporary" layer that includes temp states of westwingnorth, balcony, & southwing
 
 ## Unrelated stuff
 
@@ -507,8 +505,6 @@ The data now needs to be collected and put together in the right place for the w
 
 ### Final formatting
 
-# DO THIS!
-
 Now that the website is nearly finished, the html and css files need some touch-ups to get the appearance right.
 
 1. Open up the **html** file and find the line that says **\<body class="container">**.
@@ -538,19 +534,4 @@ Now that the website is nearly finished, the html and css files need some touch-
 6. Change each colour to fit. Currently there's no way of changing the gantt chart's colours sadly!
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+You're now done! Time to test it out :)
