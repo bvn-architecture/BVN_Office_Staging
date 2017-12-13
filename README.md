@@ -15,19 +15,17 @@
    
    - [x] Entering details into google spreadsheet
    
-   - [ ] Final formatting
+   - [x] Final formatting
 
 ### Organise the timeline data for Benita
 
-   - [ ] Look at the format for the time stuff and try and figure out what's actually being communicated
+   - [x] Look at the format for the time stuff and try and figure out what's actually being communicated
    
-   - [ ] Organise it up for Benita (similar level of stuff to what I got from Matthew)
+   - [x] Organise it up for Benita (similar level of stuff to what I got from Matthew)
 
 ### Read through this thing and tidy it up
 
    - [ ] Make sure that there's a logical flow, especially to someone who has no idea what they're doing and hasn't read this before.
-
-   - [ ] Write up [github guide](#githubGuide)
 
    - [ ] This will likely include a better 'contents' page.
 
@@ -45,7 +43,7 @@
 
    - [ ] Do a writeup on this thing (look at trello comment for breif details)
 
-   - [ ] Make "temporary" layer that includes temp states of westwingnorth, balcony, & southwing
+   - [x] Make "temporary" layer that includes temp states of westwingnorth, balcony, & southwing
 
 ## Unrelated stuff
 
@@ -492,6 +490,8 @@ In order for the the data to work right, the google sheet needs to be linked.
 
 ### Collating the data
 
+The data now needs to be collected and put together in the right place for the website to work!
+
 1. To start collating the data, open up the *Prepare_SVG.py* file.
 
    *Note: You'll need python 2.7 installed in order to do this!*
@@ -505,37 +505,33 @@ In order for the the data to work right, the google sheet needs to be linked.
 
 ### Final formatting
 
-# DO THIS!
-
 Now that the website is nearly finished, the html and css files need some touch-ups to get the appearance right.
 
+1. Open up the **html** file and find the line that says **\<body class="container">**.
+
+![Missing Image](doc_images/htmlTitle.png)
+
+2. Just below it, you should see a line that starts with **\<div class="grid__title">**. Just after it is the title displayed - change it to whatever you'd like.
+
+3. Just below, there's a line that starts with **\<span id="date">**. Just after it is the default displayed date before the slider is moved, you can change it to a more appropriate date if you'd like.
+
+------
+
+4. Open up the **css** file (most likely called style.css). With this file we'll change the theme colours used.
+
+5. At the very top of the file there should be a line that says "**:root {**"; the listings below this line are the colours used in the document. There are three main different ways to define colours:
+
+![Missing Image](doc_images/cssColours.png)
+
+|Name|Example|Description|
+|---|---|---|
+|RGB|rgb(250,128,114)|An additive mix of **R**ed, **G**reen, & **B**lue with values from 0 to 255 for each.|
+|RGBA|rgba(250,128,114,0.4)|The same as RGB with the capability of changing the opacity with the last digit (a value between 0 & 1, inclusive).|
+|Hex|#FA8072|Basically just a different format for RGB using hex numbers (16 digits: 0 -> F), two digits for each R, G or B.|
+|Name|Salmon|Very simple, just putting in the name of the colour.|
+|HSL|hsl(6,93%,71%)|Stands for **H**ue **S**aturation **L**ightness. Don't use this, no one does.|
+
+6. Change each colour to fit. Currently there's no way of changing the gantt chart's colours sadly!
 
 
-
-
-
-![Missing Image](doc_images/.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+You're now done! Time to test it out :)
