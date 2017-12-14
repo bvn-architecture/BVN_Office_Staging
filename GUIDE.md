@@ -516,7 +516,7 @@ You're now done! Time to test it out :)
 
 ### Other:
 
-   - [ ] Do a writeup on this thing (look at trello comment for breif details)
+   - [x] Do a writeup on this thing (look at trello comment for breif details)
 
    - [x] Make "temporary" layer that includes temp states of westwingnorth, balcony, & southwing
 
