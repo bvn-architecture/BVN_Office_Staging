@@ -1,3 +1,5 @@
+# Office Staging Visualisation
+
 The BVN office (as a part of project octopus) has been undergoing some works. The old office:
 
 ![Missing Image](doc_images/ExistingWithBackground.png)
@@ -16,7 +18,7 @@ Looking forward, this isn't the only potential use of the visualisation tool. It
 
    - **Building construction over time.** Rather than using the view of a floorplan, a render from any perspective could be used with various images that convey how it will change over time.
    
-   - **City planning.** On a much larger scale than a floorplan, a map of a city or some other region and how it will be developed could be visualised quite similarly.
+   - **City planning.** On a much larger scale than a floorplan, a map of a city or some other region and how it will be developed could be visualised quite similarly.
    
    - **Demographics visualisations.** Rather than highlighting zones under construction, the same zones could be used to show statistics on various demographics over time.
    
