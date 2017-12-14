@@ -1,19 +1,3 @@
-Need to do a write up on it that says:
-
-   - How it was made
-
-   - What it's for
-
-   - How it could be used in the future
-
-
--------------------------------
-
--------------------------------
-
--------------------------------
-
-
 The BVN office (as a part of project octopus) has been undergoing some works. The old office:
 
 ![Missing Image](doc_images/ExistingWithBackground.png)
@@ -30,13 +14,13 @@ The tool visualises the works around the office on a floorplan, highlighting the
 
 Looking forward, this isn't the only potential use of the visualisation tool. It has been built in an adaptable way with [a guide](README.md) on how to create and edit other similar visualisations. Any floorplan with changes over time can be visualised relatively easily, but more than just floorplans can be visualised with this. Some ideas of how it could be used include:
 
-   - Building construction over time. Rather than using the view of a floorplan, a render from any perspective could be used with various images that convey how it will change over time.
+   - **Building construction over time.** Rather than using the view of a floorplan, a render from any perspective could be used with various images that convey how it will change over time.
    
-   - City planning. On a much larger scale than a floorplan, a map of a city or some other region and how it will be developed could be visualised quite similarly.
+   - **City planning.** On a much larger scale than a floorplan, a map of a city or some other region and how it will be developed could be visualised quite similarly.
    
-   - Demographics visualisations. Rather than highlighting zones under construction, the same zones could be used to show statistics on various demographics over time.
+   - **Demographics visualisations.** Rather than highlighting zones under construction, the same zones could be used to show statistics on various demographics over time.
    
-   - Internal architecture project phasing. Similarly to the building construction idea, a visualisation could be created to communicate what has to be completed and when for an architecture project.
+   - **Internal architecture project phasing.** Similarly to the building construction idea, a visualisation could be created to communicate what has to be completed and when for an architecture project.
    
 When it comes down to it, all of these work well with the visualisation tool because they need to show spatial change over time. If there's any other kind of data that you need to visualise that needs to show spatial change over time, this visualisation tool can be used.
 
@@ -50,7 +34,7 @@ The actual way that the website works includes four main components:
    
    - **The HTML, CSS, & Javascript files.** This is the actual website and is what runs when someone views the visualisation. The Javascript file handles all of the necessary calculations for the interactive part of the website, whereas the HTML and CSS files just handle what it looks like.
 
-
+For a more comprehensive guide on how the visualisation works and how to create your own [see this guide](README.md).
 
 
 
