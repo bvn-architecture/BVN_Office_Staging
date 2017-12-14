@@ -26,4 +26,10 @@ In the meantime, various areas around the office have been closed for constructi
 
 https://baptistehiggs.github.io/BVN_Office_Staging/
 
-The tool visualises the works around the office on a floorplan, highlighting the different areas as they are zoned off, and displaying the correct table configurations when they aren't. It also has a gantt chart showing when different zones will be under construction, changing colour as time passes.
+The tool visualises the works around the office on a floorplan, highlighting the different areas as they are zoned off, and displaying the correct table configurations when they aren't. It also has a gantt chart showing when different zones will be under construction, changing colour as time passes. It gives a holistic picture that's easily understandable.
+
+Looking forward, this isn't the only potential use of the
+
+
+
+Taking a step back, the way that the website works is
