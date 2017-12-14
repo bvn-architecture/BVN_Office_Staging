@@ -1,72 +1,12 @@
-# TODO:
-
-*In order of priority*
-
-#### *@Benita: Ignore all of this todo stuff (everything before the three horizontal lines)*
-
-
-### Finish off create new website section guide:
-
-   - [x] Prep up illustrator for python code
-   
-   - [x] Running python code (this will have to change as it merges into js)
-   
-   - [x] Setting up google spreadsheet
-   
-   - [x] Entering details into google spreadsheet
-   
-   - [x] Final formatting
-
-### Organise the timeline data for Benita
-
-   - [x] Look at the format for the time stuff and try and figure out what's actually being communicated
-   
-   - [x] Organise it up for Benita (similar level of stuff to what I got from Matthew)
-
-### Read through this thing and tidy it up
-
-   - [ ] Make sure that there's a logical flow, especially to someone who has no idea what they're doing and hasn't read this before.
-
-   - [ ] This will likely include a better 'contents' page.
-
-### Website improvements?? Look into:
-
-   - [ ] Turning python code into js (prob just gonna have to ask Ben for a lotta help on this one)
-
-   - [ ] Better gui for entering of data into spreadsheet
-
-   - [ ] Reading in names from illustrator's svg files directly into spreadsheet
-
-   - [ ] Automatic entering of data into spreadsheet?? The PDF from buildcorp looks a lot like an excel spreadsheet that's been 'printed'
-
-### Other:
-
-   - [ ] Do a writeup on this thing (look at trello comment for breif details)
-
-   - [x] Make "temporary" layer that includes temp states of westwingnorth, balcony, & southwing
-
-## Unrelated stuff
-
-   - [ ] Finish workflow writeups
-   
-   - [ ] Talk to Craig about workflows
-   
-   - [ ] Ghost plugin Fab thing
-
-
-*****
-
-*****
-
-*****
-
 # Office Staging Visualisations
 
 ## Intro
 
-GithubRepoLink
+BVN is currently (as of 14/12/2017) reshaping its Sydney office. Different areas around the office are intermittently closed off for construction to allow these works to take place. This has meant that a lot of people have had to move around to work in different areas of the office as their original desks are no longer available, and their new desks aren't necessarily ready.
 
-## Getting all the files ready
+To cope with these changes, this tool was made to visualise in a clear and interactive way what is happening around the office and when. This guide will help you through the process of changing this visualisation or creating a new visualisation entirely.
+
+## <a name="downloadRepo">Getting all the files ready</a>
 
 If you have no experience with github and downloading repos, this section will guide you through setting everything up so that you can begin to edit the website. There are 2 main ways that you can do this:
 
@@ -179,17 +119,6 @@ To actually push these changes to the website, you'll need to [collate the data]
 
 ## Other Issues
 
-### <a name="namingConvention">The naming convention.</a>
-
-The naming convention of the states may not be intuitive, but there is logic to it (feel free to change it if you'd like to and feel that you'd be able to without messing anything up - every place that the convention is used will need to be updated!). 
-
-It works like a coordinate system, with the first number representing the **x** value, and the second the **y** value. The A represents how it's first in that block - there used to be Bs and Cs but now there are only As.
-
-![Missing Image](doc_images/MasterFloorplan_Example.png)
-
-The three terms - EXS, CON, & PRP - are short for existing, construction, and proposed floorplans. The construction phase is when there's an orange shape on top of it, and the existing and proposed floorplans are the different floorplans that are respectively before and after the works are completed in each area. 
-
-
 ### <a name="fileGuide">Important Files</a>
 
 There are various files in the repo, some more critical than others to the website's creation. Here's a list of the ones you may need to know about:
@@ -218,7 +147,7 @@ Gotta do this!
 
 ## <a name="SetUp">New Website Setup</a>
 
-Creating a new website for a different floorplan entirely is quite an involved process, especially depending on what source information you have. This guide will assume that you have a timeline of different stages, an image of the floorplan before, an image of the floorplan afterwards, and a copy of the files in this repo.
+Creating a new website for a different floorplan entirely is quite an involved process, especially depending on what source information you have. This guide will assume that you have a timeline of different stages, an image of the floorplan before, an image of the floorplan afterwards, and a copy of the files in this repo. [See here](#downloadRepo) for a guide on how to get a copy of the repo.
 
 *Note: This method isn't limited to just 2 states (in fact, it usually uses 3). You can use as many different states as you want (e.g. beginning, stage 1, stage 2, stage 3, etc., end, ...)*
 
@@ -535,3 +464,67 @@ Now that the website is nearly finished, the html and css files need some touch-
 
 
 You're now done! Time to test it out :)
+
+
+*****
+
+*****
+
+*****
+
+
+# TODO:
+
+*In order of priority*
+
+#### *@Benita: Ignore all of this todo stuff (everything before the three horizontal lines)*
+
+
+### Finish off create new website section guide:
+
+   - [x] Prep up illustrator for python code
+   
+   - [x] Running python code (this will have to change as it merges into js)
+   
+   - [x] Setting up google spreadsheet
+   
+   - [x] Entering details into google spreadsheet
+   
+   - [x] Final formatting
+
+### Organise the timeline data for Benita
+
+   - [x] Look at the format for the time stuff and try and figure out what's actually being communicated
+   
+   - [x] Organise it up for Benita (similar level of stuff to what I got from Matthew)
+
+### Read through this thing and tidy it up
+
+   - [ ] Make sure that there's a logical flow, especially to someone who has no idea what they're doing and hasn't read this before.
+
+   - [ ] This will likely include a better 'contents' page.
+
+### Website improvements?? Look into:
+
+   - [ ] Turning python code into js (prob just gonna have to ask Ben for a lotta help on this one)
+
+   - [ ] Better gui for entering of data into spreadsheet
+
+   - [ ] Reading in names from illustrator's svg files directly into spreadsheet
+
+   - [ ] Automatic entering of data into spreadsheet?? The PDF from buildcorp looks a lot like an excel spreadsheet that's been 'printed'
+
+### Other:
+
+   - [ ] Do a writeup on this thing (look at trello comment for breif details)
+
+   - [x] Make "temporary" layer that includes temp states of westwingnorth, balcony, & southwing
+
+## Unrelated stuff
+
+   - [ ] Finish workflow writeups
+   
+   - [ ] Talk to Craig about workflows
+   
+   - [ ] Ghost plugin Fab thing
+
