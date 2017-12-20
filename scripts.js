@@ -12,7 +12,7 @@ function slider(){
             if (this == undefined || this == null) {
                 var row = window.officeStates[0];
             } else {
-                var row = window.officeStates[this.value];  
+                var row = window.officeStates[this.value];
             }
 
             // Update chart with updated date
@@ -31,7 +31,7 @@ function slider(){
                     
                     try {
                         var d = document.getElementById(k);
-                        /*console.log("Key is " + k + ", value is " + row[k], d);*/
+                        // console.log("Key is " + k + ", value is " + row[k], d);
                         d.style.opacity = row[k];
                     } catch(e) {
                         console.log("hmmmm", e);
@@ -41,7 +41,34 @@ function slider(){
         } catch(e) {
             console.log("probably just wait for the spreadsheet to load (floorplan) ", e);
         }
-    } 
+    }
+
+    // Initialises the floorplan in the correct position
+    function startFloorplan() {
+        try {
+            row = window.officeStates[0];
+            for (var k in row){
+                if (k=="notes"){
+                    var notes = document.getElementById("notes");
+                    notes.innerText = row[k];
+                }
+                else if (row.hasOwnProperty(k)) {
+
+                    try {
+                        var d = document.getElementById(k);
+                        // console.log("Key is " + k + ", value is " + row[k], d);
+                        d.style.opacity = row[k];
+                    } catch(e) {
+                        console.log("hmmmm", e);
+                    }
+                }
+            }
+        } catch(e) {
+            console.log("Couldn't start up the floorplan correctly, trying again...")
+            setTimeout(startFloorplan, 300);
+        }
+    }
+    setTimeout(startFloorplan, 30);
 }
 
 
@@ -71,6 +98,8 @@ google.charts.load('current', {'packages':['gantt']});
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
+    /* Initialise the gantt chart given the data in googleSheetsData.js
+    */
 
     // Try statement catches instances where the spreadsheet hasn't loaded yet
     try {
@@ -114,7 +143,7 @@ function drawChart() {
         var cellValueStart = "3/3/2003";
         var cellValueEnd = "4/4/2004";
         var currentTime = Date.now();
-        var percentageCompleted = 100;
+        var percentageCompleted = 0;
         var displayName = "";
 
 
@@ -122,7 +151,7 @@ function drawChart() {
         //console.log(window.officeStates);
         //console.log(Object.keys(window.officeStates).length);
         //console.log(datesStartRow)
-        console.log("HERE! Part 0");
+        //console.log("HERE! Part 0");
 
         //Loops through each column and adds relevant rows to gantt chart
         //for (var tempColumn = startColumn; tempColumn < Object.keys(window.officeStates[0]).length; tempColumn++) {
@@ -130,7 +159,7 @@ function drawChart() {
         
         for (var columnKey in window.officeStates[datesStartRow]) {
             //Looping through the rows
-            console.log("HERE! Part 1")
+            //console.log("HERE! Part 1")
 
             for (var tempRow = datesStartRow; tempRow < window.officeStates.length; tempRow += 2) {
                 cellValueStart = window.officeStates[tempRow][columnKey];
@@ -139,7 +168,7 @@ function drawChart() {
                 //console.log(window.officeStates)
                 //console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
                 //console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
-                console.log("HERE! Part 2")
+                //console.log("HERE! Part 2")
 
                 //Ensuring invalid cells aren't treated as dates
                 //console.log(cellValueStart)
@@ -151,9 +180,9 @@ function drawChart() {
 
                     if (previousNameList.indexOf(columnKey) == -1) { //Workaround for the lack of an 'in' function in javascript
                         name = columnKey;
-                        console.log("HERE! Part 3a");
+                        //console.log("HERE! Part 3a");
                     } else {
-                        console.log("HERE! Part 3b");
+                        //console.log("HERE! Part 3b");
                         //Adding extra "pt." until untaken
                         extraCount = 2;
                         nameUnfound = true;
@@ -174,14 +203,17 @@ function drawChart() {
                     startDay = convertCellDate(cellValueStart)
                     endDay = convertCellDate(cellValueEnd)
                     
-                    //Calculating percentage completed from start, current, and end times
-                    if (endDay.getTime() < currentTime) {
-                        percentageCompleted = 100;
-                    } else if (startDay.getTime() > currentTime) {
-                        percentageCompleted = 0;
-                    } else {
-                        percentageCompleted = Math.round(((currentTime-startDay.getTime())/((endDay.getTime()-startDay.getTime())))*100);
-                    }
+                    // Calculating percentage completed from start, current, and end times (Deprecated for consistency with other elements)
+                    // if (endDay.getTime() < currentTime) {
+                    //     percentageCompleted = 100;
+                    // } else if (startDay.getTime() > currentTime) {
+                    //     percentageCompleted = 0;
+                    // } else {
+                    //     percentageCompleted = Math.round(((currentTime-startDay.getTime())/((endDay.getTime()-startDay.getTime())))*100);
+                    // }
+
+                    percentageCompleted = 0;
+
                     //Adding row information
                     if (window.BVNvisualiserColouredBySector) {
                         data.addRow([name, displayName, columnKey, startDay, endDay, null, 100, null]);
@@ -195,7 +227,7 @@ function drawChart() {
                         nearlyFilledDataRows.push([name, displayName, startDay, endDay, null]);
                     }
                     rowCount++;
-                    console.log(name + " " + startDay + " " + endDay);
+                    //console.log(name + " " + startDay + " " + endDay);
                 }
             }
         }
@@ -215,7 +247,7 @@ function drawChart() {
             }
         };
 
-        console.log("HERE! Part 5")
+        //console.log("HERE! Part 5")
 
         var container = document.getElementById('chart_div');
         chart = new google.visualization.Gantt(document.getElementById('chart_div'));
@@ -237,8 +269,8 @@ function drawChart() {
         */
 
 
-        console.log(data, name, previousNameList, startDay, endDay, cellValue, nameUnfound, extraCount, rowCount,
-                    constructionIdentifier, cellValueStart, cellValueEnd, columnKey, tempRow, chartOptions, chart)
+        // console.log(data, name, previousNameList, startDay, endDay, cellValue, nameUnfound, extraCount, rowCount,
+        //             constructionIdentifier, cellValueStart, cellValueEnd, columnKey, tempRow, chartOptions, chart)
 
 
         //https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
@@ -255,14 +287,17 @@ function drawChart() {
 
 
 function convertCellDate(dateString) {
-    //Converts the date from the structure it's given in in the cell to the necessary format for the gantt chart
+    // Converts the date from the structure it's given in in the cell to the necessary format for the gantt chart
     dateList = dateString.split('/');
     return new Date(dateList[2], dateList[0], dateList[1]);
 }
 
 
 function updateChart(currentTime) {
-    /* Updates chart data with date from slider*/
+    /* Update chart data with date from slider
+    
+    Sets the progress of each element in the gantt chart to correspond with the date selected by the slider.
+    */
 
     // Try statement catches instances where the spreadsheet hasn't loaded yet
     try {
@@ -326,7 +361,10 @@ function createDisplayName(identifier, name) {
       Practically, it:
         - Removes the beginning identifier
         - Places a space between any progressions from lowercase to uppercase
-      E.g. "CONSTRUCTIONProjectRoomSouth" => "Project Room South" */
+      E.g. "CONSTRUCTIONProjectRoomSouth" => "Project Room South"
+      
+      This function is now effectively irrelevant as the json format removes all the capitalisations sadly.
+      */
 
     //Removing beginning identifier
     var betterName = name.substr(identifier.length, name.length);
