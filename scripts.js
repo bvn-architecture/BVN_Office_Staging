@@ -22,17 +22,19 @@ function slider(){
             var Day = new Date(row.date);
             output.innerHTML = moment(Day).format('MMMM Do YYYY');
 
-            for (var k in row){
-                if (k=="notes"){
+            for (var key in row){
+                if (key=="notes"){
                     var notes = document.getElementById("notes");
-                    notes.innerText = row[k];
+                    notes.innerText = row[key];
                 }
-                else if (row.hasOwnProperty(k)) {
+                else if (row.hasOwnProperty(key)) {
                     
                     try {
-                        var d = document.getElementById(k);
+                        if (key != window.BVNcurrentZoneHover) {
+                            var d = document.getElementById(key);
+                        }
                         // console.log("Key is " + k + ", value is " + row[k], d);
-                        d.style.opacity = row[k];
+                        d.style.opacity = row[key];
                     } catch(e) {
                         console.log("hmmmm", e);
                     }
@@ -72,6 +74,7 @@ function slider(){
 }
 
 
+
 // function init() {
 //     Tabletop.init( { key: "https://docs.google.com/spreadsheets/d/" + window.BVNofficeProgressPublicSpreadsheetUrlKey + "/pubhtml",
 //                         callback: showInfo,
@@ -84,18 +87,7 @@ function slider(){
 //     window.officeStates = data;
 // }
 
-//window.addEventListener('DOMContentLoaded', init);
-window.addEventListener('DOMContentLoaded', slider);
 
-
-
-
-
-
-var nearlyFilledDataRows = [];
-
-google.charts.load('current', {'packages':['gantt']});
-google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
     /* Initialise the gantt chart given the data in googleSheetsData.js
@@ -400,4 +392,43 @@ function createDisplayName(identifier, name) {
 
 
 
+function hoverTest() {
+    // Test
+
+    var textElements = document.getElementsByTagName("text");
+    try {
+        for (var textElementIndex in textElements) {
+            // Looking for a <text> element with a dash in it. Specifically a line that resembles this:
+            // "centre: Dec 2017 - Jan 2018"
+            // The dash is an easy (albeit problematic) differentiator
+            if (textElements[textElementIndex].textContent.indexOf('-') != -1) {
+
+                // Get the string before the :
+                var currentHoverZone = textElements[textElementIndex].textContent.split(":")[0];
+                console.log(currentHoverZone);
+                break;
+            }
+        }
+
+    } catch(e) {
+        if (e != "TypeError: Cannot read property 'indexOf' of undefined") {
+            console.log(e)
+        }
+    }
+    setTimeout(hoverTest, 500)
+}
+
+window.BVNcurrentZoneHover = "NONE";
+
 // https://spreadsheets.google.com/feeds/list/1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s/od6/public/values?alt=json
+
+//window.addEventListener('DOMContentLoaded', init);
+window.addEventListener('DOMContentLoaded', slider);
+
+var nearlyFilledDataRows = [];
+
+google.charts.load('current', {'packages':['gantt']});
+google.charts.setOnLoadCallback(drawChart);
+
+
+hoverTest()

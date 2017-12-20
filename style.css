@@ -208,3 +208,11 @@ h1 {
     color: var(--title-colour);
     padding: 10px;
 }
+
+.underline {
+    /* Underlines are weird and hard to customise apparently. */
+    /* These look fairly ugly so I've left the code but it isn't used. */
+    border-bottom: 2px solid currentColor;
+    display: inline-block;
+    line-height: 0.85;
+}
