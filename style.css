@@ -144,25 +144,25 @@ h1 {
     grid-area: floorplan;
 }
 
+.grid__slider {
+    grid-area: slider;
+}
+
 .grid__gantt {
     /* grid-area: 2 / 2 / 3 / 3; */
     grid-area: gantt;
 }
 
 
-.grid__title2 {
-    /* grid-area: 2 / 2 / 3 / 3; */
-    grid-area: title2;
-}
-
-
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 13vh
+                        7vh
                         1fr;
-    grid-template-areas: "title title title title"
-                         "floorplan floorplan gantt gantt";
+    grid-template-areas: "title title"
+                         "slider slider"
+                         "floorplan gantt";
     min-height: 100vh;
     /* grid-auto-flow: row; */
 }
@@ -180,6 +180,10 @@ h1 {
         grid-area: floorplan;
     }
 
+    .grid__slider {
+        grid-area: slider;
+    }
+
     .grid__gantt {
         /* grid-area: 3 / 1 / 4/ 2; */
         grid-area: gantt;
@@ -190,9 +194,17 @@ h1 {
         grid-template-columns: 1fr;
         grid-template-rows: 13vh
                             1fr
+                            7vh
                             1fr;
         grid-template-areas: "title"
                              "floorplan"
+                             "slider"
                              "gantt";
     }
+}
+
+.blueBackground {
+    background: var(--theme-colour);
+    color: var(--title-colour);
+    padding: 10px;
 }

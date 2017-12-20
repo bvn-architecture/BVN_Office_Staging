@@ -138,12 +138,12 @@ function drawChart() {
         var cellValue = null;
         var nameUnfound = true;
         var extraCount = 2;
-        rowCount = 0;
+        var rowCount = 0;
         var constructionIdentifier = window.BVNvisualiserConstructionIdentifier;
         var cellValueStart = "3/3/2003";
         var cellValueEnd = "4/4/2004";
         var currentTime = Date.now();
-        var percentageCompleted = 0;
+        var percentageCompleted = 0.0;
         var displayName = "";
 
 
@@ -209,7 +209,7 @@ function drawChart() {
                     // } else if (startDay.getTime() > currentTime) {
                     //     percentageCompleted = 0;
                     // } else {
-                    //     percentageCompleted = Math.round(((currentTime-startDay.getTime())/((endDay.getTime()-startDay.getTime())))*100);
+                    //     percentageCompleted = Math.round(((currentTime-startDay.getTime())/((endDay.getTime()-startDay.getTime())))*1000)/10;
                     // }
 
                     percentageCompleted = 0;
@@ -231,9 +231,7 @@ function drawChart() {
                 }
             }
         }
-        
-        
-        rowCount = 20;
+
 
         chartOptions = {
             height: 30*rowCount + 50,
@@ -253,6 +251,8 @@ function drawChart() {
         chart = new google.visualization.Gantt(document.getElementById('chart_div'));
 
         // monitor activity, change bar color
+        // Doesn't work atm, hence commented out. Definitely look into this as a future feature.
+        // (Mainly because of lack of support from google api. )
 
         /*
         var observer = new MutationObserver(function (mutations) {
@@ -340,7 +340,7 @@ function updateChart(currentTime) {
             } else if (startDay.getTime() > currentTime) {
                 percentageCompleted = 0;
             } else {
-                percentageCompleted = Math.round(((currentTime-startDay.getTime())/((endDay.getTime()-startDay.getTime())))*100);
+                percentageCompleted = Math.round(((currentTime-startDay.getTime())/((endDay.getTime()-startDay.getTime())))*1000)/10;
             }
 
             // Adding the updated items to the row

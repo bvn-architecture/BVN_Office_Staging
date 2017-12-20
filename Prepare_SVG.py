@@ -336,7 +336,7 @@ def removeUnicodeUs(givenString):
 
     for char in givenString:
         previousCharacters = previousCharacters[1:] + char
-        if previousCharacters in [": u'", ", u'"] or previousCharacters[1:] == "{u'":
+        if previousCharacters in [": u'", ", u'", ': u"', ', u"'] or previousCharacters[1:] in ["{u'", '{u"']:
             cleanString = cleanString[:-1]
         
         cleanString += char
