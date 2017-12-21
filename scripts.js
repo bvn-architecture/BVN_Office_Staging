@@ -13,6 +13,7 @@ function slider(){
                 var row = window.officeStates[0];
             } else {
                 var row = window.officeStates[this.value];
+                window.BVNcurrentSliderValue = this.value;
             }
 
             // Update chart with updated date
@@ -30,9 +31,8 @@ function slider(){
                 else if (row.hasOwnProperty(key)) {
                     
                     try {
-                        if (key != window.BVNcurrentZoneHover) {
-                            var d = document.getElementById(key);
-                        }
+                        var d = document.getElementById(key);
+
                         // console.log("Key is " + k + ", value is " + row[k], d);
                         d.style.opacity = row[key];
                     } catch(e) {
@@ -393,32 +393,67 @@ function createDisplayName(identifier, name) {
 
 
 function hoverTest() {
-    // Test
+    // DO THIS DOCUMENTATION BLURB
 
     var textElements = document.getElementsByTagName("text");
-    try {
-        for (var textElementIndex in textElements) {
-            // Looking for a <text> element with a dash in it. Specifically a line that resembles this:
-            // "centre: Dec 2017 - Jan 2018"
-            // The dash is an easy (albeit problematic) differentiator
+    var hoverOverFlag = false;
+
+    for (var textElementIndex in textElements) {
+        // Looking for a <text> element with a dash in it. Specifically a line that resembles this:
+        // "centre: Dec 2017 - Jan 2018"
+        // The dash is an easy (albeit problematic) differentiator
+        try {
             if (textElements[textElementIndex].textContent.indexOf('-') != -1) {
 
-                // Get the string before the :
-                var currentHoverZone = textElements[textElementIndex].textContent.split(":")[0];
-                console.log(currentHoverZone);
+                // Get the string before the : without any "pt. 2"s or similar:
+                window.BVNcurrentHoverZone = textElements[textElementIndex].textContent.split(":")[0].trim().split(" ")[0];
+                window.BVNcurrentHoverZone = window.BVNvisualiserConstructionIdentifier + window.BVNcurrentHoverZone
+                hoverOverFlag = true;
+
+
+                //Read in current opacity state for safekeeping
+                //row = window.officeStates[window.BVNcurrentSliderValue]
+                
+                // Highlighting hovered zone
+                var currentZone = document.getElementById(window.BVNcurrentHoverZone);
+                currentZone.style.opacity = 0.5;
                 break;
             }
-        }
-
-    } catch(e) {
-        if (e != "TypeError: Cannot read property 'indexOf' of undefined") {
-            console.log(e)
+        } catch(e) {
+            // Log the error if it isn't the expected (and unimportant) error
+            if (e != "TypeError: Cannot read property 'indexOf' of undefined") {
+                console.log(e);
+            }
         }
     }
-    setTimeout(hoverTest, 500)
+
+    if (!hoverOverFlag) {
+        // Reseting zones if not being hovered over
+        try {
+            for (var elementOpacityKey in window.officeStates[window.BVNcurrentSliderValue]) {
+                if (elementOpacityKey.substring(0, window.BVNvisualiserConstructionIdentifier.length) == window.BVNvisualiserConstructionIdentifier) {
+                    //console.log("........")
+                    //console.log(elementOpacityKey);
+                    //console.log("..")
+                    //console.log("\"" + elementOpacityKey + "\"");
+                    var currentZone = document.getElementById(elementOpacityKey);
+                    //console.log('elementOpacityKey == "constructionkitchen": ' + (elementOpacityKey == "constructionkitchen"))
+                    //console.log(document.getElementById("constructionkitchen"))
+                    //console.log(currentZone)
+                    currentZone.style.opacity = window.officeStates[window.BVNcurrentSliderValue][elementOpacityKey];
+                    //console.log(".")
+                }
+            }
+            window.BVNcurrentHoverZone = "NONE";
+        } catch(e) {
+            console.log(elementOpacityKey)
+        }
+    }
+    setTimeout(hoverTest, 100);
 }
 
-window.BVNcurrentZoneHover = "NONE";
+window.BVNcurrentHoverZone = "NONE";
+window.BVNcurrentSliderValue = 0;
 
 // https://spreadsheets.google.com/feeds/list/1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s/od6/public/values?alt=json
 
@@ -431,4 +466,4 @@ google.charts.load('current', {'packages':['gantt']});
 google.charts.setOnLoadCallback(drawChart);
 
 
-hoverTest()
+window.onload = hoverTest()
