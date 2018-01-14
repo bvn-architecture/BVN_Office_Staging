@@ -293,7 +293,7 @@ function updateChart(currentTime) {
 
     // Try statement catches instances where the spreadsheet hasn't loaded yet
     try {
-        console.log(window.officeStates)
+        //console.log(window.officeStates)
 
         //throw '- actually just temp error to stop this function from working.'
 
@@ -432,21 +432,15 @@ function hoverTest() {
         try {
             for (var elementOpacityKey in window.officeStates[window.BVNcurrentSliderValue]) {
                 if (elementOpacityKey.substring(0, window.BVNvisualiserConstructionIdentifier.length) == window.BVNvisualiserConstructionIdentifier) {
-                    //console.log("........")
-                    //console.log(elementOpacityKey);
-                    //console.log("..")
-                    //console.log("\"" + elementOpacityKey + "\"");
+
                     var currentZone = document.getElementById(elementOpacityKey);
-                    //console.log('elementOpacityKey == "constructionkitchen": ' + (elementOpacityKey == "constructionkitchen"))
-                    //console.log(document.getElementById("constructionkitchen"))
-                    //console.log(currentZone)
+
                     currentZone.style.opacity = window.officeStates[window.BVNcurrentSliderValue][elementOpacityKey];
-                    //console.log(".")
                 }
             }
             window.BVNcurrentHoverZone = "NONE";
         } catch(e) {
-            console.log(elementOpacityKey)
+            //console.log(elementOpacityKey)
         }
     }
     setTimeout(hoverTest, 100);
