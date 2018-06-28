@@ -36,7 +36,7 @@ The actual way that the website works includes four main components:
    
    - **The HTML, CSS, & Javascript files.** This is the actual website and is what runs when someone views the visualisation. The Javascript file handles all of the necessary calculations for the interactive part of the website, whereas the HTML and CSS files just handle what it looks like.
 
-For a more comprehensive guide on how the visualisation works and how to create your own [see this guide](README.md).
+For a more comprehensive guide on how the visualisation works and how to create your own [see this guide](GUIDE.md).
 
 
 
