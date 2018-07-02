@@ -1,0 +1,572 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 657 609.25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00adee;
+      }
+
+      .cls-2 {
+        font-size: 12px;
+        fill: #fff;
+        font-family: MyriadPro-Regular, Myriad Pro;
+      }
+
+      .cls-10, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-27, .cls-28, .cls-29, .cls-3, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-39, .cls-4, .cls-40, .cls-41, .cls-42, .cls-43, .cls-45, .cls-46, .cls-47, .cls-48, .cls-49, .cls-5, .cls-50, .cls-51, .cls-52, .cls-53, .cls-54, .cls-55, .cls-56, .cls-58, .cls-59, .cls-6, .cls-60, .cls-61, .cls-62, .cls-63, .cls-64, .cls-65, .cls-66, .cls-67, .cls-68, .cls-69, .cls-7, .cls-70, .cls-71, .cls-72, .cls-73, .cls-74, .cls-75, .cls-76, .cls-77, .cls-78, .cls-79, .cls-8, .cls-80, .cls-82, .cls-83, .cls-84, .cls-9 {
+        fill: none;
+      }
+
+      .cls-10, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke: #00adee;
+      }
+
+      .cls-10, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-27, .cls-28, .cls-29, .cls-3, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-39, .cls-4, .cls-40, .cls-41, .cls-42, .cls-43, .cls-45, .cls-46, .cls-47, .cls-48, .cls-49, .cls-5, .cls-50, .cls-51, .cls-52, .cls-53, .cls-54, .cls-55, .cls-56, .cls-58, .cls-59, .cls-6, .cls-60, .cls-61, .cls-62, .cls-63, .cls-64, .cls-65, .cls-66, .cls-67, .cls-68, .cls-69, .cls-7, .cls-70, .cls-71, .cls-72, .cls-73, .cls-74, .cls-75, .cls-76, .cls-77, .cls-78, .cls-79, .cls-8, .cls-80, .cls-9 {
+        stroke-width: 2.13px;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 6 6;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 5.12 5.12;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 6.92 6.92;
+      }
+
+      .cls-6 {
+        stroke-dasharray: 5.66 5.66;
+      }
+
+      .cls-7 {
+        stroke-dasharray: 6 6;
+      }
+
+      .cls-8 {
+        stroke-dasharray: 6.04 6.04;
+      }
+
+      .cls-9 {
+        stroke-dasharray: 6.01 6.01;
+      }
+
+      .cls-11 {
+        font-size: 15px;
+        fill: #231f20;
+        font-family: Blender-Bold, Blender;
+        font-weight: 700;
+      }
+
+      .cls-12 {
+        letter-spacing: -0.04em;
+      }
+
+      .cls-13 {
+        fill: blue;
+      }
+
+      .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25 {
+        stroke: blue;
+      }
+
+      .cls-14 {
+        stroke-dasharray: 6.03 3.9;
+      }
+
+      .cls-15 {
+        stroke-dasharray: 5.95 3.83;
+      }
+
+      .cls-16 {
+        stroke-dasharray: 6.95 4.82;
+      }
+
+      .cls-17 {
+        stroke-dasharray: 6.21 4.08;
+      }
+
+      .cls-18 {
+        stroke-dasharray: 7.18 5.05;
+      }
+
+      .cls-19 {
+        letter-spacing: -0.04em;
+      }
+
+      .cls-20 {
+        stroke-dasharray: 6.46 4.34;
+      }
+
+      .cls-21, .cls-71 {
+        stroke-dasharray: 6.31 4.19;
+      }
+
+      .cls-22 {
+        stroke-dasharray: 6.3 4.17;
+      }
+
+      .cls-23 {
+        stroke-dasharray: 6.21 4.08;
+      }
+
+      .cls-25 {
+        stroke-dasharray: 5.13 3.01;
+      }
+
+      .cls-26 {
+        fill: #f16722;
+      }
+
+      .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-39, .cls-40, .cls-41, .cls-42, .cls-43 {
+        stroke: #f16722;
+      }
+
+      .cls-27 {
+        stroke-dasharray: 5.65 3.53;
+      }
+
+      .cls-28 {
+        stroke-dasharray: 6.49 4.36;
+      }
+
+      .cls-29 {
+        stroke-dasharray: 6.11 3.98;
+      }
+
+      .cls-30 {
+        stroke-dasharray: 6.26 4.13;
+      }
+
+      .cls-32 {
+        stroke-dasharray: 5.98 3.85;
+      }
+
+      .cls-33 {
+        stroke-dasharray: 6.22 4.13;
+      }
+
+      .cls-34 {
+        stroke-dasharray: 6.22 4.13;
+      }
+
+      .cls-35 {
+        stroke-dasharray: 6.08 3.96;
+      }
+
+      .cls-36 {
+        stroke-dasharray: 6.22 4.09;
+      }
+
+      .cls-37 {
+        stroke-dasharray: 6.61 4.48;
+      }
+
+      .cls-38 {
+        stroke-dasharray: 5.8 3.67;
+      }
+
+      .cls-39 {
+        stroke-dasharray: 6.73 4.61;
+      }
+
+      .cls-40 {
+        stroke-dasharray: 6.81 4.68;
+      }
+
+      .cls-41 {
+        stroke-dasharray: 6.11 3.98;
+      }
+
+      .cls-42 {
+        stroke-dasharray: 6.4 4.27;
+      }
+
+      .cls-43 {
+        stroke-dasharray: 5.59 3.46;
+      }
+
+      .cls-44 {
+        fill: #25bc45;
+      }
+
+      .cls-45, .cls-46, .cls-47, .cls-48, .cls-49, .cls-50, .cls-51, .cls-52, .cls-53, .cls-54, .cls-55, .cls-56 {
+        stroke: #25bc45;
+      }
+
+      .cls-45 {
+        stroke-dasharray: 6.53 4.41;
+      }
+
+      .cls-46 {
+        stroke-dasharray: 6.04 3.91;
+      }
+
+      .cls-47 {
+        stroke-dasharray: 6.24 4.12;
+      }
+
+      .cls-48 {
+        stroke-dasharray: 5.52 3.4;
+      }
+
+      .cls-50 {
+        stroke-dasharray: 6.28 6.28;
+      }
+
+      .cls-51 {
+        stroke-dasharray: 4.7 4.7;
+      }
+
+      .cls-52 {
+        stroke-dasharray: 6.02 6.02;
+      }
+
+      .cls-53 {
+        stroke-dasharray: 5.42 5.42;
+      }
+
+      .cls-54 {
+        stroke-dasharray: 4.21 4.21;
+      }
+
+      .cls-55 {
+        stroke-dasharray: 5.49 5.49;
+      }
+
+      .cls-56 {
+        stroke-dasharray: 3.67 3.67;
+      }
+
+      .cls-57 {
+        fill: #ec2289;
+      }
+
+      .cls-58, .cls-59, .cls-60, .cls-61, .cls-62, .cls-63, .cls-64, .cls-65, .cls-66, .cls-67, .cls-68, .cls-69, .cls-70, .cls-71, .cls-72, .cls-73, .cls-74, .cls-75, .cls-76, .cls-77, .cls-78, .cls-79, .cls-80 {
+        stroke: #ec2289;
+      }
+
+      .cls-58 {
+        stroke-dasharray: 5.6 3.47;
+      }
+
+      .cls-59 {
+        stroke-dasharray: 6.1 3.97;
+      }
+
+      .cls-60 {
+        stroke-dasharray: 6.11 3.98;
+      }
+
+      .cls-61 {
+        stroke-dasharray: 7.53 5.4;
+      }
+
+      .cls-62 {
+        stroke-dasharray: 6.03 3.91;
+      }
+
+      .cls-64 {
+        stroke-dasharray: 6.16 4.03;
+      }
+
+      .cls-65 {
+        stroke-dasharray: 6.37 4.25;
+      }
+
+      .cls-66 {
+        stroke-dasharray: 7.69 5.56;
+      }
+
+      .cls-67 {
+        stroke-dasharray: 6.29 4.17;
+      }
+
+      .cls-68 {
+        stroke-dasharray: 6.81 4.68;
+      }
+
+      .cls-69 {
+        stroke-dasharray: 6.85 4.72;
+      }
+
+      .cls-70 {
+        stroke-dasharray: 6.48 4.36;
+      }
+
+      .cls-72 {
+        stroke-dasharray: 6.53 4.4;
+      }
+
+      .cls-73 {
+        stroke-dasharray: 7.01 4.89;
+      }
+
+      .cls-74 {
+        stroke-dasharray: 6.26 4.14;
+      }
+
+      .cls-75 {
+        stroke-dasharray: 6.71 4.58;
+      }
+
+      .cls-76 {
+        stroke-dasharray: 6.91 4.78;
+      }
+
+      .cls-77 {
+        stroke-dasharray: 6.33 4.21;
+      }
+
+      .cls-78 {
+        stroke-dasharray: 6.45 4.32;
+      }
+
+      .cls-79 {
+        stroke-dasharray: 5.68 3.55;
+      }
+
+      .cls-80 {
+        stroke-dasharray: 6.22 4.1;
+      }
+
+      .cls-81 {
+        fill: #9cd19b;
+      }
+
+      .cls-82, .cls-83, .cls-84 {
+        stroke: #e23c40;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.84px;
+      }
+
+      .cls-82 {
+        stroke-dasharray: 0 5.51;
+      }
+
+      .cls-83 {
+        stroke-dasharray: 0 5.43;
+      }
+
+      .cls-85 {
+        font-size: 11px;
+        fill: red;
+        font-family: Blender-Book, Blender;
+      }
+
+      .cls-86 {
+        letter-spacing: -0.05em;
+      }
+    </style>
+  </defs>
+  <title>numbertest</title>
+  <image width="1703" height="1584" transform="translate(0.29 0.4) scale(0.39)" xlink:href="baseDrawing.PNG"/>
+  <g id="stage11">
+    <path class="cls-1" d="M576.22,368.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(570.07 363.11)">20</text>
+    <path class="cls-1" d="M526.22,361.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(520.07 356.11)">19</text>
+    <path class="cls-1" d="M554.22,406.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(548.07 401.11)">23</text>
+    <path class="cls-1" d="M481.22,416.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(475.07 411.11)">22</text>
+    <line class="cls-3" x1="518" y1="341.14" x2="505.01" y2="371.49"/>
+    <line class="cls-4" x1="496.61" y1="381.76" x2="466.39" y2="405.51"/>
+    <line class="cls-5" x1="470.01" y1="415.69" x2="477.67" y2="422.71"/>
+    <line class="cls-6" x1="491.02" y1="425.34" x2="532.26" y2="415.14"/>
+    <line class="cls-7" x1="546.69" y1="412.64" x2="567.53" y2="410"/>
+    <line class="cls-8" x1="576.15" y1="400.58" x2="589.5" y2="357.27"/>
+    <line class="cls-9" x1="582.56" y1="349.16" x2="527.36" y2="334.42"/>
+    <path class="cls-10" d="M524.45,333.64l-2.9-.77-1.18,2.76m70,18.75.89-2.89-2.91-.77m-17.87,58.9,3-.38.89-2.88M535,414.46l2.75-.68,3-.38m-60.52,11.65,2.55,2.34,2.75-.69m-21.14-19.61-2,1.59,2.55,2.33m38.92-36.76L502.65,377l-2,1.58"/>
+    <text class="cls-11" transform="translate(489.03 412.6)">S<tspan class="cls-12" x="8.56" y="0">T</tspan><tspan x="15.45" y="0">AGE 11</tspan></text>
+  </g>
+  <g id="stage10">
+    <path class="cls-13" d="M578.22,193.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(572.07 188.11)">11</text>
+    <path class="cls-13" d="M527.22,194.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(521.07 189.11)">10</text>
+    <path class="cls-13" d="M552.36,151.93a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(546.2 146.85)">08</text>
+    <line class="cls-14" x1="536.19" y1="140.28" x2="510.78" y2="180.68"/>
+    <line class="cls-15" x1="512.77" y1="189.86" x2="518.13" y2="195.62"/>
+    <line class="cls-16" x1="529.72" y1="198.4" x2="550.75" y2="196.36"/>
+    <path class="cls-17" d="M589.8,164.62c-5.84-8.78-17.44-24.27-23-31.62"/>
+    <line class="cls-18" x1="555.28" y1="130.85" x2="545.83" y2="133.04"/>
+    <path class="cls-17" d="M543.37,133.61l-3.5.81-1.6,2.56m27.31-5.61-1.88-2.47-3.5.81m33.1,44.17c0-1.46,0-2.54,0-3a8.85,8.85,0,0,0-1.32-2.79M565.18,197l21.75,3,2.5.35,3.56.5s0-1.17,0-3l.05-3.94c.06-5.49.15-13,.2-18.05m-40.13,20.28,3.46-.34,3.56.5m-40.73.73,2,2.18,3.46-.34m-15.17-16.53-1.61,2.55,2,2.18"/>
+    <text class="cls-11" transform="translate(522.05 172.32)">S<tspan class="cls-19" x="8.56" y="0">T</tspan><tspan x="15.46" y="0">AGE 10</tspan></text>
+  </g>
+  <g id="stage09">
+    <path class="cls-13" d="M623.22,210.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(617.07 205.11)">12</text>
+    <path class="cls-13" d="M622.22,164.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(616.07 159.11)">09</text>
+    <path class="cls-13" d="M622.22,113.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(616.07 108.11)">07</text>
+    <line class="cls-20" x1="600.45" y1="159.37" x2="606.57" y2="210.84"/>
+    <line class="cls-21" x1="614.55" y1="216.53" x2="633.43" y2="217.38"/>
+    <line class="cls-22" x1="638.78" y1="210.3" x2="640.31" y2="97.28"/>
+    <line class="cls-23" x1="633.19" y1="91.93" x2="573.52" y2="90.99"/>
+    <path class="cls-24" d="M640.33,95.19l0-3.14-3.11,0m-1.75,125.48,3.16.14,0-3.15M606.83,213l.38,3.21,3.15.15m-12.93-67.11,2.13,2.62.38,3.21"/>
+    <text class="cls-11" transform="translate(581.96 130.2)">S<tspan class="cls-12" x="8.56" y="0">T</tspan><tspan x="15.45" y="0">AGE 9</tspan></text>
+    <path class="cls-13" d="M578.22,113.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(572.07 108.11)">06</text>
+    <path class="cls-25" d="M571.48,91l-3.1,0-13.33,9.36S588.3,138,596,147.44"/>
+  </g>
+  <g id="stage08">
+    <path class="cls-26" d="M416.22,513.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(410.07 508.11)">32</text>
+    <path class="cls-26" d="M416.22,552.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(410.07 547.11)">33</text>
+    <path class="cls-26" d="M472.22,525.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(466.07 520.11)">34</text>
+    <line class="cls-27" x1="404.92" y1="557.73" x2="421.49" y2="556.88"/>
+    <line class="cls-28" x1="433.18" y1="553.93" x2="481.81" y2="535.34"/>
+    <line class="cls-29" x1="477.9" y1="502.4" x2="411.01" y2="486.88"/>
+    <line class="cls-30" x1="405.34" y1="492.96" x2="399.12" y2="552.9"/>
+    <path class="cls-31" d="M398.9,555l-.32,3.11,2.82-.14m7.67-71.49-3-.69-.32,3.11M485,507l-.22-3-3-.69m2.07,31.26,3-1.16-.21-3m-63.41,26.37,2.82-.15,3-1.15"/>
+    <text class="cls-11" transform="translate(405.4 530.11)">S<tspan class="cls-12" x="8.56" y="0">T</tspan><tspan x="15.45" y="0">AGE 8</tspan></text>
+    <line class="cls-32" x1="486.39" y1="526.58" x2="485.11" y2="508.89"/>
+  </g>
+  <g id="stage07">
+    <path class="cls-26" d="M129.22,281.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(123.07 276.11)">03</text>
+    <path class="cls-26" d="M118.22,320.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(112.07 315.11)">05</text>
+    <path class="cls-26" d="M81.22,280.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(75.07 275.11)">02 </text>
+    <text class="cls-11" transform="translate(80.45 299.97)">S<tspan class="cls-12" x="8.56" y="0">T</tspan><tspan x="15.45" y="0">AGE 7</tspan></text>
+    <g>
+      <path class="cls-31" d="M143.24,259.83l.65-3.09h-3.17"/>
+      <polyline class="cls-33" points="136.59 256.74 113.42 256.74 66.34 260.24"/>
+      <polyline class="cls-31" points="64.28 260.39 61.12 260.63 62.44 263.51"/>
+      <path class="cls-34" d="M64.16,267.26,78.69,299s48.19,38.82,48.19,38.56,12.19-57.94,15.93-75.68"/>
+    </g>
+  </g>
+  <g id="stage06">
+    <path class="cls-26" d="M43.22,317.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(37.07 312.11)">04</text>
+    <path class="cls-26" d="M34.22,279.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(28.07 274.11)">01</text>
+    <line class="cls-35" x1="24.29" y1="254.89" x2="17.53" y2="282.2"/>
+    <line class="cls-36" x1="18.68" y1="293.88" x2="28.11" y2="321.17"/>
+    <line class="cls-37" x1="37.16" y1="323.51" x2="66.5" y2="313.4"/>
+    <line class="cls-38" x1="52.44" y1="264.84" x2="29.97" y2="250.63"/>
+    <path class="cls-31" d="M28.42,249.64,26,248.09l-.73,3M59,271.57l-1-3.21-2.45-1.55m13.07,45.86,3.13-1.08-1-3.21M28.78,323.11l1,2.94L32.92,325M17.06,284.12l-.73,2.95,1,2.94"/>
+    <text class="cls-11" transform="translate(37.86 332.8)">S<tspan class="cls-12" x="8.56" y="0">T</tspan><tspan x="15.45" y="0">AGE 6</tspan></text>
+    <line class="cls-39" x1="69.33" y1="303.99" x2="59.72" y2="273.76"/>
+    <path class="cls-26" d="M415.22,473.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(409.07 468.11)">25</text>
+    <line class="cls-40" x1="400.71" y1="462.35" x2="404.02" y2="470.88"/>
+    <line class="cls-41" x1="425.26" y1="471.19" x2="428.29" y2="453.26"/>
+    <line class="cls-42" x1="421.81" y1="449.81" x2="403.01" y2="453.72"/>
+    <path class="cls-31" d="M400.92,454.16l-3.13.65L399,458m29.6-6.68.5-3-3.13.65m-4.68,28.89,2.78.3.51-3m-19.74-2,1.23,3.17,2.78.29"/>
+    <text class="cls-11" transform="translate(377.12 448.43)">S<tspan class="cls-19" x="8.56" y="0">T</tspan><tspan x="15.46" y="0">AGE 6</tspan></text>
+    <line class="cls-43" x1="412.31" y1="476.89" x2="419.59" y2="477.65"/>
+  </g>
+  <g id="stage05">
+    <path class="cls-44" d="M623.22,495.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(617.07 490.11)">31</text>
+    <path class="cls-44" d="M623.22,447.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(617.07 442.11)">29</text>
+    <path class="cls-44" d="M622.22,400.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(616.07 395.11)">24</text>
+    <path class="cls-45" d="M610,387.28c-.49,22.64-2.08,87.83-2.55,107.16"/>
+    <line class="cls-46" x1="614.22" y1="500.86" x2="632.01" y2="503.31"/>
+    <line class="cls-47" x1="636.94" y1="496.75" x2="636.94" y2="384.8"/>
+    <line class="cls-48" x1="630.78" y1="379.61" x2="614.65" y2="379.61"/>
+    <path class="cls-49" d="M613,379.61h-2.76c0,.39,0,1.52-.06,3.27m26.81-.14v-3.13h-2.76m-.23,124,3,.41v-3.12m-29.51-4.22c0,2.1-.08,3.26-.08,3.26l3,.41"/>
+    <text class="cls-11" transform="translate(597.89 467.12)">S<tspan class="cls-12" x="8.56" y="0">T</tspan><tspan x="15.45" y="0">AGE 5</tspan></text>
+  </g>
+  <g id="stage04">
+    <path class="cls-44" d="M553.22,487.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(547.07 482.11)">30</text>
+    <path class="cls-44" d="M471.22,469.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(465.07 464.11)">26</text>
+    <path class="cls-44" d="M530.22,447.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(524.07 442.11)">27</text>
+    <path class="cls-44" d="M578.22,447.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(572.07 442.11)">28</text>
+    <g>
+      <polyline class="cls-49" points="589.18 431.35 589.07 431.03 588.15 428.54 585.16 428.29"/>
+      <polyline class="cls-50" points="578.9 427.77 526.85 423.42 462.2 450.79"/>
+      <polyline class="cls-49" points="459.31 452.01 456.55 453.18 457.2 456.11"/>
+      <line class="cls-51" x1="458.22" y1="460.7" x2="459.74" y2="467.59"/>
+      <polyline class="cls-49" points="460.25 469.88 460.9 472.81 463.89 472.63"/>
+      <line class="cls-52" x1="469.91" y1="472.27" x2="515" y2="469.56"/>
+      <polyline class="cls-49" points="518.01 469.38 521 469.2 523.15 471.29"/>
+      <line class="cls-53" x1="527.03" y1="475.07" x2="540.62" y2="488.31"/>
+      <polyline class="cls-49" points="542.56 490.2 544.71 492.3 547.7 492.02"/>
+      <line class="cls-54" x1="551.89" y1="491.64" x2="558.19" y2="491.06"/>
+      <polyline class="cls-49" points="560.29 490.87 563.27 490.6 564.94 488.1"/>
+      <line class="cls-55" x1="567.99" y1="483.53" x2="590.84" y2="449.28"/>
+      <polyline class="cls-49" points="592.37 447 594.03 444.5 592.99 441.69"/>
+      <line class="cls-56" x1="591.72" y1="438.24" x2="589.82" y2="433.08"/>
+    </g>
+    <text class="cls-11" transform="translate(503.65 461.37)">S<tspan class="cls-12" x="8.56" y="0">T</tspan><tspan x="15.45" y="0">AGE 4</tspan></text>
+  </g>
+  <g id="stage03">
+    <path class="cls-57" d="M528.22,274.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(522.07 269.11)">14</text>
+    <path class="cls-57" d="M552.22,233.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(546.07 228.11)">13</text>
+    <path class="cls-57" d="M577.22,276.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(571.07 271.11)">15</text>
+    <line class="cls-58" x1="555.73" y1="210.37" x2="548.39" y2="210.37"/>
+    <path class="cls-59" d="M540.36,216.46c-6.13,10.71-18.63,32.66-23.6,42.23"/>
+    <line class="cls-60" x1="526.78" y1="277.89" x2="575.11" y2="281.07"/>
+    <line class="cls-61" x1="585.37" y1="273.86" x2="591.2" y2="265.46"/>
+    <line class="cls-62" x1="591.06" y1="254.36" x2="564.74" y2="214.52"/>
+    <path class="cls-63" d="M563.66,212.89,562,210.37h-2.8m33.54,52.87,2.14-3.1-1.66-2.52M577.09,281.2l3,.2,2.15-3.09m-64.17-4.86c.91,2.26,1.64,4,1.64,4l3,.2m-6.95-17.17a13.62,13.62,0,0,0-1.2,2.8,18.5,18.5,0,0,0,1.14,4.14m30.86-57h-2.8L542.34,213"/>
+    <text class="cls-11" transform="translate(529.34 254.66)">S<tspan class="cls-12" x="8.56" y="0">T</tspan><tspan x="15.45" y="0">AGE 3</tspan></text>
+  </g>
+  <g id="stage02">
+    <path class="cls-57" d="M623.22,256.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <path class="cls-57" d="M623.22,353.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <path class="cls-57" d="M555.22,317.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <line class="cls-64" x1="622.86" y1="363.84" x2="594.63" y2="337.33"/>
+    <line class="cls-65" x1="583.87" y1="331.46" x2="545.63" y2="318.53"/>
+    <line class="cls-66" x1="543.46" y1="307.88" x2="546.66" y2="297.91"/>
+    <line class="cls-67" x1="555.96" y1="290.95" x2="585.14" y2="288.32"/>
+    <line class="cls-68" x1="593.95" y1="280.61" x2="618.54" y2="231.27"/>
+    <line class="cls-69" x1="628.09" y1="230.32" x2="635.98" y2="235.05"/>
+    <line class="cls-70" x1="640.1" y1="245.58" x2="639.14" y2="254.19"/>
+    <line class="cls-71" x1="633.31" y1="264.73" x2="612.37" y2="285.37"/>
+    <line class="cls-72" x1="609.03" y1="296.71" x2="609.48" y2="305.42"/>
+    <line class="cls-73" x1="616.99" y1="315.15" x2="635.39" y2="326"/>
+    <line class="cls-74" x1="638.34" y1="335.96" x2="629.61" y2="363.75"/>
+    <path class="cls-63" d="M629,365.72l-.94,3-2.25-2.11m11.7-39.36,3,1.78-.94,3m-30-24.39.17,3.26,3,1.78m-1.9-25.82-2.25,2.21.17,3.26m30.09-36-.36,3.22-2.24,2.22M638,236.27l2.93,1.76-.36,3.22m-21-12.08,1.52-3,2.94,1.77m-36.83,60.24,3.14-.28,1.51-3.05M547.5,295.26l1.18-3.65,3.13-.29m-8.19,26.53-3-1,1.17-3.66M593.16,336l-2.25-2.11-3-1"/>
+    <text class="cls-11" transform="translate(561.3 324.11)">S<tspan class="cls-12" x="8.56" y="0">T</tspan><tspan x="15.45" y="0">AGE 2</tspan></text>
+    <text class="cls-2" transform="translate(617.07 251.11)">16</text>
+    <text class="cls-2" transform="translate(617.07 348.11)">21</text>
+    <text class="cls-2" transform="translate(549.07 312.11)">17</text>
+  </g>
+  <g id="stage01">
+    <path class="cls-57" d="M526.22,527.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(520.07 522.11)">35</text>
+    <path class="cls-57" d="M579.22,524.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(573.07 519.11)">36</text>
+    <path class="cls-57" d="M623.22,542.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(617.07 537.11)">37</text>
+    <path class="cls-75" d="M568.39,497c-13.58,2.7-41.3,8.18-53.12,10.51"/>
+    <line class="cls-76" x1="511.72" y1="516.59" x2="513.96" y2="525.61"/>
+    <line class="cls-77" x1="522.73" y1="530.98" x2="583.81" y2="528.51"/>
+    <line class="cls-78" x1="595.6" y1="532.07" x2="621.69" y2="547.15"/>
+    <line class="cls-79" x1="629.81" y1="544.48" x2="638.86" y2="530.47"/>
+    <line class="cls-80" x1="634.86" y1="523.49" x2="580.83" y2="497.64"/>
+    <path class="cls-63" d="M579,496.76l-2.81-1.34-3.28.67M639.83,529l1.54-2.38-2.81-1.35m-15,23,2.79,1.61,1.54-2.38m-42-19,3.16-.13,2.79,1.61m-77.32-2,.83,3.35,3.16-.12M513,508l-3.29.65.83,3.35"/>
+    <text class="cls-11" transform="translate(536.92 548.23)">S<tspan class="cls-12" x="8.56" y="0">T</tspan><tspan x="15.45" y="0">AGE 1</tspan></text>
+  </g>
+  <g id="stage00">
+    <path class="cls-81" d="M622.22,306.19a9,9,0,1,0-9-9,9,9,0,0,0,9,9"/>
+    <text class="cls-2" transform="translate(616.07 301.11)">18</text>
+  </g>
+  <g id="stagingarea">
+    <line class="cls-82" x1="481.14" y1="335.95" x2="481.14" y2="377.29"/>
+    <line class="cls-83" x1="535.45" y1="330.44" x2="483.86" y2="330.44"/>
+    <path class="cls-84" d="M481.14,330.44h0m59.74,0h0m0,49.61h0m-59.74,0h0"/>
+    <text class="cls-85" transform="translate(479 327.58)">S<tspan class="cls-86" x="6.03" y="0">T</tspan><tspan x="10.66" y="0">AGING AREA</tspan></text>
+    <line class="cls-83" x1="486.57" y1="380.05" x2="538.17" y2="380.05"/>
+    <line class="cls-82" x1="540.88" y1="374.53" x2="540.88" y2="333.2"/>
+  </g>
+</svg>
