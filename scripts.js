@@ -1,14 +1,14 @@
-function slider(){
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("date");
+function slider() {
+    let slider = document.getElementById('myRange');
+    let output = document.getElementById('date');
     // output.innerHTML = slider.value; // Display the default slider value
-    //setTimeout(drawChart, 1)
+    // setTimeout(drawChart, 1)
 
     // Update the current slider value (each time you drag the slider handle)
     slider.oninput = function() {
 
         // Try statement catches instances where the spreadsheet hasn't loaded yet
-        try{
+        try {
             if (this == undefined || this == null) {
                 var row = window.officeStates[0];
             } else {
@@ -20,59 +20,58 @@ function slider(){
             updateChart(convertCellDate(row.date));
 
             // Display date under slider
-            var Day = new Date(row.date);
+            let Day = new Date(row.date);
             output.innerHTML = moment(Day).format('MMMM Do YYYY');
 
-            for (var key in row){
-                if (key=="notes"){
-                    var notes = document.getElementById("notes");
+            for (let key in row) {
+                if (key=='notes') {
+                    let notes = document.getElementById('notes');
                     notes.innerText = row[key];
                 }
                 else if (row.hasOwnProperty(key)) {
-                    
+
                     try {
-                        var d = document.getElementById(key);
+                        let d = document.getElementById(key);
 
                         // console.log("Key is " + k + ", value is " + row[k], d);
                         d.style.opacity = row[key];
-                    } catch(e) {
-                        console.log("hmmmm", e);
+                    } catch (e) {
+                        console.log('hmmmm', e);
                     }
                 }
             }
-        } catch(e) {
-            console.log("probably just wait for the spreadsheet to load (floorplan) ", e);
+        } catch (e) {
+            console.log('probably just wait for the spreadsheet to load (floorplan) ', e);
         }
-    }
+    };
 
     // Initialises the floorplan in the correct position
     function startFloorplan() {
         try {
             row = window.officeStates[0];
-            for (var k in row){
-                if (k=="notes"){
-                    var notes = document.getElementById("notes");
+            for (let k in row) {
+                if (k=='notes') {
+                    let notes = document.getElementById('notes');
                     notes.innerText = row[k];
                 }
                 else if (row.hasOwnProperty(k)) {
 
                     try {
-                        var d = document.getElementById(k);
+                        let d = document.getElementById(k);
                         // console.log("Key is " + k + ", value is " + row[k], d);
                         d.style.opacity = row[k];
-                    } catch(e) {
-                        console.log("hmmmm", e);
+                    } catch (e) {
+                        console.log('hmmmm', e);
                     }
                 }
             }
-        } catch(e) {
-            console.log("Couldn't start up the floorplan correctly, trying again...")
+        } catch (e) {
+            console.log('Couldn\'t start up the floorplan correctly, trying again...');
             setTimeout(startFloorplan, 300);
         }
     }
     setTimeout(startFloorplan, 30);
 }
-
 
 
 // function init() {
@@ -95,19 +94,19 @@ function drawChart() {
 
     // Try statement catches instances where the spreadsheet hasn't loaded yet
     try {
-        //Finds where the dates are - assumes the first relevant column is the third one.
+        // Finds where the dates are - assumes the first relevant column is the third one.
         for (var tempRow = window.officeStates.length-1; tempRow >= 0; tempRow--) {
-            if (window.officeStates[tempRow]["date"] == 'datesStart') {
+            if (window.officeStates[tempRow]['date'] == 'datesStart') {
                 var datesStartRow = tempRow;
                 break;
             }
-            //console.log(window.officeStates[tempRow])
+            // console.log(window.officeStates[tempRow])
         }
 
         slider();
 
-        //Creating the data structure for the gantt chart
-        var data = new google.visualization.DataTable();
+        // Creating the data structure for the gantt chart
+        let data = new google.visualization.DataTable();
         data.addColumn('string', 'Task ID');
         data.addColumn('string', 'Task Name');
         if (window.BVNvisualiserColouredBySector) {
@@ -119,68 +118,68 @@ function drawChart() {
         data.addColumn('number', 'Percent Complete');
         data.addColumn('string', 'Dependencies');
 
-        //Start column of the date data
-        //var startColumn = 2;
+        // Start column of the date data
+        // var startColumn = 2;
 
-        //Various variable initialisations for the following loop
-        var name = "initial name";
-        var previousNameList = [];
-        var startDay = new Date(2001, 1, 1);
-        var endDay = new Date(2002, 2, 2);
-        var cellValue = null;
-        var nameUnfound = true;
-        var extraCount = 2;
-        var rowCount = 0;
-        var constructionIdentifier = window.BVNvisualiserConstructionIdentifier;
-        var cellValueStart = "3/3/2003";
-        var cellValueEnd = "4/4/2004";
-        var currentTime = Date.now();
-        var percentageCompleted = 0.0;
-        var displayName = "";
+        // Various variable initialisations for the following loop
+        let name = 'initial name';
+        let previousNameList = [];
+        let startDay = new Date(2001, 1, 1);
+        let endDay = new Date(2002, 2, 2);
+        let cellValue = null;
+        let nameUnfound = true;
+        let extraCount = 2;
+        let rowCount = 0;
+        let constructionIdentifier = window.BVNvisualiserConstructionIdentifier;
+        let cellValueStart = '3/3/2003';
+        let cellValueEnd = '4/4/2004';
+        let currentTime = Date.now();
+        let percentageCompleted = 0.0;
+        let displayName = '';
 
 
-        //console.log("HERE! Part -1");
-        //console.log(window.officeStates);
-        //console.log(Object.keys(window.officeStates).length);
-        //console.log(datesStartRow)
-        //console.log("HERE! Part 0");
+        // console.log("HERE! Part -1");
+        // console.log(window.officeStates);
+        // console.log(Object.keys(window.officeStates).length);
+        // console.log(datesStartRow)
+        // console.log("HERE! Part 0");
 
-        //Loops through each column and adds relevant rows to gantt chart
-        //for (var tempColumn = startColumn; tempColumn < Object.keys(window.officeStates[0]).length; tempColumn++) {
-        
-        
-        for (var columnKey in window.officeStates[datesStartRow]) {
-            //Looping through the rows
-            //console.log("HERE! Part 1")
+        // Loops through each column and adds relevant rows to gantt chart
+        // for (var tempColumn = startColumn; tempColumn < Object.keys(window.officeStates[0]).length; tempColumn++) {
+
+
+        for (let columnKey in window.officeStates[datesStartRow]) {
+            // Looping through the rows
+            // console.log("HERE! Part 1")
 
             for (var tempRow = datesStartRow; tempRow < window.officeStates.length; tempRow += 2) {
                 cellValueStart = window.officeStates[tempRow][columnKey];
 
-                //console.log(tempRow, columnKey)
-                //console.log(window.officeStates)
-                //console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
-                //console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
-                //console.log("HERE! Part 2")
+                // console.log(tempRow, columnKey)
+                // console.log(window.officeStates)
+                // console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
+                // console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
+                // console.log("HERE! Part 2")
 
-                //Ensuring invalid cells aren't treated as dates
-                //console.log(cellValueStart)
+                // Ensuring invalid cells aren't treated as dates
+                // console.log(cellValueStart)
 
-                if (cellValueStart == null || cellValueStart == "" || columnKey.substr(0,constructionIdentifier.length) != constructionIdentifier) {
+                if (cellValueStart == null || cellValueStart == '' || columnKey.substr(0, constructionIdentifier.length) != constructionIdentifier) {
                     break;
                 } else {
-                    //Checking for name already being taken
+                    // Checking for name already being taken
 
-                    if (previousNameList.indexOf(columnKey) == -1) { //Workaround for the lack of an 'in' function in javascript
+                    if (previousNameList.indexOf(columnKey) == -1) { // Workaround for the lack of an 'in' function in javascript
                         name = columnKey;
-                        //console.log("HERE! Part 3a");
+                        // console.log("HERE! Part 3a");
                     } else {
-                        //console.log("HERE! Part 3b");
-                        //Adding extra "pt." until untaken
+                        // console.log("HERE! Part 3b");
+                        // Adding extra "pt." until untaken
                         extraCount = 2;
                         nameUnfound = true;
                         while (nameUnfound == true) {
-                            if (previousNameList.indexOf(columnKey + " pt." + extraCount) == -1) {
-                                name = columnKey + " pt." + extraCount;
+                            if (previousNameList.indexOf(columnKey + ' pt.' + extraCount) == -1) {
+                                name = columnKey + ' pt.' + extraCount;
                                 nameUnfound = false;
                             }
                             extraCount++;
@@ -190,11 +189,11 @@ function drawChart() {
 
                     displayName = createDisplayName(constructionIdentifier, name);
 
-                    //Formatting start and end dates
-                    cellValueEnd = window.officeStates[tempRow + 1][columnKey]
-                    startDay = convertCellDate(cellValueStart)
-                    endDay = convertCellDate(cellValueEnd)
-                    
+                    // Formatting start and end dates
+                    cellValueEnd = window.officeStates[tempRow + 1][columnKey];
+                    startDay = convertCellDate(cellValueStart);
+                    endDay = convertCellDate(cellValueEnd);
+
                     // Calculating percentage completed from start, current, and end times (Deprecated for consistency with other elements)
                     // if (endDay.getTime() < currentTime) {
                     //     percentageCompleted = 100;
@@ -206,20 +205,20 @@ function drawChart() {
 
                     percentageCompleted = 0;
 
-                    //Adding row information
+                    // Adding row information
                     if (window.BVNvisualiserColouredBySector) {
                         data.addRow([name, displayName, columnKey, startDay, endDay, null, 100, null]);
 
-                        //Adding row information to global variable for easy continual generation
+                        // Adding row information to global variable for easy continual generation
                         nearlyFilledDataRows.push([name, displayName, columnKey, startDay, endDay, null]);
                     } else {
                         data.addRow([name, displayName, startDay, endDay, null, percentageCompleted, null]);
 
-                        //Adding row information to global variable for easy continual generation
+                        // Adding row information to global variable for easy continual generation
                         nearlyFilledDataRows.push([name, displayName, startDay, endDay, null]);
                     }
                     rowCount++;
-                    //console.log(name + " " + startDay + " " + endDay);
+                    // console.log(name + " " + startDay + " " + endDay);
                 }
             }
         }
@@ -228,18 +227,18 @@ function drawChart() {
         chartOptions = {
             height: 30*rowCount + 50,
             gantt: {
-                trackHeight: 30
+                trackHeight: 30,
             },
             labelStyle: {
-                fontName: "Arial",
+                fontName: 'Arial',
                 fontSize: 40,
-                color: '#FF0000'
-            }
+                color: '#FF0000',
+            },
         };
 
-        //console.log("HERE! Part 5")
+        // console.log("HERE! Part 5")
 
-        var container = document.getElementById('chart_div');
+        let container = document.getElementById('chart_div');
         chart = new google.visualization.Gantt(document.getElementById('chart_div'));
 
         // monitor activity, change bar color
@@ -265,13 +264,13 @@ function drawChart() {
         //             constructionIdentifier, cellValueStart, cellValueEnd, columnKey, tempRow, chartOptions, chart)
 
 
-        //https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
+        // https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
 
-        //https://stackoverflow.com/questions/40655308/change-the-bar-color-in-gantt-chat-based-on-value/40655754#40655754
+        // https://stackoverflow.com/questions/40655308/change-the-bar-color-in-gantt-chat-based-on-value/40655754#40655754
 
         chart.draw(data, chartOptions);
-    } catch(e) {
-        console.log("probably just wait for the spreadsheet to load (gantt chart initialisation) ", e);
+    } catch (e) {
+        console.log('probably just wait for the spreadsheet to load (gantt chart initialisation) ', e);
         setTimeout(drawChart, 500);
     }
 }
@@ -287,21 +286,21 @@ function convertCellDate(dateString) {
 
 function updateChart(currentTime) {
     /* Update chart data with date from slider
-    
+
     Sets the progress of each element in the gantt chart to correspond with the date selected by the slider.
     */
 
     // Try statement catches instances where the spreadsheet hasn't loaded yet
     try {
-        //console.log(window.officeStates)
+        // console.log(window.officeStates)
 
-        //throw '- actually just temp error to stop this function from working.'
+        // throw '- actually just temp error to stop this function from working.'
 
-        var startDay = new Date(2001, 1, 1);
-        var endDay = new Date(2002, 2, 2);
+        let startDay = new Date(2001, 1, 1);
+        let endDay = new Date(2002, 2, 2);
 
-        //Initialising data
-        var newData = new google.visualization.DataTable();
+        // Initialising data
+        let newData = new google.visualization.DataTable();
         newData.addColumn('string', 'Task ID');
         newData.addColumn('string', 'Task Name');
         if (window.BVNvisualiserColouredBySector) {
@@ -313,20 +312,20 @@ function updateChart(currentTime) {
         newData.addColumn('number', 'Percent Complete');
         newData.addColumn('string', 'Dependencies');
 
-        //Removing all the rows
-        //data.removeRows(0, rowCount-1)
+        // Removing all the rows
+        // data.removeRows(0, rowCount-1)
 
-        var updatedChartData = [];
+        let updatedChartData = [];
 
-        //Looping through each row
-        for (var index in nearlyFilledDataRows) {
+        // Looping through each row
+        for (let index in nearlyFilledDataRows) {
             incompleteRow = nearlyFilledDataRows[index];
 
-            //Fetching relevant dates
+            // Fetching relevant dates
             startDay = incompleteRow[2];
             endDay = incompleteRow[3];
 
-            //Calculating percentage completed
+            // Calculating percentage completed
             if (endDay.getTime() < currentTime) {
                 percentageCompleted = 100;
             } else if (startDay.getTime() > currentTime) {
@@ -340,43 +339,43 @@ function updateChart(currentTime) {
             newData.addRow(newDataList);
         }
 
-        //Redrawing the chart with the updated progress bars
+        // Redrawing the chart with the updated progress bars
         chart.draw(newData, chartOptions);
-    } catch(e) {
-        console.log("probably just wait for the spreadsheet to load (gantt chart update) ", e);
+    } catch (e) {
+        console.log('probably just wait for the spreadsheet to load (gantt chart update) ', e);
     }
 }
 
 
 function createDisplayName(identifier, name) {
-    /*Create a better (more legible) display name for each of the room names.
+    /* Create a better (more legible) display name for each of the room names.
       Practically, it:
         - Removes the beginning identifier
         - Places a space between any progressions from lowercase to uppercase
       E.g. "CONSTRUCTIONProjectRoomSouth" => "Project Room South"
-      
+
       This function is now effectively irrelevant as the json format removes all the capitalisations sadly.
       */
 
-    //Removing beginning identifier
-    var betterName = name.substr(identifier.length, name.length);
+    // Removing beginning identifier
+    let betterName = name.substr(identifier.length, name.length);
 
-    //Initialising as previous character being upper case to avoid unnecesary initial spaces
-    var previouslyLowerCase = false;
+    // Initialising as previous character being upper case to avoid unnecesary initial spaces
+    let previouslyLowerCase = false;
 
-    //Initialising the display name with the first character
-    var displayName = betterName[0];
+    // Initialising the display name with the first character
+    let displayName = betterName[0];
 
-    //Looping through each character
-    for (var charIndex = 1; charIndex < betterName.length; charIndex++) {
-        char = betterName[charIndex]
-        
-        //Testing if uppercase
+    // Looping through each character
+    for (let charIndex = 1; charIndex < betterName.length; charIndex++) {
+        char = betterName[charIndex];
+
+        // Testing if uppercase
         if (char.toUpperCase() === char && char.toLowerCase() !== char) {
-            
+
             if (previouslyLowerCase) {
-                //Adding the necessary space
-                displayName += " ";
+                // Adding the necessary space
+                displayName += ' ';
             }
 
             previouslyLowerCase = false;
@@ -384,7 +383,7 @@ function createDisplayName(identifier, name) {
             previouslyLowerCase = true;
         }
 
-        //Adding the current character to the name to be returned
+        // Adding the current character to the name to be returned
         displayName += char;
     }
     return displayName;
@@ -395,10 +394,10 @@ function createDisplayName(identifier, name) {
 function hoverTest() {
     // DO THIS DOCUMENTATION BLURB
 
-    var textElements = document.getElementsByTagName("text");
-    var hoverOverFlag = false;
+    let textElements = document.getElementsByTagName('text');
+    let hoverOverFlag = false;
 
-    for (var textElementIndex in textElements) {
+    for (let textElementIndex in textElements) {
         // Looking for a <text> element with a dash in it. Specifically a line that resembles this:
         // "centre: Dec 2017 - Jan 2018"
         // The dash is an easy (albeit problematic) differentiator
@@ -406,22 +405,22 @@ function hoverTest() {
             if (textElements[textElementIndex].textContent.indexOf('-') != -1) {
 
                 // Get the string before the : without any "pt. 2"s or similar:
-                window.BVNcurrentHoverZone = textElements[textElementIndex].textContent.split(":")[0].trim().split(" ")[0];
-                window.BVNcurrentHoverZone = window.BVNvisualiserConstructionIdentifier + window.BVNcurrentHoverZone
+                window.BVNcurrentHoverZone = textElements[textElementIndex].textContent.split(':')[0].trim().split(' ')[0];
+                window.BVNcurrentHoverZone = window.BVNvisualiserConstructionIdentifier + window.BVNcurrentHoverZone;
                 hoverOverFlag = true;
 
 
-                //Read in current opacity state for safekeeping
-                //row = window.officeStates[window.BVNcurrentSliderValue]
-                
+                // Read in current opacity state for safekeeping
+                // row = window.officeStates[window.BVNcurrentSliderValue]
+
                 // Highlighting hovered zone
                 var currentZone = document.getElementById(window.BVNcurrentHoverZone);
                 currentZone.style.opacity = 0.5;
                 break;
             }
-        } catch(e) {
+        } catch (e) {
             // Log the error if it isn't the expected (and unimportant) error
-            if (e != "TypeError: Cannot read property 'indexOf' of undefined") {
+            if (e != 'TypeError: Cannot read property \'indexOf\' of undefined') {
                 console.log(e);
             }
         }
@@ -430,7 +429,7 @@ function hoverTest() {
     if (!hoverOverFlag) {
         // Reseting zones if not being hovered over
         try {
-            for (var elementOpacityKey in window.officeStates[window.BVNcurrentSliderValue]) {
+            for (let elementOpacityKey in window.officeStates[window.BVNcurrentSliderValue]) {
                 if (elementOpacityKey.substring(0, window.BVNvisualiserConstructionIdentifier.length) == window.BVNvisualiserConstructionIdentifier) {
 
                     var currentZone = document.getElementById(elementOpacityKey);
@@ -438,26 +437,26 @@ function hoverTest() {
                     currentZone.style.opacity = window.officeStates[window.BVNcurrentSliderValue][elementOpacityKey];
                 }
             }
-            window.BVNcurrentHoverZone = "NONE";
-        } catch(e) {
-            //console.log(elementOpacityKey)
+            window.BVNcurrentHoverZone = 'NONE';
+        } catch (e) {
+            // console.log(elementOpacityKey)
         }
     }
     setTimeout(hoverTest, 100);
 }
 
-window.BVNcurrentHoverZone = "NONE";
+window.BVNcurrentHoverZone = 'NONE';
 window.BVNcurrentSliderValue = 0;
 
 // https://spreadsheets.google.com/feeds/list/1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s/od6/public/values?alt=json
 
-//window.addEventListener('DOMContentLoaded', init);
+// window.addEventListener('DOMContentLoaded', init);
 window.addEventListener('DOMContentLoaded', slider);
 
 var nearlyFilledDataRows = [];
 
-google.charts.load('current', {'packages':['gantt']});
+google.charts.load('current', {'packages': ['gantt']});
 google.charts.setOnLoadCallback(drawChart);
 
 
-window.onload = hoverTest()
+window.onload = hoverTest();
