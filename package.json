@@ -1,0 +1,25 @@
+{
+  "name": "bvn_studio_boom_staging",
+  "version": "1.0.0",
+  "description": "The BVN office (as a part of project octopus) has been undergoing some works. The old office:",
+  "main": "googleSheetsData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvn-architecture/BVN_studio_boom_staging.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bvn-architecture/BVN_studio_boom_staging/issues"
+  },
+  "homepage": "https://github.com/bvn-architecture/BVN_studio_boom_staging#readme",
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
