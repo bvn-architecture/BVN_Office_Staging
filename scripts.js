@@ -1,4 +1,6 @@
 function slider() {
+    // TODO: slider range is hard coded in the html, 
+    // this needs to be calculated based on the date ranges
     let slider = document.getElementById('myRange');
     let output = document.getElementById('date');
     // output.innerHTML = slider.value; // Display the default slider value
@@ -44,237 +46,225 @@ function slider() {
             console.log('probably just wait for the spreadsheet to load (floorplan) ', e);
         }
     };
+}
 
-    // Initialises the floorplan in the correct position
-    function startFloorplan() {
-        try {
-            row = window.officeStates[0];
-            for (let k in row) {
-                if (k=='notes') {
-                    let notes = document.getElementById('notes');
-                    notes.innerText = row[k];
-                }
-                else if (row.hasOwnProperty(k)) {
+ // Initialises the floorplan in the correct position
+ function initialiseFloorplan(data) {
+    row = data[0];
+    for (let k in row) {
+        if (k == 'notes') {
+            let notes = document.getElementById('notes');
+            notes.innerText = row[k];
+        }
+        else if (row.hasOwnProperty(k)) {
 
-                    try {
-                        let d = document.getElementById(k);
-                        // console.log("Key is " + k + ", value is " + row[k], d);
-                        d.style.opacity = row[k];
-                    } catch (e) {
-                        console.log('hmmmm', e);
-                    }
-                }
+            try {
+                let d = document.getElementById(k);
+                // console.log("Key is " + k + ", value is " + row[k], d);
+                d.style.opacity = row[k];
+            } catch (e) {
+                console.log('hmmmm', e);
             }
-        } catch (e) {
-            console.log('Couldn\'t start up the floorplan correctly, trying again...');
-            setTimeout(startFloorplan, 300);
         }
     }
-    setTimeout(startFloorplan, 30);
+}
+
+function getSpreadsheetData() {
+    Tabletop.init( { key: "https://docs.google.com/spreadsheets/d/"
+                   + window.BVNofficeProgressPublicSpreadsheetUrlKey
+                   + "/pubhtml",
+                     callback: showInfo,
+                     simpleSheet: true } );
 }
 
 
-// function init() {
-//     Tabletop.init( { key: "https://docs.google.com/spreadsheets/d/" + window.BVNofficeProgressPublicSpreadsheetUrlKey + "/pubhtml",
-//                         callback: showInfo,
-//                         simpleSheet: true } )
-// }
+function showInfo(data, tabletop) {
+    // alert('Successfully processed the table!')
+    window.officeStates = data;
 
-// function showInfo(data, tabletop) {
-//     // alert('Successfully processed the table!')
-//     console.log(data);
-//     window.officeStates = data;
-// }
+    initialiseFloorplan(data);
 
+    google.charts.load('current', {'packages': ['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+}
 
+function initialiseGantDataTable() {
+    let dataTable = new google.visualization.DataTable();
+    dataTable.addColumn('string', 'Task ID');
+    dataTable.addColumn('string', 'Task Name');
+    if (window.BVNvisualiserColouredBySector) {
+        dataTable.addColumn('string', 'Resource');
+    }
+    dataTable.addColumn('date', 'Start Date');
+    dataTable.addColumn('date', 'End Date');
+    dataTable.addColumn('number', 'Duration');
+    dataTable.addColumn('number', 'Percent Complete');
+    dataTable.addColumn('string', 'Dependencies');
+    return dataTable;
+}
+
+function getStartDateRow() {
+    for (let tempRowIndex = window.officeStates.length-1; tempRowIndex >= 0; tempRowIndex--) {
+        if (window.officeStates[tempRowIndex]['date'] == 'datesStart') {
+            return tempRowIndex;
+        }
+    }
+}
+
+function dateIsGood(d) {
+    return d != null || d != '';
+}
+
+function removeVal(arr, val) {
+    var index = arr.indexOf(val);
+    if (index > -1) {
+        arr.splice(index, 1);
+    } else {
+        console.log("didn't find", val, "in", arr);
+    }
+
+    return arr;
+}
 
 function drawChart() {
-    /* Initialise the gantt chart given the data in googleSheetsData.js
+    // Finds where the dates are - assumes the first relevant column is the third one.
+    var datesStartRow = getStartDateRow();
+
+    slider();
+
+    // Creating the data structure for the gantt chart
+    let dataTable = initialiseGantDataTable();
+
+    // Various variable initialisations for the following loop
+    let name = 'uninitialised name';
+    let previousNameList = [];
+    let startDay = new Date(1970, 1, 1);
+    let endDay = new Date(1970, 2, 2);
+    let cellValue = null;
+    let nameUnfound = true;
+    let extraCount = 2;
+    let rowCount = 0;
+    let constructionIdentifier = window.BVNvisualiserConstructionIdentifier;
+    let sectionStartDate = '3/3/2003';
+    let cellValueEnd = '4/4/2004';
+    let currentTime = Date.now();
+    let percentageCompleted = 0.0;
+    let displayName = '';
+
+    let allColumnNames = Object.keys(window.officeStates[0]);
+    let usefulColumnNames = removeVal(allColumnNames, "date");
+    usefulColumnNames = removeVal(usefulColumnNames, "notes");
+
+    for (i = 0; i < usefulColumnNames.length; i++) {
+        let columnName = usefulColumnNames[i];
+        //columnName is the header of each column i.e. for each column
+
+        // Looping through the rows
+        for (let tempRowIndex = datesStartRow; tempRowIndex < window.officeStates.length; tempRowIndex += 2) {
+            sectionStartDate = window.officeStates[tempRowIndex][columnName];
+
+            if (dateIsGood(sectionStartDate)) {
+                // Checking for name already being taken
+                if (previousNameList.indexOf(columnName) == -1) {
+                    // Workaround for the lack of an 'in' function in javascript
+                    name = columnName;
+                } else {
+                    // Adding extra "pt." until untaken
+                    extraCount = 2;
+                    nameUnfound = true;
+                    while (nameUnfound == true) {
+                        if (previousNameList.indexOf(columnName + ' pt.' + extraCount) == -1) {
+                            name = columnName + ' pt.' + extraCount;
+                            nameUnfound = false;
+                        }
+                        extraCount++;
+                    }
+                }
+                previousNameList.push(name);
+
+                displayName = createDisplayName(name);
+
+                // Formatting start and end dates
+                cellValueEnd = window.officeStates[tempRowIndex + 1][columnName];
+                startDay = convertCellDate(sectionStartDate);
+                endDay =   convertCellDate(cellValueEnd);
+
+                // Calculating percentage completed from start, current, and end times (Deprecated for consistency with other elements)
+                // if (endDay.getTime() < currentTime) {
+                //     percentageCompleted = 100;
+                // } else if (startDay.getTime() > currentTime) {
+                //     percentageCompleted = 0;
+                // } else {
+                //     percentageCompleted = Math.round(((currentTime-startDay.getTime())/((endDay.getTime()-startDay.getTime())))*1000)/10;
+                // }
+
+                percentageCompleted = 0;
+
+                // Adding row information
+                if (window.BVNvisualiserColouredBySector) {
+                    dataTable.addRow([name, displayName, columnName, startDay, endDay, null, 100, null]);
+
+                    // Adding row information to global variable for easy continual generation
+                    nearlyFilledDataRows.push([name, displayName, columnName, startDay, endDay, null]);
+                } else {
+                    dataTable.addRow([name, displayName, startDay, endDay, null, percentageCompleted, null]);
+
+                    // Adding row information to global variable for easy continual generation
+                    nearlyFilledDataRows.push([name, displayName, startDay, endDay, null]);
+                }
+                rowCount++;
+                // console.log(name + " " + startDay + " " + endDay);
+            }
+        }
+    }
+
+
+    chartOptions = {
+        height: 30*rowCount + 50,
+        gantt: {
+            trackHeight: 30,
+        },
+        labelStyle: {
+            fontName: 'Arial',
+            fontSize: 40,
+            color: '#FF0000',
+        },
+    };
+
+    // console.log("HERE! Part 5")
+
+    let container = document.getElementById('chart_div');
+    chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+    // monitor activity, change bar color
+    // Doesn't work atm, hence commented out. Definitely look into this as a future feature.
+    // (Mainly because of lack of support from google api. )
+
+    /*
+    var observer = new MutationObserver(function (mutations) {
+        Array.prototype.forEach.call(container.getElementsByTagName('path'), function(bar, index) {
+            if (data.getValue(index, 6) > 100) {
+                bar.setAttribute('fill', '#a52714');
+            }
+        });
+    });
+    observer.observe(container, {
+        childList: true,
+        subtree: true
+    });
     */
 
-    // Try statement catches instances where the spreadsheet hasn't loaded yet
-    try {
-        // Finds where the dates are - assumes the first relevant column is the third one.
-        for (var tempRow = window.officeStates.length-1; tempRow >= 0; tempRow--) {
-            if (window.officeStates[tempRow]['date'] == 'datesStart') {
-                var datesStartRow = tempRow;
-                break;
-            }
-            // console.log(window.officeStates[tempRow])
-        }
 
-        slider();
-
-        // Creating the data structure for the gantt chart
-        let data = new google.visualization.DataTable();
-        data.addColumn('string', 'Task ID');
-        data.addColumn('string', 'Task Name');
-        if (window.BVNvisualiserColouredBySector) {
-            data.addColumn('string', 'Resource');
-        }
-        data.addColumn('date', 'Start Date');
-        data.addColumn('date', 'End Date');
-        data.addColumn('number', 'Duration');
-        data.addColumn('number', 'Percent Complete');
-        data.addColumn('string', 'Dependencies');
-
-        // Start column of the date data
-        // var startColumn = 2;
-
-        // Various variable initialisations for the following loop
-        let name = 'initial name';
-        let previousNameList = [];
-        let startDay = new Date(2001, 1, 1);
-        let endDay = new Date(2002, 2, 2);
-        let cellValue = null;
-        let nameUnfound = true;
-        let extraCount = 2;
-        let rowCount = 0;
-        let constructionIdentifier = window.BVNvisualiserConstructionIdentifier;
-        let cellValueStart = '3/3/2003';
-        let cellValueEnd = '4/4/2004';
-        let currentTime = Date.now();
-        let percentageCompleted = 0.0;
-        let displayName = '';
+    // console.log(data, name, previousNameList, startDay, endDay, cellValue, nameUnfound, extraCount, rowCount,
+    //             constructionIdentifier, cellValueStart, cellValueEnd, columnKey, tempRow, chartOptions, chart)
 
 
-        // console.log("HERE! Part -1");
-        // console.log(window.officeStates);
-        // console.log(Object.keys(window.officeStates).length);
-        // console.log(datesStartRow)
-        // console.log("HERE! Part 0");
+    // https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
 
-        // Loops through each column and adds relevant rows to gantt chart
-        // for (var tempColumn = startColumn; tempColumn < Object.keys(window.officeStates[0]).length; tempColumn++) {
+    // https://stackoverflow.com/questions/40655308/change-the-bar-color-in-gantt-chat-based-on-value/40655754#40655754
 
-
-        for (let columnKey in window.officeStates[datesStartRow]) {
-            // Looping through the rows
-            // console.log("HERE! Part 1")
-
-            for (var tempRow = datesStartRow; tempRow < window.officeStates.length; tempRow += 2) {
-                cellValueStart = window.officeStates[tempRow][columnKey];
-
-                // console.log(tempRow, columnKey)
-                // console.log(window.officeStates)
-                // console.log(columnKey.substr(0,constructionIdentifier.length) + " = " + constructionIdentifier)
-                // console.log(columnKey.substr(0,constructionIdentifier.length) == constructionIdentifier)
-                // console.log("HERE! Part 2")
-
-                // Ensuring invalid cells aren't treated as dates
-                // console.log(cellValueStart)
-
-                if (cellValueStart == null || cellValueStart == '' || columnKey.substr(0, constructionIdentifier.length) != constructionIdentifier) {
-                    break;
-                } else {
-                    // Checking for name already being taken
-
-                    if (previousNameList.indexOf(columnKey) == -1) { // Workaround for the lack of an 'in' function in javascript
-                        name = columnKey;
-                        // console.log("HERE! Part 3a");
-                    } else {
-                        // console.log("HERE! Part 3b");
-                        // Adding extra "pt." until untaken
-                        extraCount = 2;
-                        nameUnfound = true;
-                        while (nameUnfound == true) {
-                            if (previousNameList.indexOf(columnKey + ' pt.' + extraCount) == -1) {
-                                name = columnKey + ' pt.' + extraCount;
-                                nameUnfound = false;
-                            }
-                            extraCount++;
-                        }
-                    }
-                    previousNameList.push(name);
-
-                    displayName = createDisplayName(constructionIdentifier, name);
-
-                    // Formatting start and end dates
-                    cellValueEnd = window.officeStates[tempRow + 1][columnKey];
-                    startDay = convertCellDate(cellValueStart);
-                    endDay = convertCellDate(cellValueEnd);
-
-                    // Calculating percentage completed from start, current, and end times (Deprecated for consistency with other elements)
-                    // if (endDay.getTime() < currentTime) {
-                    //     percentageCompleted = 100;
-                    // } else if (startDay.getTime() > currentTime) {
-                    //     percentageCompleted = 0;
-                    // } else {
-                    //     percentageCompleted = Math.round(((currentTime-startDay.getTime())/((endDay.getTime()-startDay.getTime())))*1000)/10;
-                    // }
-
-                    percentageCompleted = 0;
-
-                    // Adding row information
-                    if (window.BVNvisualiserColouredBySector) {
-                        data.addRow([name, displayName, columnKey, startDay, endDay, null, 100, null]);
-
-                        // Adding row information to global variable for easy continual generation
-                        nearlyFilledDataRows.push([name, displayName, columnKey, startDay, endDay, null]);
-                    } else {
-                        data.addRow([name, displayName, startDay, endDay, null, percentageCompleted, null]);
-
-                        // Adding row information to global variable for easy continual generation
-                        nearlyFilledDataRows.push([name, displayName, startDay, endDay, null]);
-                    }
-                    rowCount++;
-                    // console.log(name + " " + startDay + " " + endDay);
-                }
-            }
-        }
-
-
-        chartOptions = {
-            height: 30*rowCount + 50,
-            gantt: {
-                trackHeight: 30,
-            },
-            labelStyle: {
-                fontName: 'Arial',
-                fontSize: 40,
-                color: '#FF0000',
-            },
-        };
-
-        // console.log("HERE! Part 5")
-
-        let container = document.getElementById('chart_div');
-        chart = new google.visualization.Gantt(document.getElementById('chart_div'));
-
-        // monitor activity, change bar color
-        // Doesn't work atm, hence commented out. Definitely look into this as a future feature.
-        // (Mainly because of lack of support from google api. )
-
-        /*
-        var observer = new MutationObserver(function (mutations) {
-            Array.prototype.forEach.call(container.getElementsByTagName('path'), function(bar, index) {
-                if (data.getValue(index, 6) > 100) {
-                    bar.setAttribute('fill', '#a52714');
-                }
-            });
-        });
-        observer.observe(container, {
-            childList: true,
-            subtree: true
-        });
-        */
-
-
-        // console.log(data, name, previousNameList, startDay, endDay, cellValue, nameUnfound, extraCount, rowCount,
-        //             constructionIdentifier, cellValueStart, cellValueEnd, columnKey, tempRow, chartOptions, chart)
-
-
-        // https://developers.google.com/chart/interactive/docs/gallery/ganttchart#a-simple-example
-
-        // https://stackoverflow.com/questions/40655308/change-the-bar-color-in-gantt-chat-based-on-value/40655754#40655754
-
-        chart.draw(data, chartOptions);
-    } catch (e) {
-        console.log('probably just wait for the spreadsheet to load (gantt chart initialisation) ', e);
-        setTimeout(drawChart, 500);
-    }
+    chart.draw(dataTable, chartOptions);
 }
-
 
 
 function convertCellDate(dateString) {
@@ -300,17 +290,7 @@ function updateChart(currentTime) {
         let endDay = new Date(2002, 2, 2);
 
         // Initialising data
-        let newData = new google.visualization.DataTable();
-        newData.addColumn('string', 'Task ID');
-        newData.addColumn('string', 'Task Name');
-        if (window.BVNvisualiserColouredBySector) {
-            newData.addColumn('string', 'Resource');
-        }
-        newData.addColumn('date', 'Start Date');
-        newData.addColumn('date', 'End Date');
-        newData.addColumn('number', 'Duration');
-        newData.addColumn('number', 'Percent Complete');
-        newData.addColumn('string', 'Dependencies');
+        let newData = initialiseGantDataTable();
 
         // Removing all the rows
         // data.removeRows(0, rowCount-1)
@@ -347,48 +327,11 @@ function updateChart(currentTime) {
 }
 
 
-function createDisplayName(identifier, name) {
-    /* Create a better (more legible) display name for each of the room names.
-      Practically, it:
-        - Removes the beginning identifier
-        - Places a space between any progressions from lowercase to uppercase
-      E.g. "CONSTRUCTIONProjectRoomSouth" => "Project Room South"
-
-      This function is now effectively irrelevant as the json format removes all the capitalisations sadly.
-      */
-
-    // Removing beginning identifier
-    let betterName = name.substr(identifier.length, name.length);
-
-    // Initialising as previous character being upper case to avoid unnecesary initial spaces
-    let previouslyLowerCase = false;
-
-    // Initialising the display name with the first character
-    let displayName = betterName[0];
-
-    // Looping through each character
-    for (let charIndex = 1; charIndex < betterName.length; charIndex++) {
-        char = betterName[charIndex];
-
-        // Testing if uppercase
-        if (char.toUpperCase() === char && char.toLowerCase() !== char) {
-
-            if (previouslyLowerCase) {
-                // Adding the necessary space
-                displayName += ' ';
-            }
-
-            previouslyLowerCase = false;
-        } else {
-            previouslyLowerCase = true;
-        }
-
-        // Adding the current character to the name to be returned
-        displayName += char;
-    }
-    return displayName;
+function createDisplayName(name) {
+    let re = /(\w)(\w+)(\d\d)/g;
+    result = name.replace(re, "$1$2 $3");
+    return result;
 }
-
 
 
 function hoverTest() {
@@ -442,21 +385,17 @@ function hoverTest() {
             // console.log(elementOpacityKey)
         }
     }
-    setTimeout(hoverTest, 100);
+    setTimeout(hoverTest, 1000);
 }
 
+var nearlyFilledDataRows = [];
 window.BVNcurrentHoverZone = 'NONE';
 window.BVNcurrentSliderValue = 0;
 
 // https://spreadsheets.google.com/feeds/list/1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s/od6/public/values?alt=json
 
-// window.addEventListener('DOMContentLoaded', init);
+window.addEventListener('DOMContentLoaded', getSpreadsheetData);
 window.addEventListener('DOMContentLoaded', slider);
 
-var nearlyFilledDataRows = [];
 
-google.charts.load('current', {'packages': ['gantt']});
-google.charts.setOnLoadCallback(drawChart);
-
-
-window.onload = hoverTest();
+// window.onload = hoverTest();

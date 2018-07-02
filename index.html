@@ -1,40 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
     <script src="moment.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="googleSheetsData.js"></script>
     <script type="application/javascript">
         //URL key to the spreadsheet with the data
-        window.BVNofficeProgressPublicSpreadsheetUrlKey = '1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s';
+        window.BVNofficeProgressPublicSpreadsheetUrlKey = "1LWWY3zm8CfIYnrkIAbSB7OhRA41unIw1sZNYFW3ltBQ";
 
         //window.BVNofficeProgressPublicSpreadsheetUrl = './officeStates.html'
 
-        //Phrase that goes before every item you want to visualise from the gantt chart
+        //Phrase that goes before every item you want to
+        //visualise from the gantt chart
         window.BVNvisualiserConstructionIdentifier = "construction";
 
         //Set to 'false' for no colours, and 'true' for individual colouring per location
         window.BVNvisualiserColouredBySector = false;
     </script>
-    <script src='scripts.js'></script>
+    <script type="text/javascript" src='scripts.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 
 <body class="container">
-    <div class="grid__title">BVN Sydney Studio—Project Octopus 🐙</div>
-    
-    <div class="grid__floorplan">
-        
-        
-        
+    <div class="grid__title">BVN Sydney Studio—Booms 🐙</div>
 
-    </div>
+    <div id="svg_container" class="grid__floorplan"></div>
+
     <div class="grid__slider">
         <br>
         <div id="slidecontainer">
-            <input type="range" min="0" max="160" value="0" class="slider" id="myRange">
+            <input type="range" min="0" max="48" value="0" 
+                   class="slider" id="myRange">
         </div>
         <br>
     </div>
@@ -46,6 +44,9 @@
             <div id="notes"></div>
         </div>
     </div>
+    
+    <script type="text/javascript" src="injectSVG.js"></script>
+    
 </body>
 
 </html>
