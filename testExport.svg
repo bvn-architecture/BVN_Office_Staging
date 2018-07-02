@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1109.08 1028.16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path-3);
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-path-4);
+      }
+
+      .cls-6 {
+        clip-path: url(#clip-path-5);
+      }
+
+      .cls-7 {
+        clip-path: url(#clip-path-6);
+      }
+
+      .cls-8 {
+        clip-path: url(#clip-path-7);
+      }
+
+      .cls-9 {
+        clip-path: url(#clip-path-8);
+      }
+
+      .cls-10 {
+        clip-path: url(#clip-path-9);
+      }
+
+      .cls-11, .cls-13 {
+        fill: #0a81c4;
+      }
+
+      .cls-11, .cls-12, .cls-14, .cls-15 {
+        opacity: 0.49;
+      }
+
+      .cls-14 {
+        fill: #0081c8;
+      }
+
+      .cls-15 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(-22.51 -16.5)">
+      <polygon id="_02A_PRP" data-name="02A_PRP" class="cls-1" points="36.18 388.5 306.58 388.5 306.18 566.5 53.66 566.5 36.18 580.5 36.18 388.5"/>
+    </clipPath>
+    <clipPath id="clip-path-2" transform="translate(-22.51 -16.5)">
+      <polygon id="_03A_PRP" data-name="03A_PRP" class="cls-1" points="30.51 673 36.18 586.31 68.69 568.92 434.01 568.92 434.01 580.37 397.51 677.5 301.01 666.61 301.01 626.47 315.26 571.5 264.26 571.25 259.77 590.76 138.37 591.9 127.97 673.25 30.51 673"/>
+    </clipPath>
+    <clipPath id="clip-path-3" transform="translate(-22.51 -16.5)">
+      <polygon id="_13A_PRP" data-name="13A_PRP" class="cls-1" points="156.01 667.74 300.75 665.52 300.62 655.24 300.22 654.48 300.33 578.83 304.14 573.6 271.01 572.88 256.51 602.25 174.09 600.64 156.01 667.74"/>
+    </clipPath>
+    <clipPath id="clip-path-4" transform="translate(-22.51 -16.5)">
+      <polygon id="_33A_PRP" data-name="33A_PRP" class="cls-1" points="571.85 650 679.51 641.81 676.01 566.5 628.04 567.33 561.68 619.66 571.85 650"/>
+    </clipPath>
+    <clipPath id="clip-path-5" transform="translate(-22.51 -16.5)">
+      <polygon id="_44A_PRP" data-name="44A_PRP" class="cls-1" points="629.44 651.63 866.67 651.63 866.67 807.7 920.42 812.88 922.5 864.19 1020.17 871.83 1032.12 896.17 1030.9 921.43 956.65 992.83 645.51 991.72 629.44 651.63"/>
+    </clipPath>
+    <clipPath id="clip-path-6" transform="translate(-22.51 -16.5)">
+      <polygon id="_71A_PRP" data-name="71A_PRP" class="cls-1" points="1027.42 846.98 1028.56 887.87 1117.51 887.83 1138.85 586.93 1127.43 138.28 1011.65 150.16 1053.17 242.5 1032.83 268.83 1042.18 296.78 1048.52 323.53 1049.52 405.51 1070.83 448.5 1050.85 474.83 1041.04 653.17 1047.08 847.31 1027.42 846.98"/>
+    </clipPath>
+    <clipPath id="clip-path-7" transform="translate(-22.51 -16.5)">
+      <polygon id="_76A_PRP" data-name="76A_PRP" class="cls-1" points="1051.35 976.27 1119.18 975.66 1116.85 1032.17 1046.23 1032.17 1051.35 976.27"/>
+    </clipPath>
+    <clipPath id="clip-path-8" transform="translate(-22.51 -16.5)">
+      <polygon id="_61A_PRP" data-name="61A_PRP" class="cls-1" points="1043.29 845.85 1021.45 846.37 965.74 861.05 922.5 838.51 922.51 811.25 877.76 790.24 874.87 642.05 708.18 632 711.51 570 836.16 563.5 836.16 379 869.29 296.48 882.27 202.69 1019.91 178.5 1049.84 238.33 1024.91 273.7 1047.29 331.65 1047.82 410.52 1054.22 427.26 1044.53 444.25 1038.76 595.99 1038.77 707.96 1041.76 720.53 1043.29 845.85"/>
+    </clipPath>
+    <clipPath id="clip-path-9" transform="translate(-22.51 -16.5)">
+      <polygon id="_40A_PRP" data-name="40A_PRP" class="cls-1" points="651.01 68 651.01 405.98 824.28 398 860.06 297.15 877.08 198.66 978.01 181.46 971.99 70.5 651.01 68"/>
+    </clipPath>
+    <image id="image" width="4550" height="4261" xlink:href="\\syd-file\practice\Baptiste\BVN_Office_Staging\ProposedFloorplan.png"/>
+  </defs>
+  <title>testExport</title>
+  <g id="Background">
+    <image width="4613" height="4284" transform="scale(0.24)" xlink:href="\\syd-file\practice\Baptiste\BVN_Office_Staging\EmptyFloorplan.png"/>
+  </g>
+  <g id="clippaths">
+    <g id="proposedwestwingnorth">
+      <g class="cls-2">
+        <use transform="translate(17.08 2.04) scale(0.24)" xlink:href="#image"/>
+      </g>
+    </g>
+    <g id="proposedlibrary">
+      <g class="cls-3">
+        <use transform="translate(39.59 18.54) scale(0.24)" xlink:href="#image"/>
+      </g>
+    </g>
+    <g id="proposedwestprinters">
+      <g class="cls-4">
+        <use transform="translate(39.59 18.54) scale(0.24)" xlink:href="#image"/>
+      </g>
+    </g>
+    <g id="proposedboardroom">
+      <g class="cls-5">
+        <use transform="translate(39.59 18.54) scale(0.24)" xlink:href="#image"/>
+      </g>
+    </g>
+    <g id="proposedsouthwing">
+      <g class="cls-6">
+        <use transform="translate(39.59 18.54) scale(0.24)" xlink:href="#image"/>
+      </g>
+    </g>
+    <g id="proposedbalcony">
+      <g class="cls-7">
+        <use transform="translate(39.59 18.54) scale(0.24)" xlink:href="#image"/>
+      </g>
+    </g>
+    <g id="proposedprojectroomsouth">
+      <g class="cls-8">
+        <use transform="translate(39.59 18.54) scale(0.24)" xlink:href="#image"/>
+      </g>
+    </g>
+    <g id="proposedcentre">
+      <g class="cls-9">
+        <use transform="translate(39.59 18.54) scale(0.24)" xlink:href="#image"/>
+      </g>
+    </g>
+    <g id="proposednorthwing">
+      <g class="cls-10">
+        <use transform="translate(39.59 18.54) scale(0.24)" xlink:href="#image"/>
+      </g>
+    </g>
+  </g>
+  <g id="Zones">
+    <g id="constructionworkshop">
+      <rect class="cls-11" x="709.29" y="526.62" width="84.87" height="10.45" rx="5.09" ry="5.09"/>
+      <rect class="cls-11" x="656.7" y="526.62" width="37.92" height="10.45" rx="5.09" ry="5.09"/>
+      <path class="cls-11" d="M624,539.89H525c-2.82,0-5.1,3.77-5.1,8.42v.44c0,4.65,2.28,8.42,5.1,8.42h99c2.81,0,5.09-3.77,5.09-8.42v-.44C629.07,543.66,626.79,539.89,624,539.89Z" transform="translate(-22.51 -16.5)"/>
+      <path class="cls-11" d="M502.15,540H365.24c-2.81,0-5.09,3.75-5.09,8.38v.44c0,4.63,2.28,8.38,5.09,8.38H502.15c2.82,0,5.1-3.75,5.1-8.38v-.44C507.25,543.72,505,540,502.15,540Z" transform="translate(-22.51 -16.5)"/>
+      <g class="cls-12">
+        <rect class="cls-13" x="647.59" y="559.71" width="222.81" height="89.7" rx="5" ry="5"/>
+      </g>
+    </g>
+    <g id="constructionnorthwing">
+      <path class="cls-14" d="M815.72,455.22v88.93a5.09,5.09,0,0,1-5.1,5.09H737.56a5.09,5.09,0,0,0-5.09,5.09v7.37a5.09,5.09,0,0,0,5.09,5.09h95.68a5.09,5.09,0,0,0,5.09-5.09V455.22a5.09,5.09,0,0,0-5.09-5.1H820.81A5.09,5.09,0,0,0,815.72,455.22Z" transform="translate(-22.51 -16.5)"/>
+      <rect class="cls-14" x="793.21" y="370.43" width="22.62" height="47" rx="5.09" ry="5.09"/>
+      <path class="cls-14" d="M656.14,383.59V83a5.09,5.09,0,0,1,5.09-5.1H840.72a5.1,5.1,0,0,1,5.1,5.1v5.52H957.68a5.09,5.09,0,0,1,5.1,5.09V171a5.09,5.09,0,0,1-5.1,5.09H915.44a5.09,5.09,0,0,0-5.1,5.09v32.37a5.09,5.09,0,0,1-5.09,5.09H850.34a5.1,5.1,0,0,0-5.1,5.1V364.21a5.09,5.09,0,0,1-5.09,5.09H799.58a5.09,5.09,0,0,0-5.1,5.09h0l0,9a5.09,5.09,0,0,1-5.09,5.1l-128.17.14A5.09,5.09,0,0,1,656.14,383.59Z" transform="translate(-22.51 -16.5)"/>
+    </g>
+    <g id="constructionlibrary">
+      <path class="cls-11" d="M37.8,581.3v86.33c0,2.81,6.38,5.09,14.25,5.09h228.1c7.87,0,14.25-2.28,14.25-5.09V581.3c0-2.81-6.38-5.09-14.25-5.09H52.05C44.18,576.21,37.8,578.49,37.8,581.3Z" transform="translate(-22.51 -16.5)"/>
+      <path class="cls-11" d="M282.2,558.65v16.58c0,.54,3.52,1,7.85,1H415.73c4.34,0,7.85-.44,7.85-1V558.65c0-.54-3.51-1-7.85-1H290.05C285.72,557.68,282.2,558.11,282.2,558.65Z" transform="translate(-22.51 -16.5)"/>
+    </g>
+    <g id="constructionwestwingnorth">
+      <path class="cls-11" d="M37.8,401.05V570.33c0,3.25,2.16,5.88,4.83,5.88H276.14c2.67,0,4.84-2.63,4.84-5.88V400.93c0-3.24-2.17-5.87-4.84-5.87l-233.51.11C40,395.17,37.8,397.8,37.8,401.05Z" transform="translate(-22.51 -16.5)"/>
+      <rect class="cls-15" x="32.19" y="677.6" width="39.9" height="54.32" rx="5.09" ry="5.09"/>
+    </g>
+    <g id="constructionserverroom">
+      <path class="cls-11" d="M294.4,581.3v86.33a5.39,5.39,0,0,0,5.63,5.09h90.12a5.38,5.38,0,0,0,5.63-5.09V581.3a5.38,5.38,0,0,0-5.63-5.09H300A5.39,5.39,0,0,0,294.4,581.3Z" transform="translate(-22.51 -16.5)"/>
+      <rect class="cls-15" x="148.87" y="677.6" width="39.9" height="54.32" rx="5.09" ry="5.09"/>
+    </g>
+    <g id="constructionsouthwing">
+      <path class="cls-11" d="M668.12,671V980.36a5.09,5.09,0,0,0,5.1,5.09H791.06a5.09,5.09,0,0,0,5.09-5.09V950.19a5.09,5.09,0,0,1,5.1-5.09h81.68a5.09,5.09,0,0,1,5.09,5.09v25.19a5.09,5.09,0,0,0,5.09,5.09h94.13a5.09,5.09,0,0,0,5.09-5.09v-3.52a5.09,5.09,0,0,1,5.09-5.09h27.41a5.09,5.09,0,0,0,5.09-5.09V843.19a5.09,5.09,0,0,0-5.09-5.09H917.37a5.09,5.09,0,0,1-5.09-5.1V671a5.09,5.09,0,0,0-5.1-5.09h-234A5.09,5.09,0,0,0,668.12,671Z" transform="translate(-22.51 -16.5)"/>
+      <rect class="cls-15" x="232" y="677.6" width="39.9" height="54.32" rx="5.09" ry="5.09"/>
+    </g>
+    <g id="constructionquietroomsouth">
+      <rect class="cls-11" x="968.85" y="973.3" width="39.9" height="54.32" rx="5.09" ry="5.09"/>
+      <rect class="cls-15" x="397.25" y="682.6" width="39.9" height="54.32" rx="5.09" ry="5.09"/>
+    </g>
+    <g id="constructionprojectroomsouth">
+      <rect class="cls-11" x="1017.36" y="942.09" width="89.96" height="82.56" rx="5.09" ry="5.09"/>
+      <rect class="cls-15" x="472" y="682.6" width="39.9" height="54.32" rx="5.09" ry="5.09"/>
+    </g>
+    <g id="constructionbalcony">
+      <rect class="cls-11" x="1014.63" y="120.97" width="91.63" height="815.2" rx="5.09" ry="5.09"/>
+      <rect class="cls-15" x="544.14" y="677.6" width="39.9" height="54.32" rx="5.09" ry="5.09"/>
+    </g>
+    <g id="constructionquietroomnorth">
+      <g id="CON60A" class="cls-12">
+        <rect class="cls-13" x="945.19" y="2" width="52.52" height="69.66" rx="5.09" ry="5.09"/>
+      </g>
+      <rect class="cls-15" x="24" y="751.41" width="39.9" height="54.32" rx="5.09" ry="5.09"/>
+    </g>
+    <g id="constructionprojectroomnorth">
+      <rect class="cls-11" x="1016.23" y="0.51" width="90.56" height="112.89" rx="5.09" ry="5.09"/>
+      <rect class="cls-15" x="88.98" y="751.41" width="39.9" height="54.32" rx="5.09" ry="5.09"/>
+    </g>
+    <g id="constructioncentre">
+      <g class="cls-12">
+        <path class="cls-13" d="M910.27,181a5,5,0,0,1,5-5h116.88a5,5,0,0,1,5,5V395.5a5,5,0,0,1-5,5H850.51a5,5,0,0,1-5-5V223.63a5,5,0,0,1,5-5h54.84a5,5,0,0,0,5-5Z" transform="translate(-22.51 -16.5)"/>
+      </g>
+      <g class="cls-12">
+        <path class="cls-13" d="M867,571.21a5,5,0,0,0,5,5H887.9a5,5,0,0,1,5,5v79.7a5,5,0,0,0,5,5h9.28a5,5,0,0,1,5,5V833a5,5,0,0,0,5,5h72.33a5,5,0,0,0,5-5V428.17a5,5,0,0,0-5-5H872a5,5,0,0,0-5,5Z" transform="translate(-22.51 -16.5)"/>
+      </g>
+    </g>
+    <g id="constructionboardroom">
+      <path class="cls-11" d="M395.78,581.64v83c0,3,2.12,5.44,4.72,5.44H665.38c2.61,0,4.72-2.44,4.72-5.44v-83c0-3-2.11-5.43-4.72-5.43H400.5C397.9,576.21,395.78,578.64,395.78,581.64Z" transform="translate(-22.51 -16.5)"/>
+      <rect class="cls-15" x="167.68" y="751.41" width="39.9" height="54.32" rx="5.09" ry="5.09"/>
+    </g>
+    <g id="constructionkitchen">
+      <g class="cls-12">
+        <rect class="cls-13" x="972.01" y="406.67" width="42.62" height="225.31" rx="5" ry="5"/>
+      </g>
+      <rect class="cls-15" x="264.13" y="748.6" width="39.9" height="54.32" rx="5.09" ry="5.09"/>
+    </g>
+  </g>
+</svg>

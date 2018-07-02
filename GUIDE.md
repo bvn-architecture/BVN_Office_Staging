@@ -2,9 +2,9 @@
 
 ## Intro
 
-BVN is currently (as of 14/12/2017) reshaping its Sydney office. Different areas around the office are intermittently closed off for construction to allow these works to take place. This has meant that a lot of people have had to move around to work in different areas of the office as their original desks are no longer available, and their new desks aren't necessarily ready.
+BVN is (as of 14/12/2017) reshaping its Sydney office. Different areas around the office are intermittently closed off for construction to allow these works to take place. This has meant that a lot of people have had to move around to work in different areas of the office as their original desks are no longer available, and their new desks aren't necessarily ready.
 
-To cope with these changes, this tool was made to visualise in a clear and interactive way what is happening around the office and when. This guide will help you through the process of changing this visualisation or creating a new visualisation entirely.
+To cope with these changes, we made this tool to visualise in a clear and interactive way what is happening around the office and when. This guide will help you through the process of changing this visualisation or creating a new visualisation entirely.
 
 ## <a name="downloadRepo">Getting all the files ready</a>
 
@@ -28,7 +28,7 @@ This method provides no backups or web hosting capabilities, but is a bit less i
 
 ### Github Repo Pulling
 
-This method is recommended for most people - even though it takes a bit longer to get started, the payoffs of easy version control and web hosting are worth it.
+This method is best for most people - even though it takes a bit longer to get started, the payoffs of easy version control and web hosting are worth it.
 
 1. [Create a github account](https://github.com/join?source=other) if you don't have one already.
 
