@@ -5,10 +5,10 @@
 }
 
 :root {
-    --theme-colour: rgba(36, 127, 255, 0.49);
-    --theme-colour-opaque:  #276fe2;
-    --slider-background: #d3d3d3;
-    --title-colour: #fff;
+    --theme-colour:      rgba( 36, 127, 255, 0.5);
+    --theme-colour-opaque: rgba( 39, 111, 226, 1)
+    --slider-background:   rgba(211, 211, 211, 1);
+    --title-colour:      rgba( 36, 127, 255, 0.5);
 }
 
 body {
