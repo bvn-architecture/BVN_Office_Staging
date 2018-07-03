@@ -220,7 +220,7 @@ function drawChart() {
 
 
     chartOptions = {
-        height: 30*rowCount + 50,
+        // height: 30*rowCount + 50,
         gantt: {
             trackHeight: 30,
         },
@@ -268,7 +268,8 @@ function drawChart() {
 
 
 function convertCellDate(dateString) {
-    // Converts the date from the structure it's given in in the cell to the necessary format for the gantt chart
+    // Converts the date from the structure it's given in in the cell 
+    // to the necessary format for the gantt chart
     dateList = dateString.split('/');
     return new Date(dateList[2], dateList[0], dateList[1]);
 }
@@ -391,8 +392,6 @@ function hoverTest() {
 var nearlyFilledDataRows = [];
 window.BVNcurrentHoverZone = 'NONE';
 window.BVNcurrentSliderValue = 0;
-
-// https://spreadsheets.google.com/feeds/list/1Np-BOM5_Jr6B4Obx_9ls0JlX0vd-i1pDeVKMYbUYA_s/od6/public/values?alt=json
 
 window.addEventListener('DOMContentLoaded', getSpreadsheetData);
 window.addEventListener('DOMContentLoaded', slider);

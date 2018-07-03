@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="slider.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
     <script src="moment.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -20,34 +21,34 @@
         //Set to 'false' for no colours, and 'true' for individual colouring per location
         window.BVNvisualiserColouredBySector = false;
     </script>
-    <script type="text/javascript" src='scripts.js'></script>
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"> -->
 </head>
 
 <body class="container">
-    <div class="grid__title">🐙BVN Sydney Studio🐙<br>💥 Booms 💥</div>
+    <div class="grid__title">🐙BVN Sydney Studio&mdash;Booms 💥</div>
 
     <div id="svg_container" class="grid__floorplan"></div>
 
     <div class="grid__slider">
-        <br>
         <div id="slidecontainer">
-            <input type="range" min="0" max="48" value="0" 
-                   class="slider" id="myRange">
+            <input type="range"
+                   min="0"
+                   max="48"
+                   value="0"
+                   class="slider"
+                   id="myRange">
         </div>
-        <br>
     </div>
     <div class="grid__gantt">
-        <div id="chart_div"></div>
-        <br>
-        <div class="bluebackground">
-            <b><span id="date">August 1st 2017</span></b>
-            <div id="notes"></div>
+        <div id="chart_div" class="chart-container"></div>
+        <div class="meta">
+            <span id="date" class="date">--</span>
+            <div id="notes" class="notes"></div>
         </div>
     </div>
     
     <script type="text/javascript" src="injectSVG.js"></script>
-    
+    <script type="text/javascript" src='scripts.js'></script>
 </body>
 
 </html>
