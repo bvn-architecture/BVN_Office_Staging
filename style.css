@@ -18,9 +18,14 @@ body {
     display: table-cell;
 }
 
+.grid__floorplan svg {
+    max-height: 45vh;
+}
+
 svg * {
     transition: opacity 1s;
 }
+
 .hidden {
     opacity: 0;
 }
@@ -31,7 +36,7 @@ svg * {
     bottom: 0;
 }
 
-#notes {
+.notes {
     font-size: 2vmin;
     height: 3vmin;
 }
@@ -54,7 +59,8 @@ svg * {
     opacity: 1; /* Fully shown on mouse-over */
 }
 
-/* The slider handle (use webkit (Chrome, Opera, Safari, Edge) and moz (Firefox) to override default look) */ 
+/* The slider handle (use webkit (Chrome, Opera, Safari, 
+Edge) and moz (Firefox) to override default look) */ 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -105,45 +111,38 @@ svg * {
 
 h1 {
     color: var(--title-colour);
-    background-color: var(--theme-colour);
+    background-color: none; /*var(--theme-colour); */
     text-align: center;
-    font-family: 'Muli', sans-serif;
-    font-size: 7.5vmin;
+    font-size: 5vmin;
     padding: 1.5vmin;
 }
 
-#date {
+.date {
     font-size: 2vmin;
+    font-weight: bold;
 }
 
 #chart_div * {
-    font-family: 'Muli', sans-serif !important;
     color: var(--theme-colour) !important;
 }
 
 #chart_div {
-    font-family: 'Muli', sans-serif !important;
     color: var(--theme-colour) !important;
     max-width: 100%;
 }
 
-
-
-
 /* Grid stuff */
-
-
 .grid__title {
     /* grid-area: 1 / 1 / 2 / 3; */
     grid-area: title;
     top: 0px;
     color: var(--title-colour);
-    background-color: var(--theme-colour);
     text-align: center;
-    font-family: 'Muli', sans-serif;
-    font-size: 7.5vmin;
+    font-size: 5.5vmin;
     padding: 1.5vmin;
 }
+
+.grid__title {}
 
 .grid__floorplan {
     /* grid-area: 2 / 1 / 3 / 2; */
@@ -173,6 +172,20 @@ h1 {
     /* grid-auto-flow: row; */
 }
 
+.blueBackground {
+    background: var(--theme-colour);
+    color: var(--title-colour);
+    padding: 10px;
+}
+
+.underline {
+    /* Underlines are weird and hard to customise apparently. */
+    /* These look fairly ugly so I've left the code but it isn't used. */
+    border-bottom: 2px solid currentColor;
+    display: inline-block;
+    line-height: 0.85;
+}
+
 @media screen and (max-aspect-ratio: 1/1) {
 
     .grid__title {
@@ -198,27 +211,10 @@ h1 {
     .container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 13vh
-                            1fr
-                            7vh
-                            1fr;
+        grid-template-rows: 10vh                             1fr                              7vh                              1fr;
         grid-template-areas: "title"
                              "floorplan"
                              "slider"
                              "gantt";
     }
-}
-
-.blueBackground {
-    background: var(--theme-colour);
-    color: var(--title-colour);
-    padding: 10px;
-}
-
-.underline {
-    /* Underlines are weird and hard to customise apparently. */
-    /* These look fairly ugly so I've left the code but it isn't used. */
-    border-bottom: 2px solid currentColor;
-    display: inline-block;
-    line-height: 0.85;
 }
